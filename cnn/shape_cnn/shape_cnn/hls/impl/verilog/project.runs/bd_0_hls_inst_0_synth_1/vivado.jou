@@ -1,0 +1,24 @@
+#-----------------------------------------------------------
+# Vivado v2026.1 (64-bit)
+# SW Build 6511674 on Tue Jun 16 11:01:26 MDT 2026
+# IP Build 6504888 on Tue Jun 09 09:05:25 MDT 2026
+# SharedData Build 6501428 on Mon Jun 08 17:34:18 MDT 2026
+# Start of session at: Sat Nov 21 01:01:07 2026
+# Process ID         : 31014
+# Current directory  : /home/rubisrage/Projects/vivado-projects/assignment_2_vitis/shape_cnn/shape_cnn/hls/impl/verilog/project.runs/bd_0_hls_inst_0_synth_1
+# Command line       : vivado -log bd_0_hls_inst_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source bd_0_hls_inst_0.tcl
+# Log file           : /home/rubisrage/Projects/vivado-projects/assignment_2_vitis/shape_cnn/shape_cnn/hls/impl/verilog/project.runs/bd_0_hls_inst_0_synth_1/bd_0_hls_inst_0.vds
+# Journal file       : /home/rubisrage/Projects/vivado-projects/assignment_2_vitis/shape_cnn/shape_cnn/hls/impl/verilog/project.runs/bd_0_hls_inst_0_synth_1/vivado.jou
+# Running On         : yoga
+# Platform           : Ubuntu
+# Operating System   : Ubuntu 24.04.5 LTS
+# Processor Detail   : AMD Ryzen AI 7 445 w/ Radeon 840M
+# CPU Frequency      : 4523.263 MHz
+# CPU Physical cores : 6
+# CPU Logical cores  : 12
+# Host memory        : 32929 MB
+# Swap memory        : 8589 MB
+# Total Virtual      : 41519 MB
+# Available Virtual  : 31977 MB
+#-----------------------------------------------------------
+source bd_0_hls_inst_0.tcl -notrace

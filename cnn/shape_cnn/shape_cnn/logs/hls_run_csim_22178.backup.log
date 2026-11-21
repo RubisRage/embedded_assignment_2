@@ -1,0 +1,44 @@
+  **** HLS Build v2026.1 6493734
+INFO: [HLS 200-2005] Using work_dir /home/rubisrage/Projects/vivado-projects/assignment_2_vitis/shape_cnn/shape_cnn 
+INFO: [HLS 200-2176] Writing Vitis IDE component file /home/rubisrage/Projects/vivado-projects/assignment_2_vitis/shape_cnn/shape_cnn/vitis-comp.json
+INFO: [HLS 200-10] Creating and opening component '/home/rubisrage/Projects/vivado-projects/assignment_2_vitis/shape_cnn/shape_cnn'.
+INFO: [HLS 200-2174] Applying component config ini file hls_config.cfg
+INFO: [HLS 200-1465] Applying config ini 'syn.file=shape_cnn.cpp' from hls_config.cfg(10)
+INFO: [HLS 200-10] Adding design file '/home/rubisrage/Projects/vivado-projects/assignment_2_vitis/shape_cnn/shape_cnn.cpp' to the project
+INFO: [HLS 200-1465] Applying config ini 'syn.file=ds_cnn_weights.h' from hls_config.cfg(11)
+INFO: [HLS 200-10] Adding design file '/home/rubisrage/Projects/vivado-projects/assignment_2_vitis/shape_cnn/ds_cnn_weights.h' to the project
+INFO: [HLS 200-1465] Applying config ini 'syn.file=ds_cnn_weights_data.h' from hls_config.cfg(12)
+INFO: [HLS 200-10] Adding design file '/home/rubisrage/Projects/vivado-projects/assignment_2_vitis/shape_cnn/ds_cnn_weights_data.h' to the project
+INFO: [HLS 200-1465] Applying config ini 'tb.file=tb_shape_cnn.cpp' from hls_config.cfg(9)
+INFO: [HLS 200-10] Adding test bench file '/home/rubisrage/Projects/vivado-projects/assignment_2_vitis/shape_cnn/tb_shape_cnn.cpp' to the project
+INFO: [HLS 200-1465] Applying config ini 'syn.top=ds_cnn' from hls_config.cfg(8)
+INFO: [HLS 200-1465] Applying config ini 'part=xc7z020clg400-1' from hls_config.cfg(1)
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+INFO: [HLS 200-1465] Applying config ini 'clock=10' from hls_config.cfg(6)
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1465] Applying config ini 'clock_uncertainty=27%' from hls_config.cfg(7)
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 2.7ns.
+INFO: [HLS 200-1465] Applying config ini 'package.output.format=ip_catalog' from hls_config.cfg(4)
+INFO: [HLS 200-2174] Applying component config ini file shape_cnn/hls-debug.cfg
+INFO: [HLS 200-1465] Applying config ini 'csim.O=0' from shape_cnn/hls-debug.cfg(3)
+INFO: [HLS 200-1907] Replacing 'config_csim -O=0' with 'config_sim -O=0' in current solution file
+INFO: [HLS 200-1465] Applying config ini 'csim.clean=1' from shape_cnn/hls-debug.cfg(4)
+INFO: [HLS 200-1907] Replacing 'config_csim -O=0' with 'config_sim -O=0' in current solution file
+INFO: [HLS 200-1465] Applying config ini 'csim.setup=1' from shape_cnn/hls-debug.cfg(2)
+INFO: [HLS 200-1907] Replacing 'config_csim -O=0' with 'config_sim -O=0' in current solution file
+INFO: [HLS 200-2176] Writing Vitis IDE component file /home/rubisrage/Projects/vivado-projects/assignment_2_vitis/shape_cnn/shape_cnn/vitis-comp.json
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [HLS 200-2191] C-Simulation will use clang-16 as the compiler
+INFO: [HLS 200-2036] Building debug C Simulation binaries
+   Compiling ../../../../tb_shape_cnn.cpp in debug mode
+   Compiling ../../../../shape_cnn.cpp in debug mode
+   Generating csim.exe
+ld.lld: error: undefined symbol: ds_cnn(ap_fixed<16, 8, (ap_q_mode)5, (ap_o_mode)3, 0> const*, int*, ap_fixed<16, 8, (ap_q_mode)5, (ap_o_mode)3, 0>*)
+>>> referenced by tb_shape_cnn.cpp:201 (../../../../tb_shape_cnn.cpp:201)
+>>>               obj/tb_shape_cnn.o:(main)
+clang++: error: linker command failed with exit code 1 (use -v to see invocation)
+make: *** [Makefile.rules:347: csim.exe] Error 1
+ERROR: [SIM 211-100] CSim file generation failed: compilation error(s).
+INFO: [SIM 211-3] *************** CSIM finish ***************
+ERROR: CSIM Failed
+INFO: [HLS 200-112] Total CPU user time: 3.29 seconds. Total CPU system time: 0.5 seconds. Total elapsed time: 3.73 seconds; peak allocated memory: 261.922 MB.

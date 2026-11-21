@@ -1,0 +1,31 @@
+  **** HLS Build v2026.1 6493734
+INFO: [HLS 200-2005] Using work_dir /home/rubisrage/Projects/vivado-projects/assignment_2_vitis/shape_cnn/shape_cnn 
+INFO: [HLS 200-2176] Writing Vitis IDE component file /home/rubisrage/Projects/vivado-projects/assignment_2_vitis/shape_cnn/shape_cnn/vitis-comp.json
+INFO: [HLS 200-10] Creating and opening component '/home/rubisrage/Projects/vivado-projects/assignment_2_vitis/shape_cnn/shape_cnn'.
+INFO: [HLS 200-2174] Applying component config ini file hls_config.cfg
+INFO: [HLS 200-1465] Applying config ini 'syn.file=shape_cnn.cpp' from hls_config.cfg(8)
+INFO: [HLS 200-10] Adding design file '/home/rubisrage/Projects/vivado-projects/assignment_2_vitis/shape_cnn/shape_cnn.cpp' to the project
+INFO: [HLS 200-1465] Applying config ini 'syn.file=ds_cnn_weights.h' from hls_config.cfg(9)
+INFO: [HLS 200-10] Adding design file '/home/rubisrage/Projects/vivado-projects/assignment_2_vitis/shape_cnn/ds_cnn_weights.h' to the project
+INFO: [HLS 200-1465] Applying config ini 'syn.file=shape_cnn_tb.cpp' from hls_config.cfg(10)
+INFO: [HLS 200-10] Adding design file '/home/rubisrage/Projects/vivado-projects/assignment_2_vitis/shape_cnn/shape_cnn_tb.cpp' to the project
+INFO: [HLS 200-1465] Applying config ini 'syn.file=ds_cnn_weights_data.cpp' from hls_config.cfg(11)
+INFO: [HLS 200-10] Adding design file '/home/rubisrage/Projects/vivado-projects/assignment_2_vitis/shape_cnn/ds_cnn_weights_data.cpp' to the project
+INFO: [HLS 200-1465] Applying config ini 'syn.top=ds_cnn' from hls_config.cfg(12)
+INFO: [HLS 200-1465] Applying config ini 'part=xc7z020clg400-1' from hls_config.cfg(1)
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+INFO: [HLS 200-1465] Applying config ini 'clock=10' from hls_config.cfg(6)
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1465] Applying config ini 'clock_uncertainty=27%' from hls_config.cfg(7)
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 2.7ns.
+INFO: [HLS 200-1465] Applying config ini 'package.output.format=ip_catalog' from hls_config.cfg(4)
+INFO: [HLS 200-2176] Writing Vitis IDE component file /home/rubisrage/Projects/vivado-projects/assignment_2_vitis/shape_cnn/shape_cnn/vitis-comp.json
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 3.16 seconds. CPU system time: 0.54 seconds. Elapsed time: 3.84 seconds; current allocated memory: 261.738 MB.
+INFO: [HLS 200-2191] C-Synthesis will use clang-16 as the compiler
+INFO: [HLS 200-10] Analyzing design file 'ds_cnn_weights_data.cpp' ... 
+INFO: [HLS 200-10] Analyzing design file 'shape_cnn_tb.cpp' ... 
+INFO: [HLS 200-10] Analyzing design file 'shape_cnn.cpp' ... 
+ERROR: [HLS 207-974] 'ds_cnn_weights_data.h' file not found (shape_cnn.cpp:3:10)
+ERROR: compilation failed: {shape_cnn.cpp:3:10: fatal error: 'ds_cnn_weights_data.h' file not found} {#include "ds_cnn_weights_data.h"
+         ^~~~~~~~~~~~~~~~~~~~~~~} {1 error generated.}
+INFO: [HLS 200-112] Total CPU user time: 11.78 seconds. Total CPU system time: 1.66 seconds. Total elapsed time: 14.05 seconds; peak allocated memory: 264.199 MB.

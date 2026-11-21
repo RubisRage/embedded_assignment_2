@@ -1,0 +1,91 @@
+{
+  "0": {
+    "basicblocks": 3,
+    "calls": "1 4 3 2",
+    "control_depth": 0,
+    "def_use_depth": 3,
+    "file": "shape_cnn.cpp",
+    "fileloc": 217,
+    "instructions": 32,
+    "memory_accesses": 2,
+    "name": "ds_cnn",
+    "stores": {
+      "G": 1,
+      "T": 1
+    },
+    "total_instructions": 3771
+  },
+  "1": {
+    "basicblocks": 31,
+    "calls": "",
+    "control_depth": 4,
+    "def_use_depth": 96,
+    "file": "shape_cnn.cpp",
+    "fileloc": 28,
+    "instructions": 1052,
+    "loads": {
+      "G": 34
+    },
+    "memory_accesses": 31,
+    "name": "conv1_relu_maxpool",
+    "stores": {
+      "G": 1
+    },
+    "total_instructions": 1052
+  },
+  "2": {
+    "basicblocks": 111,
+    "calls": "",
+    "control_depth": 6,
+    "def_use_depth": 127,
+    "file": "shape_cnn.cpp",
+    "fileloc": 164,
+    "instructions": 803,
+    "loads": {
+      "G": 10,
+      "L": 24
+    },
+    "memory_accesses": 97,
+    "name": "cls_gap_logits_argmax",
+    "stores": {
+      "L": 73
+    },
+    "total_instructions": 803
+  },
+  "3": {
+    "basicblocks": 7,
+    "calls": "",
+    "control_depth": 0,
+    "def_use_depth": 399,
+    "file": "shape_cnn.cpp",
+    "fileloc": 138,
+    "instructions": 1075,
+    "loads": {
+      "G": 48
+    },
+    "memory_accesses": 49,
+    "name": "avgpool6x8",
+    "stores": {
+      "G": 1
+    },
+    "total_instructions": 1075
+  },
+  "4": {
+    "basicblocks": 41,
+    "calls": "",
+    "control_depth": 4,
+    "def_use_depth": 146,
+    "file": "shape_cnn.cpp",
+    "fileloc": 80,
+    "instructions": 809,
+    "loads": {
+      "G": 36
+    },
+    "memory_accesses": 38,
+    "name": "depthwise_pointwise_relu_fused",
+    "stores": {
+      "G": 1
+    },
+    "total_instructions": 809
+  }
+}

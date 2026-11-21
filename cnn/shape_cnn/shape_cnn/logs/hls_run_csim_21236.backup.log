@@ -1,0 +1,250 @@
+  **** HLS Build v2026.1 6493734
+INFO: [HLS 200-2005] Using work_dir /home/rubisrage/Projects/vivado-projects/assignment_2_vitis/shape_cnn/shape_cnn 
+INFO: [HLS 200-2176] Writing Vitis IDE component file /home/rubisrage/Projects/vivado-projects/assignment_2_vitis/shape_cnn/shape_cnn/vitis-comp.json
+INFO: [HLS 200-10] Creating and opening component '/home/rubisrage/Projects/vivado-projects/assignment_2_vitis/shape_cnn/shape_cnn'.
+INFO: [HLS 200-2174] Applying component config ini file hls_config.cfg
+INFO: [HLS 200-1465] Applying config ini 'syn.file=shape_cnn.cpp' from hls_config.cfg(10)
+INFO: [HLS 200-10] Adding design file '/home/rubisrage/Projects/vivado-projects/assignment_2_vitis/shape_cnn/shape_cnn.cpp' to the project
+INFO: [HLS 200-1465] Applying config ini 'syn.file=ds_cnn_weights.h' from hls_config.cfg(11)
+INFO: [HLS 200-10] Adding design file '/home/rubisrage/Projects/vivado-projects/assignment_2_vitis/shape_cnn/ds_cnn_weights.h' to the project
+INFO: [HLS 200-1465] Applying config ini 'syn.file=ds_cnn_weights_data.h' from hls_config.cfg(12)
+INFO: [HLS 200-10] Adding design file '/home/rubisrage/Projects/vivado-projects/assignment_2_vitis/shape_cnn/ds_cnn_weights_data.h' to the project
+INFO: [HLS 200-1465] Applying config ini 'tb.file=tb_shape_cnn.cpp' from hls_config.cfg(9)
+INFO: [HLS 200-10] Adding test bench file '/home/rubisrage/Projects/vivado-projects/assignment_2_vitis/shape_cnn/tb_shape_cnn.cpp' to the project
+INFO: [HLS 200-1465] Applying config ini 'syn.top=ds_cnn' from hls_config.cfg(8)
+INFO: [HLS 200-1465] Applying config ini 'part=xc7z020clg400-1' from hls_config.cfg(1)
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+INFO: [HLS 200-1465] Applying config ini 'clock=10' from hls_config.cfg(6)
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1465] Applying config ini 'clock_uncertainty=27%' from hls_config.cfg(7)
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 2.7ns.
+INFO: [HLS 200-1465] Applying config ini 'package.output.format=ip_catalog' from hls_config.cfg(4)
+INFO: [HLS 200-2176] Writing Vitis IDE component file /home/rubisrage/Projects/vivado-projects/assignment_2_vitis/shape_cnn/shape_cnn/vitis-comp.json
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [HLS 200-2191] C-Simulation will use clang-16 as the compiler
+INFO: [HLS 200-2036] Building debug C Simulation binaries
+   Compiling ../../../../shape_cnn.cpp in debug mode
+../../../../shape_cnn.cpp:9:15: error: typedef redefinition with different types ('float' vs 'ap_fixed<16, 8>')
+typedef float data_t;
+              ^
+../../../../ds_cnn_weights.h:7:24: note: previous definition is here
+typedef ap_fixed<16,8> data_t;
+                       ^
+../../../../shape_cnn.cpp:61:17: error: use of overloaded operator '+=' is ambiguous (with operand types 'acc_t' (aka 'float') and 'typename RType<16, 8, true>::mult' (aka 'ap_fixed<32, 16>'))
+            acc += inval *
+            ~~~ ^  ~~~~~~~
+../../../../shape_cnn.cpp:61:17: note: built-in candidate operator+=(float &, float)
+../../../../shape_cnn.cpp:61:17: note: built-in candidate operator+=(float &, double)
+../../../../shape_cnn.cpp:61:17: note: built-in candidate operator+=(float &, long double)
+../../../../shape_cnn.cpp:61:17: note: built-in candidate operator+=(float &, __float128)
+../../../../shape_cnn.cpp:61:17: note: built-in candidate operator+=(float &, int)
+../../../../shape_cnn.cpp:61:17: note: built-in candidate operator+=(float &, long)
+../../../../shape_cnn.cpp:61:17: note: built-in candidate operator+=(float &, long long)
+../../../../shape_cnn.cpp:61:17: note: built-in candidate operator+=(float &, __int128)
+../../../../shape_cnn.cpp:61:17: note: built-in candidate operator+=(float &, unsigned int)
+../../../../shape_cnn.cpp:61:17: note: built-in candidate operator+=(float &, unsigned long)
+../../../../shape_cnn.cpp:61:17: note: built-in candidate operator+=(float &, unsigned long long)
+../../../../shape_cnn.cpp:61:17: note: built-in candidate operator+=(float &, unsigned __int128)
+../../../../shape_cnn.cpp:109:17: error: use of overloaded operator '+=' is ambiguous (with operand types 'acc_t' (aka 'float') and 'typename RType<16, 8, true>::mult' (aka 'ap_fixed<32, 16>'))
+            acc += inval *
+            ~~~ ^  ~~~~~~~
+../../../../shape_cnn.cpp:109:17: note: built-in candidate operator+=(float &, float)
+../../../../shape_cnn.cpp:109:17: note: built-in candidate operator+=(float &, double)
+../../../../shape_cnn.cpp:109:17: note: built-in candidate operator+=(float &, long double)
+../../../../shape_cnn.cpp:109:17: note: built-in candidate operator+=(float &, __float128)
+../../../../shape_cnn.cpp:109:17: note: built-in candidate operator+=(float &, int)
+../../../../shape_cnn.cpp:109:17: note: built-in candidate operator+=(float &, long)
+../../../../shape_cnn.cpp:109:17: note: built-in candidate operator+=(float &, long long)
+../../../../shape_cnn.cpp:109:17: note: built-in candidate operator+=(float &, __int128)
+../../../../shape_cnn.cpp:109:17: note: built-in candidate operator+=(float &, unsigned int)
+../../../../shape_cnn.cpp:109:17: note: built-in candidate operator+=(float &, unsigned long)
+../../../../shape_cnn.cpp:109:17: note: built-in candidate operator+=(float &, unsigned long long)
+../../../../shape_cnn.cpp:109:17: note: built-in candidate operator+=(float &, unsigned __int128)
+../../../../shape_cnn.cpp:123:16: error: use of overloaded operator '+=' is ambiguous (with operand types 'acc_t' (aka 'float') and 'typename RType<16, 8, true>::mult' (aka 'ap_fixed<32, 16>'))
+            acc+=dw_relu[ic]*
+            ~~~^ ~~~~~~~~~~~~
+../../../../shape_cnn.cpp:123:16: note: built-in candidate operator+=(float &, float)
+../../../../shape_cnn.cpp:123:16: note: built-in candidate operator+=(float &, double)
+../../../../shape_cnn.cpp:123:16: note: built-in candidate operator+=(float &, long double)
+../../../../shape_cnn.cpp:123:16: note: built-in candidate operator+=(float &, __float128)
+../../../../shape_cnn.cpp:123:16: note: built-in candidate operator+=(float &, int)
+../../../../shape_cnn.cpp:123:16: note: built-in candidate operator+=(float &, long)
+../../../../shape_cnn.cpp:123:16: note: built-in candidate operator+=(float &, long long)
+../../../../shape_cnn.cpp:123:16: note: built-in candidate operator+=(float &, __int128)
+../../../../shape_cnn.cpp:123:16: note: built-in candidate operator+=(float &, unsigned int)
+../../../../shape_cnn.cpp:123:16: note: built-in candidate operator+=(float &, unsigned long)
+../../../../shape_cnn.cpp:123:16: note: built-in candidate operator+=(float &, unsigned long long)
+../../../../shape_cnn.cpp:123:16: note: built-in candidate operator+=(float &, unsigned __int128)
+../../../../shape_cnn.cpp:151:12: error: use of overloaded operator '+=' is ambiguous (with operand types 'acc_t' (aka 'float') and 'data_t' (aka 'ap_fixed<16, 8>'))
+        acc+=in[oh*6+ph][ow*8+pw][c];
+        ~~~^ ~~~~~~~~~~~~~~~~~~~~~~~
+../../../../shape_cnn.cpp:151:12: note: built-in candidate operator+=(float &, float)
+../../../../shape_cnn.cpp:151:12: note: built-in candidate operator+=(float &, double)
+../../../../shape_cnn.cpp:151:12: note: built-in candidate operator+=(float &, long double)
+../../../../shape_cnn.cpp:151:12: note: built-in candidate operator+=(float &, __float128)
+../../../../shape_cnn.cpp:151:12: note: built-in candidate operator+=(float &, int)
+../../../../shape_cnn.cpp:151:12: note: built-in candidate operator+=(float &, long)
+../../../../shape_cnn.cpp:151:12: note: built-in candidate operator+=(float &, long long)
+../../../../shape_cnn.cpp:151:12: note: built-in candidate operator+=(float &, __int128)
+../../../../shape_cnn.cpp:151:12: note: built-in candidate operator+=(float &, unsigned int)
+../../../../shape_cnn.cpp:151:12: note: built-in candidate operator+=(float &, unsigned long)
+../../../../shape_cnn.cpp:151:12: note: built-in candidate operator+=(float &, unsigned long long)
+../../../../shape_cnn.cpp:151:12: note: built-in candidate operator+=(float &, unsigned __int128)
+../../../../shape_cnn.cpp:178:16: error: use of overloaded operator '+=' is ambiguous (with operand types 'acc_t' (aka 'float') and 'data_t' (aka 'ap_fixed<16, 8>'))
+        gap[ic]+=bins[h][w][ic];
+        ~~~~~~~^ ~~~~~~~~~~~~~~
+../../../../shape_cnn.cpp:178:16: note: built-in candidate operator+=(float &, float)
+../../../../shape_cnn.cpp:178:16: note: built-in candidate operator+=(float &, double)
+../../../../shape_cnn.cpp:178:16: note: built-in candidate operator+=(float &, long double)
+../../../../shape_cnn.cpp:178:16: note: built-in candidate operator+=(float &, __float128)
+../../../../shape_cnn.cpp:178:16: note: built-in candidate operator+=(float &, int)
+../../../../shape_cnn.cpp:178:16: note: built-in candidate operator+=(float &, long)
+../../../../shape_cnn.cpp:178:16: note: built-in candidate operator+=(float &, long long)
+../../../../shape_cnn.cpp:178:16: note: built-in candidate operator+=(float &, __int128)
+../../../../shape_cnn.cpp:178:16: note: built-in candidate operator+=(float &, unsigned int)
+../../../../shape_cnn.cpp:178:16: note: built-in candidate operator+=(float &, unsigned long)
+../../../../shape_cnn.cpp:178:16: note: built-in candidate operator+=(float &, unsigned long long)
+../../../../shape_cnn.cpp:178:16: note: built-in candidate operator+=(float &, unsigned __int128)
+../../../../shape_cnn.cpp:193:25: error: use of overloaded operator '*' is ambiguous (with operand types 'acc_t' (aka 'float') and 'const data_t' (aka 'const ap_fixed<16, 8>'))
+            acc+=gap[ic]*
+                 ~~~~~~~^
+/home/rubisrage/tools/xilinx-sdu/2026.1/Vitis/include/etc/ap_fixed_base.h:2376:1: note: candidate function [with _AP_W = 16, _AP_I = 8, _AP_S = true, _AP_Q = AP_TRN, _AP_O = AP_WRAP, _AP_N = 0]
+ALL_AF_OP_WITH_INT(bool, 1, false)
+^
+/home/rubisrage/tools/xilinx-sdu/2026.1/Vitis/include/etc/ap_fixed_base.h:2351:3: note: expanded from macro 'ALL_AF_OP_WITH_INT'
+  AF_BIN_OP_WITH_INT(*, C_TYPE, (BITS), (SIGN), mult)     \
+  ^
+/home/rubisrage/tools/xilinx-sdu/2026.1/Vitis/include/etc/ap_fixed_base.h:2306:3: note: expanded from macro 'AF_BIN_OP_WITH_INT'
+  operator BIN_OP(                                                          \
+  ^
+/home/rubisrage/tools/xilinx-sdu/2026.1/Vitis/include/etc/ap_fixed_base.h:2377:1: note: candidate function [with _AP_W = 16, _AP_I = 8, _AP_S = true, _AP_Q = AP_TRN, _AP_O = AP_WRAP, _AP_N = 0]
+ALL_AF_OP_WITH_INT(char, 8, CHAR_IS_SIGNED)
+^
+/home/rubisrage/tools/xilinx-sdu/2026.1/Vitis/include/etc/ap_fixed_base.h:2351:3: note: expanded from macro 'ALL_AF_OP_WITH_INT'
+  AF_BIN_OP_WITH_INT(*, C_TYPE, (BITS), (SIGN), mult)     \
+  ^
+/home/rubisrage/tools/xilinx-sdu/2026.1/Vitis/include/etc/ap_fixed_base.h:2306:3: note: expanded from macro 'AF_BIN_OP_WITH_INT'
+  operator BIN_OP(                                                          \
+  ^
+/home/rubisrage/tools/xilinx-sdu/2026.1/Vitis/include/etc/ap_fixed_base.h:2378:1: note: candidate function [with _AP_W = 16, _AP_I = 8, _AP_S = true, _AP_Q = AP_TRN, _AP_O = AP_WRAP, _AP_N = 0]
+ALL_AF_OP_WITH_INT(signed char, 8, true)
+^
+/home/rubisrage/tools/xilinx-sdu/2026.1/Vitis/include/etc/ap_fixed_base.h:2351:3: note: expanded from macro 'ALL_AF_OP_WITH_INT'
+  AF_BIN_OP_WITH_INT(*, C_TYPE, (BITS), (SIGN), mult)     \
+  ^
+/home/rubisrage/tools/xilinx-sdu/2026.1/Vitis/include/etc/ap_fixed_base.h:2306:3: note: expanded from macro 'AF_BIN_OP_WITH_INT'
+  operator BIN_OP(                                                          \
+  ^
+/home/rubisrage/tools/xilinx-sdu/2026.1/Vitis/include/etc/ap_fixed_base.h:2379:1: note: candidate function [with _AP_W = 16, _AP_I = 8, _AP_S = true, _AP_Q = AP_TRN, _AP_O = AP_WRAP, _AP_N = 0]
+ALL_AF_OP_WITH_INT(unsigned char, 8, false)
+^
+/home/rubisrage/tools/xilinx-sdu/2026.1/Vitis/include/etc/ap_fixed_base.h:2351:3: note: expanded from macro 'ALL_AF_OP_WITH_INT'
+  AF_BIN_OP_WITH_INT(*, C_TYPE, (BITS), (SIGN), mult)     \
+  ^
+/home/rubisrage/tools/xilinx-sdu/2026.1/Vitis/include/etc/ap_fixed_base.h:2306:3: note: expanded from macro 'AF_BIN_OP_WITH_INT'
+  operator BIN_OP(                                                          \
+  ^
+/home/rubisrage/tools/xilinx-sdu/2026.1/Vitis/include/etc/ap_fixed_base.h:2380:1: note: candidate function [with _AP_W = 16, _AP_I = 8, _AP_S = true, _AP_Q = AP_TRN, _AP_O = AP_WRAP, _AP_N = 0]
+ALL_AF_OP_WITH_INT(short, _AP_SIZE_short, true)
+^
+/home/rubisrage/tools/xilinx-sdu/2026.1/Vitis/include/etc/ap_fixed_base.h:2351:3: note: expanded from macro 'ALL_AF_OP_WITH_INT'
+  AF_BIN_OP_WITH_INT(*, C_TYPE, (BITS), (SIGN), mult)     \
+  ^
+/home/rubisrage/tools/xilinx-sdu/2026.1/Vitis/include/etc/ap_fixed_base.h:2306:3: note: expanded from macro 'AF_BIN_OP_WITH_INT'
+  operator BIN_OP(                                                          \
+  ^
+/home/rubisrage/tools/xilinx-sdu/2026.1/Vitis/include/etc/ap_fixed_base.h:2381:1: note: candidate function [with _AP_W = 16, _AP_I = 8, _AP_S = true, _AP_Q = AP_TRN, _AP_O = AP_WRAP, _AP_N = 0]
+ALL_AF_OP_WITH_INT(unsigned short, _AP_SIZE_short, false)
+^
+/home/rubisrage/tools/xilinx-sdu/2026.1/Vitis/include/etc/ap_fixed_base.h:2351:3: note: expanded from macro 'ALL_AF_OP_WITH_INT'
+  AF_BIN_OP_WITH_INT(*, C_TYPE, (BITS), (SIGN), mult)     \
+  ^
+/home/rubisrage/tools/xilinx-sdu/2026.1/Vitis/include/etc/ap_fixed_base.h:2306:3: note: expanded from macro 'AF_BIN_OP_WITH_INT'
+  operator BIN_OP(                                                          \
+  ^
+/home/rubisrage/tools/xilinx-sdu/2026.1/Vitis/include/etc/ap_fixed_base.h:2382:1: note: candidate function [with _AP_W = 16, _AP_I = 8, _AP_S = true, _AP_Q = AP_TRN, _AP_O = AP_WRAP, _AP_N = 0]
+ALL_AF_OP_WITH_INT(int, _AP_SIZE_int, true)
+^
+/home/rubisrage/tools/xilinx-sdu/2026.1/Vitis/include/etc/ap_fixed_base.h:2351:3: note: expanded from macro 'ALL_AF_OP_WITH_INT'
+  AF_BIN_OP_WITH_INT(*, C_TYPE, (BITS), (SIGN), mult)     \
+  ^
+/home/rubisrage/tools/xilinx-sdu/2026.1/Vitis/include/etc/ap_fixed_base.h:2306:3: note: expanded from macro 'AF_BIN_OP_WITH_INT'
+  operator BIN_OP(                                                          \
+  ^
+/home/rubisrage/tools/xilinx-sdu/2026.1/Vitis/include/etc/ap_fixed_base.h:2383:1: note: candidate function [with _AP_W = 16, _AP_I = 8, _AP_S = true, _AP_Q = AP_TRN, _AP_O = AP_WRAP, _AP_N = 0]
+ALL_AF_OP_WITH_INT(unsigned int, _AP_SIZE_int, false)
+^
+/home/rubisrage/tools/xilinx-sdu/2026.1/Vitis/include/etc/ap_fixed_base.h:2351:3: note: expanded from macro 'ALL_AF_OP_WITH_INT'
+  AF_BIN_OP_WITH_INT(*, C_TYPE, (BITS), (SIGN), mult)     \
+  ^
+/home/rubisrage/tools/xilinx-sdu/2026.1/Vitis/include/etc/ap_fixed_base.h:2306:3: note: expanded from macro 'AF_BIN_OP_WITH_INT'
+  operator BIN_OP(                                                          \
+  ^
+/home/rubisrage/tools/xilinx-sdu/2026.1/Vitis/include/etc/ap_fixed_base.h:2384:1: note: candidate function [with _AP_W = 16, _AP_I = 8, _AP_S = true, _AP_Q = AP_TRN, _AP_O = AP_WRAP, _AP_N = 0]
+ALL_AF_OP_WITH_INT(long, _AP_SIZE_long, true)
+^
+/home/rubisrage/tools/xilinx-sdu/2026.1/Vitis/include/etc/ap_fixed_base.h:2351:3: note: expanded from macro 'ALL_AF_OP_WITH_INT'
+  AF_BIN_OP_WITH_INT(*, C_TYPE, (BITS), (SIGN), mult)     \
+  ^
+/home/rubisrage/tools/xilinx-sdu/2026.1/Vitis/include/etc/ap_fixed_base.h:2306:3: note: expanded from macro 'AF_BIN_OP_WITH_INT'
+  operator BIN_OP(                                                          \
+  ^
+/home/rubisrage/tools/xilinx-sdu/2026.1/Vitis/include/etc/ap_fixed_base.h:2385:1: note: candidate function [with _AP_W = 16, _AP_I = 8, _AP_S = true, _AP_Q = AP_TRN, _AP_O = AP_WRAP, _AP_N = 0]
+ALL_AF_OP_WITH_INT(unsigned long, _AP_SIZE_long, false)
+^
+/home/rubisrage/tools/xilinx-sdu/2026.1/Vitis/include/etc/ap_fixed_base.h:2351:3: note: expanded from macro 'ALL_AF_OP_WITH_INT'
+  AF_BIN_OP_WITH_INT(*, C_TYPE, (BITS), (SIGN), mult)     \
+  ^
+/home/rubisrage/tools/xilinx-sdu/2026.1/Vitis/include/etc/ap_fixed_base.h:2306:3: note: expanded from macro 'AF_BIN_OP_WITH_INT'
+  operator BIN_OP(                                                          \
+  ^
+/home/rubisrage/tools/xilinx-sdu/2026.1/Vitis/include/etc/ap_fixed_base.h:2386:1: note: candidate function [with _AP_W = 16, _AP_I = 8, _AP_S = true, _AP_Q = AP_TRN, _AP_O = AP_WRAP, _AP_N = 0]
+ALL_AF_OP_WITH_INT(ap_slong, _AP_SIZE_ap_slong, true)
+^
+/home/rubisrage/tools/xilinx-sdu/2026.1/Vitis/include/etc/ap_fixed_base.h:2351:3: note: expanded from macro 'ALL_AF_OP_WITH_INT'
+  AF_BIN_OP_WITH_INT(*, C_TYPE, (BITS), (SIGN), mult)     \
+  ^
+/home/rubisrage/tools/xilinx-sdu/2026.1/Vitis/include/etc/ap_fixed_base.h:2306:3: note: expanded from macro 'AF_BIN_OP_WITH_INT'
+  operator BIN_OP(                                                          \
+  ^
+/home/rubisrage/tools/xilinx-sdu/2026.1/Vitis/include/etc/ap_fixed_base.h:2387:1: note: candidate function [with _AP_W = 16, _AP_I = 8, _AP_S = true, _AP_Q = AP_TRN, _AP_O = AP_WRAP, _AP_N = 0]
+ALL_AF_OP_WITH_INT(ap_ulong, _AP_SIZE_ap_slong, false)
+^
+/home/rubisrage/tools/xilinx-sdu/2026.1/Vitis/include/etc/ap_fixed_base.h:2351:3: note: expanded from macro 'ALL_AF_OP_WITH_INT'
+  AF_BIN_OP_WITH_INT(*, C_TYPE, (BITS), (SIGN), mult)     \
+  ^
+/home/rubisrage/tools/xilinx-sdu/2026.1/Vitis/include/etc/ap_fixed_base.h:2306:3: note: expanded from macro 'AF_BIN_OP_WITH_INT'
+  operator BIN_OP(                                                          \
+  ^
+../../../../shape_cnn.cpp:193:25: note: built-in candidate operator*(float, float)
+            acc+=gap[ic]*
+                        ^
+../../../../shape_cnn.cpp:193:25: note: built-in candidate operator*(float, double)
+../../../../shape_cnn.cpp:193:25: note: built-in candidate operator*(float, long double)
+../../../../shape_cnn.cpp:193:25: note: built-in candidate operator*(float, __float128)
+../../../../shape_cnn.cpp:193:25: note: built-in candidate operator*(float, int)
+../../../../shape_cnn.cpp:193:25: note: built-in candidate operator*(float, long)
+../../../../shape_cnn.cpp:193:25: note: built-in candidate operator*(float, long long)
+../../../../shape_cnn.cpp:193:25: note: built-in candidate operator*(float, __int128)
+../../../../shape_cnn.cpp:193:25: note: built-in candidate operator*(float, unsigned int)
+../../../../shape_cnn.cpp:193:25: note: built-in candidate operator*(float, unsigned long)
+../../../../shape_cnn.cpp:193:25: note: built-in candidate operator*(float, unsigned long long)
+../../../../shape_cnn.cpp:193:25: note: built-in candidate operator*(float, unsigned __int128)
+../../../../shape_cnn.cpp:193:25: note: built-in candidate operator*(double, float)
+../../../../shape_cnn.cpp:193:25: note: built-in candidate operator*(double, double)
+../../../../shape_cnn.cpp:193:25: note: built-in candidate operator*(double, long double)
+../../../../shape_cnn.cpp:193:25: note: built-in candidate operator*(double, __float128)
+../../../../shape_cnn.cpp:193:25: note: built-in candidate operator*(double, int)
+../../../../shape_cnn.cpp:193:25: note: built-in candidate operator*(double, long)
+../../../../shape_cnn.cpp:193:25: note: built-in candidate operator*(double, long long)
+../../../../shape_cnn.cpp:193:25: note: built-in candidate operator*(double, __int128)
+../../../../shape_cnn.cpp:193:25: note: built-in candidate operator*(double, unsigned int)
+../../../../shape_cnn.cpp:193:25: note: built-in candidate operator*(double, unsigned long)
+../../../../shape_cnn.cpp:193:25: note: built-in candidate operator*(double, unsigned long long)
+../../../../shape_cnn.cpp:193:25: note: built-in candidate operator*(double, unsigned __int128)
+7 errors generated.
+make: *** [csim.mk:97: obj/shape_cnn.o] Error 1
+ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s).
+INFO: [SIM 211-3] *************** CSIM finish ***************
+ERROR: CSIM Failed
+INFO: [HLS 200-112] Total CPU user time: 2.18 seconds. Total CPU system time: 0.46 seconds. Total elapsed time: 2.57 seconds; peak allocated memory: 261.844 MB.

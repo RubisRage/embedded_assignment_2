@@ -1,0 +1,63 @@
+  **** HLS Build v2026.1 6493734
+INFO: [HLS 200-2005] Using work_dir /home/rubisrage/Projects/vivado-projects/assignment_2_vitis/shape_cnn/shape_cnn 
+INFO: [HLS 200-2176] Writing Vitis IDE component file /home/rubisrage/Projects/vivado-projects/assignment_2_vitis/shape_cnn/shape_cnn/vitis-comp.json
+INFO: [HLS 200-10] Creating and opening component '/home/rubisrage/Projects/vivado-projects/assignment_2_vitis/shape_cnn/shape_cnn'.
+INFO: [HLS 200-2174] Applying component config ini file hls_config.cfg
+INFO: [HLS 200-1465] Applying config ini 'syn.file=shape_cnn.cpp' from hls_config.cfg(10)
+INFO: [HLS 200-10] Adding design file '/home/rubisrage/Projects/vivado-projects/assignment_2_vitis/shape_cnn/shape_cnn.cpp' to the project
+INFO: [HLS 200-1465] Applying config ini 'syn.file=ds_cnn_weights.h' from hls_config.cfg(11)
+INFO: [HLS 200-10] Adding design file '/home/rubisrage/Projects/vivado-projects/assignment_2_vitis/shape_cnn/ds_cnn_weights.h' to the project
+INFO: [HLS 200-1465] Applying config ini 'syn.file=ds_cnn_weights_data.h' from hls_config.cfg(12)
+INFO: [HLS 200-10] Adding design file '/home/rubisrage/Projects/vivado-projects/assignment_2_vitis/shape_cnn/ds_cnn_weights_data.h' to the project
+INFO: [HLS 200-1465] Applying config ini 'tb.file=tb_shape_cnn.cpp' from hls_config.cfg(9)
+INFO: [HLS 200-10] Adding test bench file '/home/rubisrage/Projects/vivado-projects/assignment_2_vitis/shape_cnn/tb_shape_cnn.cpp' to the project
+INFO: [HLS 200-1465] Applying config ini 'syn.top=ds_cnn' from hls_config.cfg(8)
+INFO: [HLS 200-1465] Applying config ini 'part=xc7z020clg400-1' from hls_config.cfg(1)
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+INFO: [HLS 200-1465] Applying config ini 'clock=10' from hls_config.cfg(6)
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1465] Applying config ini 'clock_uncertainty=27%' from hls_config.cfg(7)
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 2.7ns.
+INFO: [HLS 200-1465] Applying config ini 'package.output.format=ip_catalog' from hls_config.cfg(4)
+INFO: [HLS 200-2176] Writing Vitis IDE component file /home/rubisrage/Projects/vivado-projects/assignment_2_vitis/shape_cnn/shape_cnn/vitis-comp.json
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [HLS 200-2191] C-Simulation will use clang-16 as the compiler
+INFO: [HLS 200-2036] Building debug C Simulation binaries
+   Compiling ../../../../shape_cnn.cpp in debug mode
+In file included from ../../../../shape_cnn.cpp:3:
+In file included from ../../../../ds_cnn_weights_data.h:37:
+../../../../weights_cstyle_folded/layer_4_cls_1x1_WEIGHTS.txt:1:61: error: excess elements in array initializer
+{{1.5584553480148315, 1.175323247909546, 9.097597122192383, -0.684052050113678, 1.0538212060928345, -8.429485321044922},
+                                                            ^~~~~~~~~~~~~~~~~~
+../../../../weights_cstyle_folded/layer_4_cls_1x1_WEIGHTS.txt:2:62: error: excess elements in array initializer
+{3.7606256008148193, 1.433253526687622, -2.8557960987091064, -0.8515334725379944, -1.3976038694381714, 1.263259768486023},
+                                                             ^~~~~~~~~~~~~~~~~~~
+../../../../weights_cstyle_folded/layer_4_cls_1x1_WEIGHTS.txt:3:63: error: excess elements in array initializer
+{2.4114794731140137, 0.9328733086585999, -2.4898688793182373, -0.9459750652313232, -2.0107247829437256, 1.115058183670044},
+                                                              ^~~~~~~~~~~~~~~~~~~
+../../../../weights_cstyle_folded/layer_4_cls_1x1_WEIGHTS.txt:4:67: error: excess elements in array initializer
+{-0.0006884640897624195, 0.11593539267778397, -6.455649375915527, 0.2642596662044525, 1.6951000690460205, 3.577115535736084},
+                                                                  ^~~~~~~~~~~~~~~~~~
+../../../../weights_cstyle_folded/layer_4_cls_1x1_WEIGHTS.txt:5:60: error: excess elements in array initializer
+{2.3585424423217773, 2.620187759399414, 13.46545124053955, -1.4603486061096191, -2.2202110290527344, -10.911233901977539},
+                                                           ^~~~~~~~~~~~~~~~~~~
+../../../../weights_cstyle_folded/layer_4_cls_1x1_WEIGHTS.txt:6:63: error: excess elements in array initializer
+{-5.197179794311523, -4.625103950500488, -0.5731558799743652, 1.9228863716125488, 3.7131078243255615, 1.6024171113967896},
+                                                              ^~~~~~~~~~~~~~~~~~
+../../../../weights_cstyle_folded/layer_4_cls_1x1_WEIGHTS.txt:7:63: error: excess elements in array initializer
+{-34.21723175048828, -10.300600051879883, 2.2553486824035645, 7.322467803955078, 6.860365867614746, 4.763568878173828},
+                                                              ^~~~~~~~~~~~~~~~~
+../../../../weights_cstyle_folded/layer_4_cls_1x1_WEIGHTS.txt:8:63: error: excess elements in array initializer
+{2.7223947048187256, 1.5750013589859009, -3.2133519649505615, -0.7342602610588074, -2.1565263271331787, 2.0059611797332764}}
+                                                              ^~~~~~~~~~~~~~~~~~~
+In file included from ../../../../shape_cnn.cpp:3:
+In file included from ../../../../ds_cnn_weights_data.h:41:
+../../../../weights_cstyle_folded/layer_4_cls_1x1_BIAS.txt:1:63: error: excess elements in array initializer
+{1.9802906513214111, 2.3271799087524414, -2.6775004863739014, -0.7243048548698425, -0.9702295064926147, 0.7095395922660828}
+                                                              ^~~~~~~~~~~~~~~~~~~
+9 errors generated.
+make: *** [csim.mk:97: obj/shape_cnn.o] Error 1
+ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s).
+INFO: [SIM 211-3] *************** CSIM finish ***************
+ERROR: CSIM Failed
+INFO: [HLS 200-112] Total CPU user time: 2.68 seconds. Total CPU system time: 0.57 seconds. Total elapsed time: 3.37 seconds; peak allocated memory: 261.844 MB.

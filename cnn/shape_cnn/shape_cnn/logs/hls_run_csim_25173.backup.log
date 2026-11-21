@@ -1,0 +1,60 @@
+  **** HLS Build v2026.1 6493734
+INFO: [HLS 200-2005] Using work_dir /home/rubisrage/Projects/vivado-projects/assignment_2_vitis/shape_cnn/shape_cnn 
+INFO: [HLS 200-2176] Writing Vitis IDE component file /home/rubisrage/Projects/vivado-projects/assignment_2_vitis/shape_cnn/shape_cnn/vitis-comp.json
+INFO: [HLS 200-10] Creating and opening component '/home/rubisrage/Projects/vivado-projects/assignment_2_vitis/shape_cnn/shape_cnn'.
+INFO: [HLS 200-2174] Applying component config ini file hls_config.cfg
+INFO: [HLS 200-1465] Applying config ini 'syn.file=shape_cnn.cpp' from hls_config.cfg(10)
+INFO: [HLS 200-10] Adding design file '/home/rubisrage/Projects/vivado-projects/assignment_2_vitis/shape_cnn/shape_cnn.cpp' to the project
+INFO: [HLS 200-1465] Applying config ini 'syn.file=ds_cnn_weights.h' from hls_config.cfg(11)
+INFO: [HLS 200-10] Adding design file '/home/rubisrage/Projects/vivado-projects/assignment_2_vitis/shape_cnn/ds_cnn_weights.h' to the project
+INFO: [HLS 200-1465] Applying config ini 'syn.file=ds_cnn_weights_data.h' from hls_config.cfg(12)
+INFO: [HLS 200-10] Adding design file '/home/rubisrage/Projects/vivado-projects/assignment_2_vitis/shape_cnn/ds_cnn_weights_data.h' to the project
+INFO: [HLS 200-1465] Applying config ini 'tb.file=tb_shape_cnn.cpp' from hls_config.cfg(9)
+INFO: [HLS 200-10] Adding test bench file '/home/rubisrage/Projects/vivado-projects/assignment_2_vitis/shape_cnn/tb_shape_cnn.cpp' to the project
+INFO: [HLS 200-1465] Applying config ini 'syn.top=ds_cnn' from hls_config.cfg(8)
+INFO: [HLS 200-1465] Applying config ini 'part=xc7z020clg400-1' from hls_config.cfg(1)
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+INFO: [HLS 200-1465] Applying config ini 'clock=10' from hls_config.cfg(6)
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1465] Applying config ini 'clock_uncertainty=27%' from hls_config.cfg(7)
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 2.7ns.
+INFO: [HLS 200-1465] Applying config ini 'package.output.format=ip_catalog' from hls_config.cfg(4)
+INFO: [HLS 200-2176] Writing Vitis IDE component file /home/rubisrage/Projects/vivado-projects/assignment_2_vitis/shape_cnn/shape_cnn/vitis-comp.json
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [HLS 200-2191] C-Simulation will use clang-16 as the compiler
+INFO: [HLS 200-2036] Building debug C Simulation binaries
+   Compiling ../../../../shape_cnn.cpp in debug mode
+In file included from ../../../../shape_cnn.cpp:3:
+../../../../ds_cnn_weights_data.h:9:14: error: redefinition of 'CONV1_W' with a different type: 'const data_t[9][16]' (aka 'const ap_fixed<16, 8, AP_RND, AP_SAT>[9][16]') vs 'const w_t[9][16]' (aka 'const ap_fixed<16, 4, AP_RND, AP_SAT>[9][16]')
+const data_t CONV1_W[9][C1] =
+             ^
+../../../../ds_cnn_weights.h:31:18: note: previous declaration is here
+extern const w_t CONV1_W[9][C1];     // (3*3) x 16
+                 ^
+In file included from ../../../../shape_cnn.cpp:3:
+../../../../ds_cnn_weights_data.h:18:14: error: redefinition of 'DW_W' with a different type: 'const data_t[16][9]' (aka 'const ap_fixed<16, 8, AP_RND, AP_SAT>[16][9]') vs 'const w_t[16][9]' (aka 'const ap_fixed<16, 4, AP_RND, AP_SAT>[16][9]')
+const data_t DW_W[C1][9] =
+             ^
+../../../../ds_cnn_weights.h:35:18: note: previous declaration is here
+extern const w_t DW_W[C1][9];        // 16 x (3*3)
+                 ^
+In file included from ../../../../shape_cnn.cpp:3:
+../../../../ds_cnn_weights_data.h:27:14: error: redefinition of 'PW_W' with a different type: 'const data_t[16][8]' (aka 'const ap_fixed<16, 8, AP_RND, AP_SAT>[16][8]') vs 'const w_t[16][8]' (aka 'const ap_fixed<16, 4, AP_RND, AP_SAT>[16][8]')
+const data_t PW_W[C1][BOTTLENECK_CH] =
+             ^
+../../../../ds_cnn_weights.h:39:18: note: previous declaration is here
+extern const w_t PW_W[C1][BOTTLENECK_CH];  // 16 x 8
+                 ^
+In file included from ../../../../shape_cnn.cpp:3:
+../../../../ds_cnn_weights_data.h:36:14: error: redefinition of 'CLS_W' with a different type: 'const data_t[8][6]' (aka 'const ap_fixed<16, 8, AP_RND, AP_SAT>[8][6]') vs 'const w_t[8][6]' (aka 'const ap_fixed<16, 4, AP_RND, AP_SAT>[8][6]')
+const data_t CLS_W[BOTTLENECK_CH][N_CLASSES] =
+             ^
+../../../../ds_cnn_weights.h:43:18: note: previous declaration is here
+extern const w_t CLS_W[BOTTLENECK_CH][N_CLASSES]; // 8 x 4
+                 ^
+4 errors generated.
+make: *** [csim.mk:97: obj/shape_cnn.o] Error 1
+ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s).
+INFO: [SIM 211-3] *************** CSIM finish ***************
+ERROR: CSIM Failed
+INFO: [HLS 200-112] Total CPU user time: 2.42 seconds. Total CPU system time: 0.49 seconds. Total elapsed time: 2.8 seconds; peak allocated memory: 261.855 MB.

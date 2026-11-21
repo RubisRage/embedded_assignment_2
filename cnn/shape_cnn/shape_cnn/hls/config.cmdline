@@ -1,0 +1,3 @@
+relativeroot=/home/rubisrage/Projects/vivado-projects/assignment_2_vitis/shape_cnn
+original_argv=--mode hls --package --config /home/rubisrage/Projects/vivado-projects/assignment_2_vitis/shape_cnn/hls_config.cfg --work_dir shape_cnn 
+

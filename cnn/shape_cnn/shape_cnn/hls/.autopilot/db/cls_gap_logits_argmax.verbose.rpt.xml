@@ -1,0 +1,167 @@
+<profile>
+
+<section name = "Vitis HLS Report for 'cls_gap_logits_argmax'" level="0">
+<item name = "Date">Sat Nov 21 01:00:40 2026
+</item>
+<item name = "Version">2026.1 (Build 6493734 on Jun 16 2026)</item>
+<item name = "Project">shape_cnn</item>
+<item name = "Solution">hls</item>
+<item name = "Product family">zynq</item>
+<item name = "Target device">xc7z020-clg400-1</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00 ns, 7.246 ns, 2.70 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">263, 263, 2.630 us, 2.630 us, 263, 263, no</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+<column name="grp_cls_gap_logits_argmax_Pipeline_VITIS_LOOP_177_2_VITIS_LOOP_178_3_VITIS_LOOP_179_s_fu_154">cls_gap_logits_argmax_Pipeline_VITIS_LOOP_177_2_VITIS_LOOP_178_3_VITIS_LOOP_179_s, 208, 208, 2.080 us, 2.080 us, 0, 0, loop pipeline stp</column>
+<column name="grp_cls_gap_logits_argmax_Pipeline_VITIS_LOOP_187_5_fu_168">cls_gap_logits_argmax_Pipeline_VITIS_LOOP_187_5, 14, 14, 0.140 us, 0.140 us, 0, 0, loop pipeline stp</column>
+<column name="grp_cls_gap_logits_argmax_Pipeline_VITIS_LOOP_194_6_fu_180">cls_gap_logits_argmax_Pipeline_VITIS_LOOP_194_6, 24, 24, 0.240 us, 0.240 us, 0, 0, loop pipeline stp</column>
+<column name="grp_cls_gap_logits_argmax_Pipeline_VITIS_LOOP_207_8_fu_218">cls_gap_logits_argmax_Pipeline_VITIS_LOOP_207_8, 7, 7, 70.000 ns, 70.000 ns, 0, 0, loop pipeline stp</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Utilization Estimates" level="0">
+<item name = "Summary"><table name="" hasTotal="1">
+<keys size="6">Name, BRAM_18K, DSP, FF, LUT, URAM</keys>
+<column name="DSP">-, -, -, -, -</column>
+<column name="Expression">-, -, 0, 128, -</column>
+<column name="FIFO">-, -, -, -, -</column>
+<column name="Instance">0, 16, 4757, 5282, -</column>
+<column name="Memory">-, -, -, -, -</column>
+<column name="Multiplexer">-, -, 0, 177, -</column>
+<column name="Register">-, -, 335, -, -</column>
+<specialColumn name="Available">280, 220, 106400, 53200, 0</specialColumn>
+<specialColumn name="Utilization (%)">0, 7, 4, 10, 0</specialColumn>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="1">
+<keys size="7">Instance, Module, BRAM_18K, DSP, FF, LUT, URAM</keys>
+<column name="grp_cls_gap_logits_argmax_Pipeline_VITIS_LOOP_177_2_VITIS_LOOP_178_3_VITIS_LOOP_179_s_fu_154">cls_gap_logits_argmax_Pipeline_VITIS_LOOP_177_2_VITIS_LOOP_178_3_VITIS_LOOP_179_s, 0, 0, 218, 657, 0</column>
+<column name="grp_cls_gap_logits_argmax_Pipeline_VITIS_LOOP_187_5_fu_168">cls_gap_logits_argmax_Pipeline_VITIS_LOOP_187_5, 0, 0, 317, 826, 0</column>
+<column name="grp_cls_gap_logits_argmax_Pipeline_VITIS_LOOP_194_6_fu_180">cls_gap_logits_argmax_Pipeline_VITIS_LOOP_194_6, 0, 16, 4105, 3497, 0</column>
+<column name="grp_cls_gap_logits_argmax_Pipeline_VITIS_LOOP_207_8_fu_218">cls_gap_logits_argmax_Pipeline_VITIS_LOOP_207_8, 0, 0, 117, 302, 0</column>
+</table>
+</item>
+<item name = "DSP"><table name="" hasTotal="0">
+<keys size="3">Instance, Module, Expression</keys>
+</table>
+</item>
+<item name = "Memory"><table name="" hasTotal="1">
+<keys size="10">Memory, Module, BRAM_18K, FF, LUT, URAM, Words, Bits, Banks, W*Bits*Banks</keys>
+</table>
+</item>
+<item name = "FIFO"><table name="" hasTotal="1">
+<keys size="8">Name, BRAM_18K, FF, LUT, URAM, Depth, Bits, Size:D*B</keys>
+</table>
+</item>
+<item name = "Expression"><table name="" hasTotal="1">
+<keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
+<column name="maxv_6_fu_342_p2">+, 0, 0, 23, 16, 16</column>
+<column name="and_ln205_1_fu_424_p2">and, 0, 0, 2, 1, 1</column>
+<column name="and_ln205_2_fu_438_p2">and, 0, 0, 2, 1, 1</column>
+<column name="and_ln205_3_fu_462_p2">and, 0, 0, 2, 1, 1</column>
+<column name="and_ln205_4_fu_468_p2">and, 0, 0, 2, 1, 1</column>
+<column name="and_ln205_5_fu_486_p2">and, 0, 0, 2, 1, 1</column>
+<column name="and_ln205_fu_362_p2">and, 0, 0, 2, 1, 1</column>
+<column name="icmp_ln205_1_fu_398_p2">icmp, 0, 0, 13, 10, 2</column>
+<column name="icmp_ln205_2_fu_404_p2">icmp, 0, 0, 13, 10, 1</column>
+<column name="icmp_ln205_fu_384_p2">icmp, 0, 0, 14, 9, 2</column>
+<column name="or_ln205_1_fu_500_p2">or, 0, 0, 2, 1, 1</column>
+<column name="or_ln205_2_fu_474_p2">or, 0, 0, 2, 1, 1</column>
+<column name="or_ln205_fu_450_p2">or, 0, 0, 2, 1, 1</column>
+<column name="maxv_7_fu_506_p3">select, 0, 0, 16, 1, 16</column>
+<column name="select_ln205_1_fu_430_p3">select, 0, 0, 2, 1, 1</column>
+<column name="select_ln205_2_fu_492_p3">select, 0, 0, 17, 1, 15</column>
+<column name="select_ln205_fu_410_p3">select, 0, 0, 2, 1, 1</column>
+<column name="xor_ln205_1_fu_418_p2">xor, 0, 0, 2, 1, 2</column>
+<column name="xor_ln205_2_fu_444_p2">xor, 0, 0, 2, 1, 2</column>
+<column name="xor_ln205_3_fu_456_p2">xor, 0, 0, 2, 1, 2</column>
+<column name="xor_ln205_4_fu_480_p2">xor, 0, 0, 2, 1, 2</column>
+<column name="xor_ln205_fu_356_p2">xor, 0, 0, 2, 1, 2</column>
+</table>
+</item>
+<item name = "Multiplexer"><table name="" hasTotal="1">
+<keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
+<column name="ap_NS_fsm">65, 12, 1, 12</column>
+<column name="gap_1_fu_126">14, 3, 38, 114</column>
+<column name="gap_2_fu_130">14, 3, 38, 114</column>
+<column name="gap_3_fu_134">14, 3, 38, 114</column>
+<column name="gap_4_fu_138">14, 3, 38, 114</column>
+<column name="gap_5_fu_142">14, 3, 38, 114</column>
+<column name="gap_6_fu_146">14, 3, 38, 114</column>
+<column name="gap_7_fu_150">14, 3, 38, 114</column>
+<column name="gap_fu_122">14, 3, 38, 114</column>
+</table>
+</item>
+<item name = "Register"><table name="" hasTotal="1">
+<keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
+<column name="ap_CS_fsm">11, 0, 11, 0</column>
+<column name="gap_1_fu_126">38, 0, 38, 0</column>
+<column name="gap_2_fu_130">38, 0, 38, 0</column>
+<column name="gap_3_fu_134">38, 0, 38, 0</column>
+<column name="gap_4_fu_138">38, 0, 38, 0</column>
+<column name="gap_5_fu_142">38, 0, 38, 0</column>
+<column name="gap_6_fu_146">38, 0, 38, 0</column>
+<column name="gap_7_fu_150">38, 0, 38, 0</column>
+<column name="gap_fu_122">38, 0, 38, 0</column>
+<column name="grp_cls_gap_logits_argmax_Pipeline_VITIS_LOOP_177_2_VITIS_LOOP_178_3_VITIS_LOOP_179_s_fu_154_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_cls_gap_logits_argmax_Pipeline_VITIS_LOOP_187_5_fu_168_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_cls_gap_logits_argmax_Pipeline_VITIS_LOOP_194_6_fu_180_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_cls_gap_logits_argmax_Pipeline_VITIS_LOOP_207_8_fu_218_ap_start_reg">1, 0, 1, 0</column>
+<column name="maxv_7_reg_667">16, 0, 16, 0</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Interface" level="0">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
+<column name="ap_clk">in, 1, ap_ctrl_hs, cls_gap_logits_argmax, return value</column>
+<column name="ap_rst">in, 1, ap_ctrl_hs, cls_gap_logits_argmax, return value</column>
+<column name="ap_start">in, 1, ap_ctrl_hs, cls_gap_logits_argmax, return value</column>
+<column name="ap_done">out, 1, ap_ctrl_hs, cls_gap_logits_argmax, return value</column>
+<column name="ap_idle">out, 1, ap_ctrl_hs, cls_gap_logits_argmax, return value</column>
+<column name="ap_ready">out, 1, ap_ctrl_hs, cls_gap_logits_argmax, return value</column>
+<column name="ap_return">out, 32, ap_ctrl_hs, cls_gap_logits_argmax, return value</column>
+<column name="logits_out_address0">out, 3, ap_memory, logits_out, array</column>
+<column name="logits_out_ce0">out, 1, ap_memory, logits_out, array</column>
+<column name="logits_out_we0">out, 1, ap_memory, logits_out, array</column>
+<column name="logits_out_d0">out, 16, ap_memory, logits_out, array</column>
+<column name="bins_r_address0">out, 8, ap_memory, bins_r, array</column>
+<column name="bins_r_ce0">out, 1, ap_memory, bins_r, array</column>
+<column name="bins_r_q0">in, 15, ap_memory, bins_r, array</column>
+</table>
+</item>
+</section>
+</profile>

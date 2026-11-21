@@ -1,0 +1,254 @@
+{
+    "1": {
+        "name": "depthwise_pointwise_relu_fused",
+        "file": "shape_cnn.cpp",
+        "fileloc": "80",
+        "instructions": "176",
+        "total_instructions": "1154",
+        "calls": "3 8",
+        "basicblocks": "7",
+        "memory_accesses": "0",
+        "control_depth": "0",
+        "def_use_depth": "1",
+        "loads": {
+            "L": "20"
+        },
+        "stores": {
+            "L": "6"
+        },
+        "loops": {
+            "L": "1",
+            "N": "1"
+        }
+    },
+    "2": {
+        "name": "cls_gap_logits_argmax_Pipeline_VITIS_LOOP_194_6",
+        "file": "shape_cnn.cpp",
+        "fileloc": "191",
+        "instructions": "405",
+        "total_instructions": "405",
+        "calls": "",
+        "basicblocks": "11",
+        "memory_accesses": "18",
+        "control_depth": "2",
+        "def_use_depth": "1",
+        "loads": {
+            "G": "9",
+            "L": "7"
+        },
+        "stores": {
+            "L": "8",
+            "T": "1"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "3": {
+        "name": "depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_94_3",
+        "file": "shape_cnn.cpp",
+        "fileloc": "90",
+        "instructions": "537",
+        "total_instructions": "537",
+        "calls": "",
+        "basicblocks": "21",
+        "memory_accesses": "109",
+        "control_depth": "2",
+        "def_use_depth": "1",
+        "loads": {
+            "G": "91",
+            "L": "17"
+        },
+        "stores": {
+            "L": "18"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "4": {
+        "name": "ds_cnn_Pipeline_VITIS_LOOP_240_1",
+        "file": "shape_cnn.cpp",
+        "fileloc": "240",
+        "instructions": "85",
+        "total_instructions": "85",
+        "calls": "",
+        "basicblocks": "16",
+        "memory_accesses": "17",
+        "control_depth": "2",
+        "def_use_depth": "1",
+        "loads": {
+            "L": "4"
+        },
+        "stores": {
+            "G": "8",
+            "L": "8"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "5": {
+        "name": "cls_gap_logits_argmax_Pipeline_VITIS_LOOP_207_8",
+        "file": "shape_cnn.cpp",
+        "fileloc": "204",
+        "instructions": "65",
+        "total_instructions": "65",
+        "calls": "",
+        "basicblocks": "4",
+        "memory_accesses": "6",
+        "control_depth": "1",
+        "def_use_depth": "1",
+        "loads": {
+            "L": "4"
+        },
+        "stores": {
+            "L": "6"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "6": {
+        "name": "cls_gap_logits_argmax_Pipeline_VITIS_LOOP_187_5",
+        "file": "shape_cnn.cpp",
+        "fileloc": "187",
+        "instructions": "138",
+        "total_instructions": "138",
+        "calls": "",
+        "basicblocks": "48",
+        "memory_accesses": "42",
+        "control_depth": "5",
+        "def_use_depth": "3",
+        "loads": {
+            "L": "1"
+        },
+        "stores": {
+            "L": "2"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "7": {
+        "name": "cls_gap_logits_argmax",
+        "file": "shape_cnn.cpp",
+        "fileloc": "164",
+        "instructions": "77",
+        "total_instructions": "839",
+        "calls": "10 6 2 5",
+        "basicblocks": "1",
+        "memory_accesses": "0",
+        "control_depth": "0",
+        "def_use_depth": "14",
+        "loads": {
+            "L": "15"
+        },
+        "stores": {
+            "L": "8"
+        }
+    },
+    "8": {
+        "name": "depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6",
+        "file": "shape_cnn.cpp",
+        "fileloc": "120",
+        "instructions": "441",
+        "total_instructions": "441",
+        "calls": "",
+        "basicblocks": "35",
+        "memory_accesses": "43",
+        "control_depth": "3",
+        "def_use_depth": "1",
+        "loads": {
+            "G": "17",
+            "L": "1"
+        },
+        "stores": {
+            "G": "24",
+            "L": "2"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "0": {
+        "name": "ds_cnn",
+        "file": "shape_cnn.cpp",
+        "fileloc": "217",
+        "instructions": "67",
+        "total_instructions": "3412",
+        "calls": "4 11 1 9 7",
+        "basicblocks": "1",
+        "memory_accesses": "0",
+        "control_depth": "0",
+        "def_use_depth": "2"
+    },
+    "9": {
+        "name": "avgpool6x8",
+        "file": "shape_cnn.cpp",
+        "fileloc": "138",
+        "instructions": "367",
+        "total_instructions": "367",
+        "calls": "",
+        "basicblocks": "4",
+        "memory_accesses": "59",
+        "control_depth": "1",
+        "def_use_depth": "1",
+        "loads": {
+            "G": "48",
+            "L": "5"
+        },
+        "stores": {
+            "G": "1",
+            "L": "10"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "10": {
+        "name": "cls_gap_logits_argmax_Pipeline_VITIS_LOOP_177_2_VITIS_LOOP_178_3_VITIS_LOOP_179_",
+        "file": "shape_cnn.cpp",
+        "fileloc": "177",
+        "instructions": "154",
+        "total_instructions": "154",
+        "calls": "",
+        "basicblocks": "48",
+        "memory_accesses": "51",
+        "control_depth": "5",
+        "def_use_depth": "3",
+        "loads": {
+            "G": "1",
+            "L": "5"
+        },
+        "stores": {
+            "L": "10"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "11": {
+        "name": "conv1_relu_maxpool",
+        "file": "shape_cnn.cpp",
+        "fileloc": "28",
+        "instructions": "900",
+        "total_instructions": "900",
+        "calls": "",
+        "basicblocks": "20",
+        "memory_accesses": "61",
+        "control_depth": "3",
+        "def_use_depth": "2",
+        "loads": {
+            "G": "42",
+            "L": "5"
+        },
+        "stores": {
+            "G": "9",
+            "L": "10"
+        },
+        "loops": {
+            "L": "1"
+        }
+    }
+}

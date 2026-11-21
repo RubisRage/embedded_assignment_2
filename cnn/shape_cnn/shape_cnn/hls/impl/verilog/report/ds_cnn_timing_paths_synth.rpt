@@ -1,0 +1,1067 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2026 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2026.1 (lin64) Build 6511674 Tue Jun 16 11:01:26 MDT 2026
+| Date         : Sat Nov 21 01:02:50 2026
+| Host         : yoga running 64-bit Ubuntu 24.04.5 LTS
+| Command      : report_timing -max_paths 10 -file ./report/ds_cnn_timing_paths_synth.rpt
+| Design       : bd_0_wrapper
+| Device       : 7z020-clg400
+| Speed File   : -1  PRODUCTION 1.12 2019-11-22
+| Design State : Synthesized
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Timing Report
+
+Slack (MET) :             1.734ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/tmp_85_reg_3109_reg[0]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/tmp_42_reg_3152_reg[0]/S
+                            (rising edge-triggered cell FDSE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        7.658ns  (logic 3.999ns (52.220%)  route 3.659ns (47.780%))
+  Logic Levels:           21  (CARRY4=18 LUT2=1 LUT4=2)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 10.924 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  <hidden>
+                                                      0.000     0.000 r  ap_clk
+                         net (fo=7211, unset)         0.973     0.973    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/ap_clk
+                         FDRE                                         r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/tmp_85_reg_3109_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+                         FDRE (Prop_fdre_C_Q)         0.518     1.491 r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/tmp_85_reg_3109_reg[0]/Q
+                         net (fo=40, unplaced)        0.818     2.309    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/tmp_85_reg_3109[0]
+                         LUT4 (Prop_lut4_I1_O)        0.295     2.604 r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry_i_3/O
+                         net (fo=1, unplaced)         0.000     2.604    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry_i_3_n_4
+                         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.533     3.137 r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry/CO[3]
+                         net (fo=1, unplaced)         0.009     3.146    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry_n_4
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     3.263 r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__0/CO[3]
+                         net (fo=1, unplaced)         0.000     3.263    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__0_n_4
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     3.380 r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__1/CO[3]
+                         net (fo=1, unplaced)         0.000     3.380    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__1_n_4
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     3.497 r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__2/CO[3]
+                         net (fo=1, unplaced)         0.000     3.497    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__2_n_4
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     3.614 r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__3/CO[3]
+                         net (fo=1, unplaced)         0.000     3.614    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__3_n_4
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     3.731 r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__4/CO[3]
+                         net (fo=1, unplaced)         0.000     3.731    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__4_n_4
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     3.848 r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__5/CO[3]
+                         net (fo=1, unplaced)         0.000     3.848    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__5_n_4
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     3.965 r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__6/CO[3]
+                         net (fo=1, unplaced)         0.000     3.965    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__6_n_4
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     4.082 r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__7/CO[3]
+                         net (fo=41, unplaced)        0.995     5.077    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__7_n_4
+                         LUT4 (Prop_lut4_I2_O)        0.124     5.201 r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry_i_3/O
+                         net (fo=1, unplaced)         0.000     5.201    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry_i_3_n_4
+                         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.533     5.734 r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry/CO[3]
+                         net (fo=1, unplaced)         0.009     5.743    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry_n_4
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     5.860 r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__0/CO[3]
+                         net (fo=1, unplaced)         0.000     5.860    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__0_n_4
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     5.977 r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__1/CO[3]
+                         net (fo=1, unplaced)         0.000     5.977    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__1_n_4
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     6.094 r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__2/CO[3]
+                         net (fo=1, unplaced)         0.000     6.094    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__2_n_4
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     6.211 r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__3/CO[3]
+                         net (fo=1, unplaced)         0.000     6.211    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__3_n_4
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     6.328 r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__4/CO[3]
+                         net (fo=1, unplaced)         0.000     6.328    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__4_n_4
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     6.445 r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__5/CO[3]
+                         net (fo=1, unplaced)         0.000     6.445    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__5_n_4
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     6.562 r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__6/CO[3]
+                         net (fo=1, unplaced)         0.000     6.562    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__6_n_4
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     6.679 r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__7/CO[3]
+                         net (fo=28, unplaced)        0.986     7.665    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__7_n_4
+                         LUT2 (Prop_lut2_I1_O)        0.124     7.789 r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/tmp_91_reg_3142[0]_i_1/O
+                         net (fo=26, unplaced)        0.842     8.631    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/tmp_91_reg_3142[0]_i_1_n_4
+                         FDSE                                         r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/tmp_42_reg_3152_reg[0]/S
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)    10.000    10.000 r  <hidden>
+                                                      0.000    10.000 r  ap_clk
+                         net (fo=7211, unset)         0.924    10.924    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/ap_clk
+                         FDSE                                         r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/tmp_42_reg_3152_reg[0]/C
+                         clock pessimism              0.000    10.924    <hidden>
+                         clock uncertainty           -0.035    10.889    <hidden>
+                         FDSE (Setup_fdse_C_S)       -0.524    10.365    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/tmp_42_reg_3152_reg[0]
+  -------------------------------------------------------------------
+                         required time                         10.365    <hidden>
+                         arrival time                          -8.631    <hidden>
+  -------------------------------------------------------------------
+                         slack                                  1.734    <hidden>
+
+Slack (MET) :             1.734ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/tmp_85_reg_3109_reg[0]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/tmp_42_reg_3152_reg[1]/S
+                            (rising edge-triggered cell FDSE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        7.658ns  (logic 3.999ns (52.220%)  route 3.659ns (47.780%))
+  Logic Levels:           21  (CARRY4=18 LUT2=1 LUT4=2)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 10.924 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  <hidden>
+                                                      0.000     0.000 r  ap_clk
+                         net (fo=7211, unset)         0.973     0.973    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/ap_clk
+                         FDRE                                         r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/tmp_85_reg_3109_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+                         FDRE (Prop_fdre_C_Q)         0.518     1.491 r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/tmp_85_reg_3109_reg[0]/Q
+                         net (fo=40, unplaced)        0.818     2.309    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/tmp_85_reg_3109[0]
+                         LUT4 (Prop_lut4_I1_O)        0.295     2.604 r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry_i_3/O
+                         net (fo=1, unplaced)         0.000     2.604    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry_i_3_n_4
+                         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.533     3.137 r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry/CO[3]
+                         net (fo=1, unplaced)         0.009     3.146    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry_n_4
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     3.263 r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__0/CO[3]
+                         net (fo=1, unplaced)         0.000     3.263    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__0_n_4
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     3.380 r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__1/CO[3]
+                         net (fo=1, unplaced)         0.000     3.380    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__1_n_4
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     3.497 r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__2/CO[3]
+                         net (fo=1, unplaced)         0.000     3.497    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__2_n_4
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     3.614 r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__3/CO[3]
+                         net (fo=1, unplaced)         0.000     3.614    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__3_n_4
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     3.731 r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__4/CO[3]
+                         net (fo=1, unplaced)         0.000     3.731    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__4_n_4
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     3.848 r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__5/CO[3]
+                         net (fo=1, unplaced)         0.000     3.848    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__5_n_4
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     3.965 r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__6/CO[3]
+                         net (fo=1, unplaced)         0.000     3.965    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__6_n_4
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     4.082 r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__7/CO[3]
+                         net (fo=41, unplaced)        0.995     5.077    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__7_n_4
+                         LUT4 (Prop_lut4_I2_O)        0.124     5.201 r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry_i_3/O
+                         net (fo=1, unplaced)         0.000     5.201    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry_i_3_n_4
+                         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.533     5.734 r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry/CO[3]
+                         net (fo=1, unplaced)         0.009     5.743    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry_n_4
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     5.860 r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__0/CO[3]
+                         net (fo=1, unplaced)         0.000     5.860    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__0_n_4
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     5.977 r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__1/CO[3]
+                         net (fo=1, unplaced)         0.000     5.977    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__1_n_4
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     6.094 r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__2/CO[3]
+                         net (fo=1, unplaced)         0.000     6.094    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__2_n_4
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     6.211 r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__3/CO[3]
+                         net (fo=1, unplaced)         0.000     6.211    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__3_n_4
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     6.328 r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__4/CO[3]
+                         net (fo=1, unplaced)         0.000     6.328    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__4_n_4
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     6.445 r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__5/CO[3]
+                         net (fo=1, unplaced)         0.000     6.445    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__5_n_4
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     6.562 r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__6/CO[3]
+                         net (fo=1, unplaced)         0.000     6.562    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__6_n_4
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     6.679 r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__7/CO[3]
+                         net (fo=28, unplaced)        0.986     7.665    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__7_n_4
+                         LUT2 (Prop_lut2_I1_O)        0.124     7.789 r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/tmp_91_reg_3142[0]_i_1/O
+                         net (fo=26, unplaced)        0.842     8.631    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/tmp_91_reg_3142[0]_i_1_n_4
+                         FDSE                                         r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/tmp_42_reg_3152_reg[1]/S
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)    10.000    10.000 r  <hidden>
+                                                      0.000    10.000 r  ap_clk
+                         net (fo=7211, unset)         0.924    10.924    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/ap_clk
+                         FDSE                                         r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/tmp_42_reg_3152_reg[1]/C
+                         clock pessimism              0.000    10.924    <hidden>
+                         clock uncertainty           -0.035    10.889    <hidden>
+                         FDSE (Setup_fdse_C_S)       -0.524    10.365    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/tmp_42_reg_3152_reg[1]
+  -------------------------------------------------------------------
+                         required time                         10.365    <hidden>
+                         arrival time                          -8.631    <hidden>
+  -------------------------------------------------------------------
+                         slack                                  1.734    <hidden>
+
+Slack (MET) :             1.734ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/tmp_85_reg_3109_reg[0]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/tmp_42_reg_3152_reg[2]/S
+                            (rising edge-triggered cell FDSE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        7.658ns  (logic 3.999ns (52.220%)  route 3.659ns (47.780%))
+  Logic Levels:           21  (CARRY4=18 LUT2=1 LUT4=2)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 10.924 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  <hidden>
+                                                      0.000     0.000 r  ap_clk
+                         net (fo=7211, unset)         0.973     0.973    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/ap_clk
+                         FDRE                                         r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/tmp_85_reg_3109_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+                         FDRE (Prop_fdre_C_Q)         0.518     1.491 r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/tmp_85_reg_3109_reg[0]/Q
+                         net (fo=40, unplaced)        0.818     2.309    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/tmp_85_reg_3109[0]
+                         LUT4 (Prop_lut4_I1_O)        0.295     2.604 r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry_i_3/O
+                         net (fo=1, unplaced)         0.000     2.604    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry_i_3_n_4
+                         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.533     3.137 r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry/CO[3]
+                         net (fo=1, unplaced)         0.009     3.146    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry_n_4
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     3.263 r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__0/CO[3]
+                         net (fo=1, unplaced)         0.000     3.263    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__0_n_4
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     3.380 r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__1/CO[3]
+                         net (fo=1, unplaced)         0.000     3.380    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__1_n_4
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     3.497 r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__2/CO[3]
+                         net (fo=1, unplaced)         0.000     3.497    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__2_n_4
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     3.614 r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__3/CO[3]
+                         net (fo=1, unplaced)         0.000     3.614    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__3_n_4
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     3.731 r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__4/CO[3]
+                         net (fo=1, unplaced)         0.000     3.731    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__4_n_4
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     3.848 r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__5/CO[3]
+                         net (fo=1, unplaced)         0.000     3.848    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__5_n_4
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     3.965 r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__6/CO[3]
+                         net (fo=1, unplaced)         0.000     3.965    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__6_n_4
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     4.082 r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__7/CO[3]
+                         net (fo=41, unplaced)        0.995     5.077    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__7_n_4
+                         LUT4 (Prop_lut4_I2_O)        0.124     5.201 r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry_i_3/O
+                         net (fo=1, unplaced)         0.000     5.201    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry_i_3_n_4
+                         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.533     5.734 r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry/CO[3]
+                         net (fo=1, unplaced)         0.009     5.743    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry_n_4
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     5.860 r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__0/CO[3]
+                         net (fo=1, unplaced)         0.000     5.860    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__0_n_4
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     5.977 r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__1/CO[3]
+                         net (fo=1, unplaced)         0.000     5.977    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__1_n_4
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     6.094 r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__2/CO[3]
+                         net (fo=1, unplaced)         0.000     6.094    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__2_n_4
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     6.211 r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__3/CO[3]
+                         net (fo=1, unplaced)         0.000     6.211    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__3_n_4
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     6.328 r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__4/CO[3]
+                         net (fo=1, unplaced)         0.000     6.328    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__4_n_4
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     6.445 r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__5/CO[3]
+                         net (fo=1, unplaced)         0.000     6.445    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__5_n_4
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     6.562 r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__6/CO[3]
+                         net (fo=1, unplaced)         0.000     6.562    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__6_n_4
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     6.679 r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__7/CO[3]
+                         net (fo=28, unplaced)        0.986     7.665    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__7_n_4
+                         LUT2 (Prop_lut2_I1_O)        0.124     7.789 r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/tmp_91_reg_3142[0]_i_1/O
+                         net (fo=26, unplaced)        0.842     8.631    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/tmp_91_reg_3142[0]_i_1_n_4
+                         FDSE                                         r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/tmp_42_reg_3152_reg[2]/S
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)    10.000    10.000 r  <hidden>
+                                                      0.000    10.000 r  ap_clk
+                         net (fo=7211, unset)         0.924    10.924    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/ap_clk
+                         FDSE                                         r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/tmp_42_reg_3152_reg[2]/C
+                         clock pessimism              0.000    10.924    <hidden>
+                         clock uncertainty           -0.035    10.889    <hidden>
+                         FDSE (Setup_fdse_C_S)       -0.524    10.365    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/tmp_42_reg_3152_reg[2]
+  -------------------------------------------------------------------
+                         required time                         10.365    <hidden>
+                         arrival time                          -8.631    <hidden>
+  -------------------------------------------------------------------
+                         slack                                  1.734    <hidden>
+
+Slack (MET) :             1.734ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/tmp_85_reg_3109_reg[0]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/tmp_42_reg_3152_reg[3]/S
+                            (rising edge-triggered cell FDSE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        7.658ns  (logic 3.999ns (52.220%)  route 3.659ns (47.780%))
+  Logic Levels:           21  (CARRY4=18 LUT2=1 LUT4=2)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 10.924 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  <hidden>
+                                                      0.000     0.000 r  ap_clk
+                         net (fo=7211, unset)         0.973     0.973    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/ap_clk
+                         FDRE                                         r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/tmp_85_reg_3109_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+                         FDRE (Prop_fdre_C_Q)         0.518     1.491 r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/tmp_85_reg_3109_reg[0]/Q
+                         net (fo=40, unplaced)        0.818     2.309    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/tmp_85_reg_3109[0]
+                         LUT4 (Prop_lut4_I1_O)        0.295     2.604 r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry_i_3/O
+                         net (fo=1, unplaced)         0.000     2.604    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry_i_3_n_4
+                         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.533     3.137 r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry/CO[3]
+                         net (fo=1, unplaced)         0.009     3.146    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry_n_4
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     3.263 r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__0/CO[3]
+                         net (fo=1, unplaced)         0.000     3.263    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__0_n_4
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     3.380 r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__1/CO[3]
+                         net (fo=1, unplaced)         0.000     3.380    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__1_n_4
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     3.497 r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__2/CO[3]
+                         net (fo=1, unplaced)         0.000     3.497    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__2_n_4
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     3.614 r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__3/CO[3]
+                         net (fo=1, unplaced)         0.000     3.614    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__3_n_4
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     3.731 r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__4/CO[3]
+                         net (fo=1, unplaced)         0.000     3.731    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__4_n_4
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     3.848 r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__5/CO[3]
+                         net (fo=1, unplaced)         0.000     3.848    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__5_n_4
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     3.965 r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__6/CO[3]
+                         net (fo=1, unplaced)         0.000     3.965    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__6_n_4
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     4.082 r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__7/CO[3]
+                         net (fo=41, unplaced)        0.995     5.077    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__7_n_4
+                         LUT4 (Prop_lut4_I2_O)        0.124     5.201 r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry_i_3/O
+                         net (fo=1, unplaced)         0.000     5.201    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry_i_3_n_4
+                         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.533     5.734 r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry/CO[3]
+                         net (fo=1, unplaced)         0.009     5.743    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry_n_4
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     5.860 r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__0/CO[3]
+                         net (fo=1, unplaced)         0.000     5.860    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__0_n_4
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     5.977 r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__1/CO[3]
+                         net (fo=1, unplaced)         0.000     5.977    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__1_n_4
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     6.094 r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__2/CO[3]
+                         net (fo=1, unplaced)         0.000     6.094    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__2_n_4
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     6.211 r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__3/CO[3]
+                         net (fo=1, unplaced)         0.000     6.211    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__3_n_4
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     6.328 r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__4/CO[3]
+                         net (fo=1, unplaced)         0.000     6.328    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__4_n_4
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     6.445 r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__5/CO[3]
+                         net (fo=1, unplaced)         0.000     6.445    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__5_n_4
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     6.562 r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__6/CO[3]
+                         net (fo=1, unplaced)         0.000     6.562    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__6_n_4
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     6.679 r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__7/CO[3]
+                         net (fo=28, unplaced)        0.986     7.665    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__7_n_4
+                         LUT2 (Prop_lut2_I1_O)        0.124     7.789 r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/tmp_91_reg_3142[0]_i_1/O
+                         net (fo=26, unplaced)        0.842     8.631    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/tmp_91_reg_3142[0]_i_1_n_4
+                         FDSE                                         r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/tmp_42_reg_3152_reg[3]/S
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)    10.000    10.000 r  <hidden>
+                                                      0.000    10.000 r  ap_clk
+                         net (fo=7211, unset)         0.924    10.924    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/ap_clk
+                         FDSE                                         r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/tmp_42_reg_3152_reg[3]/C
+                         clock pessimism              0.000    10.924    <hidden>
+                         clock uncertainty           -0.035    10.889    <hidden>
+                         FDSE (Setup_fdse_C_S)       -0.524    10.365    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/tmp_42_reg_3152_reg[3]
+  -------------------------------------------------------------------
+                         required time                         10.365    <hidden>
+                         arrival time                          -8.631    <hidden>
+  -------------------------------------------------------------------
+                         slack                                  1.734    <hidden>
+
+Slack (MET) :             1.734ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/tmp_85_reg_3109_reg[0]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/tmp_42_reg_3152_reg[4]/S
+                            (rising edge-triggered cell FDSE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        7.658ns  (logic 3.999ns (52.220%)  route 3.659ns (47.780%))
+  Logic Levels:           21  (CARRY4=18 LUT2=1 LUT4=2)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 10.924 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  <hidden>
+                                                      0.000     0.000 r  ap_clk
+                         net (fo=7211, unset)         0.973     0.973    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/ap_clk
+                         FDRE                                         r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/tmp_85_reg_3109_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+                         FDRE (Prop_fdre_C_Q)         0.518     1.491 r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/tmp_85_reg_3109_reg[0]/Q
+                         net (fo=40, unplaced)        0.818     2.309    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/tmp_85_reg_3109[0]
+                         LUT4 (Prop_lut4_I1_O)        0.295     2.604 r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry_i_3/O
+                         net (fo=1, unplaced)         0.000     2.604    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry_i_3_n_4
+                         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.533     3.137 r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry/CO[3]
+                         net (fo=1, unplaced)         0.009     3.146    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry_n_4
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     3.263 r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__0/CO[3]
+                         net (fo=1, unplaced)         0.000     3.263    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__0_n_4
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     3.380 r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__1/CO[3]
+                         net (fo=1, unplaced)         0.000     3.380    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__1_n_4
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     3.497 r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__2/CO[3]
+                         net (fo=1, unplaced)         0.000     3.497    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__2_n_4
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     3.614 r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__3/CO[3]
+                         net (fo=1, unplaced)         0.000     3.614    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__3_n_4
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     3.731 r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__4/CO[3]
+                         net (fo=1, unplaced)         0.000     3.731    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__4_n_4
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     3.848 r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__5/CO[3]
+                         net (fo=1, unplaced)         0.000     3.848    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__5_n_4
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     3.965 r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__6/CO[3]
+                         net (fo=1, unplaced)         0.000     3.965    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__6_n_4
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     4.082 r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__7/CO[3]
+                         net (fo=41, unplaced)        0.995     5.077    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__7_n_4
+                         LUT4 (Prop_lut4_I2_O)        0.124     5.201 r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry_i_3/O
+                         net (fo=1, unplaced)         0.000     5.201    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry_i_3_n_4
+                         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.533     5.734 r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry/CO[3]
+                         net (fo=1, unplaced)         0.009     5.743    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry_n_4
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     5.860 r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__0/CO[3]
+                         net (fo=1, unplaced)         0.000     5.860    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__0_n_4
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     5.977 r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__1/CO[3]
+                         net (fo=1, unplaced)         0.000     5.977    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__1_n_4
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     6.094 r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__2/CO[3]
+                         net (fo=1, unplaced)         0.000     6.094    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__2_n_4
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     6.211 r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__3/CO[3]
+                         net (fo=1, unplaced)         0.000     6.211    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__3_n_4
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     6.328 r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__4/CO[3]
+                         net (fo=1, unplaced)         0.000     6.328    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__4_n_4
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     6.445 r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__5/CO[3]
+                         net (fo=1, unplaced)         0.000     6.445    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__5_n_4
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     6.562 r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__6/CO[3]
+                         net (fo=1, unplaced)         0.000     6.562    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__6_n_4
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     6.679 r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__7/CO[3]
+                         net (fo=28, unplaced)        0.986     7.665    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__7_n_4
+                         LUT2 (Prop_lut2_I1_O)        0.124     7.789 r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/tmp_91_reg_3142[0]_i_1/O
+                         net (fo=26, unplaced)        0.842     8.631    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/tmp_91_reg_3142[0]_i_1_n_4
+                         FDSE                                         r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/tmp_42_reg_3152_reg[4]/S
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)    10.000    10.000 r  <hidden>
+                                                      0.000    10.000 r  ap_clk
+                         net (fo=7211, unset)         0.924    10.924    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/ap_clk
+                         FDSE                                         r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/tmp_42_reg_3152_reg[4]/C
+                         clock pessimism              0.000    10.924    <hidden>
+                         clock uncertainty           -0.035    10.889    <hidden>
+                         FDSE (Setup_fdse_C_S)       -0.524    10.365    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/tmp_42_reg_3152_reg[4]
+  -------------------------------------------------------------------
+                         required time                         10.365    <hidden>
+                         arrival time                          -8.631    <hidden>
+  -------------------------------------------------------------------
+                         slack                                  1.734    <hidden>
+
+Slack (MET) :             1.734ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/tmp_85_reg_3109_reg[0]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/tmp_42_reg_3152_reg[5]/S
+                            (rising edge-triggered cell FDSE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        7.658ns  (logic 3.999ns (52.220%)  route 3.659ns (47.780%))
+  Logic Levels:           21  (CARRY4=18 LUT2=1 LUT4=2)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 10.924 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  <hidden>
+                                                      0.000     0.000 r  ap_clk
+                         net (fo=7211, unset)         0.973     0.973    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/ap_clk
+                         FDRE                                         r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/tmp_85_reg_3109_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+                         FDRE (Prop_fdre_C_Q)         0.518     1.491 r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/tmp_85_reg_3109_reg[0]/Q
+                         net (fo=40, unplaced)        0.818     2.309    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/tmp_85_reg_3109[0]
+                         LUT4 (Prop_lut4_I1_O)        0.295     2.604 r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry_i_3/O
+                         net (fo=1, unplaced)         0.000     2.604    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry_i_3_n_4
+                         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.533     3.137 r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry/CO[3]
+                         net (fo=1, unplaced)         0.009     3.146    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry_n_4
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     3.263 r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__0/CO[3]
+                         net (fo=1, unplaced)         0.000     3.263    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__0_n_4
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     3.380 r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__1/CO[3]
+                         net (fo=1, unplaced)         0.000     3.380    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__1_n_4
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     3.497 r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__2/CO[3]
+                         net (fo=1, unplaced)         0.000     3.497    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__2_n_4
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     3.614 r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__3/CO[3]
+                         net (fo=1, unplaced)         0.000     3.614    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__3_n_4
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     3.731 r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__4/CO[3]
+                         net (fo=1, unplaced)         0.000     3.731    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__4_n_4
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     3.848 r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__5/CO[3]
+                         net (fo=1, unplaced)         0.000     3.848    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__5_n_4
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     3.965 r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__6/CO[3]
+                         net (fo=1, unplaced)         0.000     3.965    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__6_n_4
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     4.082 r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__7/CO[3]
+                         net (fo=41, unplaced)        0.995     5.077    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__7_n_4
+                         LUT4 (Prop_lut4_I2_O)        0.124     5.201 r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry_i_3/O
+                         net (fo=1, unplaced)         0.000     5.201    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry_i_3_n_4
+                         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.533     5.734 r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry/CO[3]
+                         net (fo=1, unplaced)         0.009     5.743    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry_n_4
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     5.860 r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__0/CO[3]
+                         net (fo=1, unplaced)         0.000     5.860    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__0_n_4
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     5.977 r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__1/CO[3]
+                         net (fo=1, unplaced)         0.000     5.977    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__1_n_4
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     6.094 r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__2/CO[3]
+                         net (fo=1, unplaced)         0.000     6.094    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__2_n_4
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     6.211 r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__3/CO[3]
+                         net (fo=1, unplaced)         0.000     6.211    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__3_n_4
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     6.328 r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__4/CO[3]
+                         net (fo=1, unplaced)         0.000     6.328    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__4_n_4
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     6.445 r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__5/CO[3]
+                         net (fo=1, unplaced)         0.000     6.445    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__5_n_4
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     6.562 r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__6/CO[3]
+                         net (fo=1, unplaced)         0.000     6.562    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__6_n_4
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     6.679 r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__7/CO[3]
+                         net (fo=28, unplaced)        0.986     7.665    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__7_n_4
+                         LUT2 (Prop_lut2_I1_O)        0.124     7.789 r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/tmp_91_reg_3142[0]_i_1/O
+                         net (fo=26, unplaced)        0.842     8.631    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/tmp_91_reg_3142[0]_i_1_n_4
+                         FDSE                                         r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/tmp_42_reg_3152_reg[5]/S
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)    10.000    10.000 r  <hidden>
+                                                      0.000    10.000 r  ap_clk
+                         net (fo=7211, unset)         0.924    10.924    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/ap_clk
+                         FDSE                                         r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/tmp_42_reg_3152_reg[5]/C
+                         clock pessimism              0.000    10.924    <hidden>
+                         clock uncertainty           -0.035    10.889    <hidden>
+                         FDSE (Setup_fdse_C_S)       -0.524    10.365    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/tmp_42_reg_3152_reg[5]
+  -------------------------------------------------------------------
+                         required time                         10.365    <hidden>
+                         arrival time                          -8.631    <hidden>
+  -------------------------------------------------------------------
+                         slack                                  1.734    <hidden>
+
+Slack (MET) :             1.734ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/tmp_85_reg_3109_reg[0]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/tmp_42_reg_3152_reg[6]/S
+                            (rising edge-triggered cell FDSE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        7.658ns  (logic 3.999ns (52.220%)  route 3.659ns (47.780%))
+  Logic Levels:           21  (CARRY4=18 LUT2=1 LUT4=2)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 10.924 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  <hidden>
+                                                      0.000     0.000 r  ap_clk
+                         net (fo=7211, unset)         0.973     0.973    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/ap_clk
+                         FDRE                                         r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/tmp_85_reg_3109_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+                         FDRE (Prop_fdre_C_Q)         0.518     1.491 r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/tmp_85_reg_3109_reg[0]/Q
+                         net (fo=40, unplaced)        0.818     2.309    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/tmp_85_reg_3109[0]
+                         LUT4 (Prop_lut4_I1_O)        0.295     2.604 r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry_i_3/O
+                         net (fo=1, unplaced)         0.000     2.604    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry_i_3_n_4
+                         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.533     3.137 r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry/CO[3]
+                         net (fo=1, unplaced)         0.009     3.146    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry_n_4
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     3.263 r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__0/CO[3]
+                         net (fo=1, unplaced)         0.000     3.263    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__0_n_4
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     3.380 r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__1/CO[3]
+                         net (fo=1, unplaced)         0.000     3.380    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__1_n_4
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     3.497 r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__2/CO[3]
+                         net (fo=1, unplaced)         0.000     3.497    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__2_n_4
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     3.614 r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__3/CO[3]
+                         net (fo=1, unplaced)         0.000     3.614    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__3_n_4
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     3.731 r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__4/CO[3]
+                         net (fo=1, unplaced)         0.000     3.731    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__4_n_4
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     3.848 r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__5/CO[3]
+                         net (fo=1, unplaced)         0.000     3.848    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__5_n_4
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     3.965 r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__6/CO[3]
+                         net (fo=1, unplaced)         0.000     3.965    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__6_n_4
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     4.082 r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__7/CO[3]
+                         net (fo=41, unplaced)        0.995     5.077    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__7_n_4
+                         LUT4 (Prop_lut4_I2_O)        0.124     5.201 r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry_i_3/O
+                         net (fo=1, unplaced)         0.000     5.201    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry_i_3_n_4
+                         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.533     5.734 r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry/CO[3]
+                         net (fo=1, unplaced)         0.009     5.743    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry_n_4
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     5.860 r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__0/CO[3]
+                         net (fo=1, unplaced)         0.000     5.860    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__0_n_4
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     5.977 r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__1/CO[3]
+                         net (fo=1, unplaced)         0.000     5.977    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__1_n_4
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     6.094 r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__2/CO[3]
+                         net (fo=1, unplaced)         0.000     6.094    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__2_n_4
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     6.211 r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__3/CO[3]
+                         net (fo=1, unplaced)         0.000     6.211    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__3_n_4
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     6.328 r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__4/CO[3]
+                         net (fo=1, unplaced)         0.000     6.328    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__4_n_4
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     6.445 r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__5/CO[3]
+                         net (fo=1, unplaced)         0.000     6.445    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__5_n_4
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     6.562 r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__6/CO[3]
+                         net (fo=1, unplaced)         0.000     6.562    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__6_n_4
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     6.679 r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__7/CO[3]
+                         net (fo=28, unplaced)        0.986     7.665    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__7_n_4
+                         LUT2 (Prop_lut2_I1_O)        0.124     7.789 r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/tmp_91_reg_3142[0]_i_1/O
+                         net (fo=26, unplaced)        0.842     8.631    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/tmp_91_reg_3142[0]_i_1_n_4
+                         FDSE                                         r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/tmp_42_reg_3152_reg[6]/S
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)    10.000    10.000 r  <hidden>
+                                                      0.000    10.000 r  ap_clk
+                         net (fo=7211, unset)         0.924    10.924    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/ap_clk
+                         FDSE                                         r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/tmp_42_reg_3152_reg[6]/C
+                         clock pessimism              0.000    10.924    <hidden>
+                         clock uncertainty           -0.035    10.889    <hidden>
+                         FDSE (Setup_fdse_C_S)       -0.524    10.365    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/tmp_42_reg_3152_reg[6]
+  -------------------------------------------------------------------
+                         required time                         10.365    <hidden>
+                         arrival time                          -8.631    <hidden>
+  -------------------------------------------------------------------
+                         slack                                  1.734    <hidden>
+
+Slack (MET) :             1.734ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/tmp_85_reg_3109_reg[0]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/tmp_42_reg_3152_reg[7]/S
+                            (rising edge-triggered cell FDSE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        7.658ns  (logic 3.999ns (52.220%)  route 3.659ns (47.780%))
+  Logic Levels:           21  (CARRY4=18 LUT2=1 LUT4=2)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 10.924 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  <hidden>
+                                                      0.000     0.000 r  ap_clk
+                         net (fo=7211, unset)         0.973     0.973    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/ap_clk
+                         FDRE                                         r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/tmp_85_reg_3109_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+                         FDRE (Prop_fdre_C_Q)         0.518     1.491 r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/tmp_85_reg_3109_reg[0]/Q
+                         net (fo=40, unplaced)        0.818     2.309    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/tmp_85_reg_3109[0]
+                         LUT4 (Prop_lut4_I1_O)        0.295     2.604 r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry_i_3/O
+                         net (fo=1, unplaced)         0.000     2.604    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry_i_3_n_4
+                         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.533     3.137 r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry/CO[3]
+                         net (fo=1, unplaced)         0.009     3.146    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry_n_4
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     3.263 r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__0/CO[3]
+                         net (fo=1, unplaced)         0.000     3.263    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__0_n_4
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     3.380 r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__1/CO[3]
+                         net (fo=1, unplaced)         0.000     3.380    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__1_n_4
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     3.497 r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__2/CO[3]
+                         net (fo=1, unplaced)         0.000     3.497    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__2_n_4
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     3.614 r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__3/CO[3]
+                         net (fo=1, unplaced)         0.000     3.614    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__3_n_4
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     3.731 r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__4/CO[3]
+                         net (fo=1, unplaced)         0.000     3.731    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__4_n_4
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     3.848 r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__5/CO[3]
+                         net (fo=1, unplaced)         0.000     3.848    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__5_n_4
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     3.965 r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__6/CO[3]
+                         net (fo=1, unplaced)         0.000     3.965    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__6_n_4
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     4.082 r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__7/CO[3]
+                         net (fo=41, unplaced)        0.995     5.077    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__7_n_4
+                         LUT4 (Prop_lut4_I2_O)        0.124     5.201 r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry_i_3/O
+                         net (fo=1, unplaced)         0.000     5.201    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry_i_3_n_4
+                         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.533     5.734 r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry/CO[3]
+                         net (fo=1, unplaced)         0.009     5.743    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry_n_4
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     5.860 r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__0/CO[3]
+                         net (fo=1, unplaced)         0.000     5.860    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__0_n_4
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     5.977 r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__1/CO[3]
+                         net (fo=1, unplaced)         0.000     5.977    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__1_n_4
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     6.094 r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__2/CO[3]
+                         net (fo=1, unplaced)         0.000     6.094    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__2_n_4
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     6.211 r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__3/CO[3]
+                         net (fo=1, unplaced)         0.000     6.211    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__3_n_4
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     6.328 r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__4/CO[3]
+                         net (fo=1, unplaced)         0.000     6.328    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__4_n_4
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     6.445 r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__5/CO[3]
+                         net (fo=1, unplaced)         0.000     6.445    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__5_n_4
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     6.562 r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__6/CO[3]
+                         net (fo=1, unplaced)         0.000     6.562    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__6_n_4
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     6.679 r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__7/CO[3]
+                         net (fo=28, unplaced)        0.986     7.665    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__7_n_4
+                         LUT2 (Prop_lut2_I1_O)        0.124     7.789 r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/tmp_91_reg_3142[0]_i_1/O
+                         net (fo=26, unplaced)        0.842     8.631    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/tmp_91_reg_3142[0]_i_1_n_4
+                         FDSE                                         r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/tmp_42_reg_3152_reg[7]/S
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)    10.000    10.000 r  <hidden>
+                                                      0.000    10.000 r  ap_clk
+                         net (fo=7211, unset)         0.924    10.924    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/ap_clk
+                         FDSE                                         r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/tmp_42_reg_3152_reg[7]/C
+                         clock pessimism              0.000    10.924    <hidden>
+                         clock uncertainty           -0.035    10.889    <hidden>
+                         FDSE (Setup_fdse_C_S)       -0.524    10.365    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/tmp_42_reg_3152_reg[7]
+  -------------------------------------------------------------------
+                         required time                         10.365    <hidden>
+                         arrival time                          -8.631    <hidden>
+  -------------------------------------------------------------------
+                         slack                                  1.734    <hidden>
+
+Slack (MET) :             1.734ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/tmp_85_reg_3109_reg[0]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/tmp_42_reg_3152_reg[8]/S
+                            (rising edge-triggered cell FDSE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        7.658ns  (logic 3.999ns (52.220%)  route 3.659ns (47.780%))
+  Logic Levels:           21  (CARRY4=18 LUT2=1 LUT4=2)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 10.924 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  <hidden>
+                                                      0.000     0.000 r  ap_clk
+                         net (fo=7211, unset)         0.973     0.973    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/ap_clk
+                         FDRE                                         r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/tmp_85_reg_3109_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+                         FDRE (Prop_fdre_C_Q)         0.518     1.491 r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/tmp_85_reg_3109_reg[0]/Q
+                         net (fo=40, unplaced)        0.818     2.309    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/tmp_85_reg_3109[0]
+                         LUT4 (Prop_lut4_I1_O)        0.295     2.604 r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry_i_3/O
+                         net (fo=1, unplaced)         0.000     2.604    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry_i_3_n_4
+                         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.533     3.137 r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry/CO[3]
+                         net (fo=1, unplaced)         0.009     3.146    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry_n_4
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     3.263 r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__0/CO[3]
+                         net (fo=1, unplaced)         0.000     3.263    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__0_n_4
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     3.380 r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__1/CO[3]
+                         net (fo=1, unplaced)         0.000     3.380    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__1_n_4
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     3.497 r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__2/CO[3]
+                         net (fo=1, unplaced)         0.000     3.497    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__2_n_4
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     3.614 r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__3/CO[3]
+                         net (fo=1, unplaced)         0.000     3.614    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__3_n_4
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     3.731 r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__4/CO[3]
+                         net (fo=1, unplaced)         0.000     3.731    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__4_n_4
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     3.848 r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__5/CO[3]
+                         net (fo=1, unplaced)         0.000     3.848    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__5_n_4
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     3.965 r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__6/CO[3]
+                         net (fo=1, unplaced)         0.000     3.965    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__6_n_4
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     4.082 r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__7/CO[3]
+                         net (fo=41, unplaced)        0.995     5.077    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__7_n_4
+                         LUT4 (Prop_lut4_I2_O)        0.124     5.201 r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry_i_3/O
+                         net (fo=1, unplaced)         0.000     5.201    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry_i_3_n_4
+                         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.533     5.734 r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry/CO[3]
+                         net (fo=1, unplaced)         0.009     5.743    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry_n_4
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     5.860 r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__0/CO[3]
+                         net (fo=1, unplaced)         0.000     5.860    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__0_n_4
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     5.977 r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__1/CO[3]
+                         net (fo=1, unplaced)         0.000     5.977    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__1_n_4
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     6.094 r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__2/CO[3]
+                         net (fo=1, unplaced)         0.000     6.094    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__2_n_4
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     6.211 r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__3/CO[3]
+                         net (fo=1, unplaced)         0.000     6.211    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__3_n_4
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     6.328 r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__4/CO[3]
+                         net (fo=1, unplaced)         0.000     6.328    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__4_n_4
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     6.445 r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__5/CO[3]
+                         net (fo=1, unplaced)         0.000     6.445    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__5_n_4
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     6.562 r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__6/CO[3]
+                         net (fo=1, unplaced)         0.000     6.562    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__6_n_4
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     6.679 r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__7/CO[3]
+                         net (fo=28, unplaced)        0.986     7.665    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__7_n_4
+                         LUT2 (Prop_lut2_I1_O)        0.124     7.789 r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/tmp_91_reg_3142[0]_i_1/O
+                         net (fo=26, unplaced)        0.842     8.631    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/tmp_91_reg_3142[0]_i_1_n_4
+                         FDSE                                         r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/tmp_42_reg_3152_reg[8]/S
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)    10.000    10.000 r  <hidden>
+                                                      0.000    10.000 r  ap_clk
+                         net (fo=7211, unset)         0.924    10.924    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/ap_clk
+                         FDSE                                         r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/tmp_42_reg_3152_reg[8]/C
+                         clock pessimism              0.000    10.924    <hidden>
+                         clock uncertainty           -0.035    10.889    <hidden>
+                         FDSE (Setup_fdse_C_S)       -0.524    10.365    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/tmp_42_reg_3152_reg[8]
+  -------------------------------------------------------------------
+                         required time                         10.365    <hidden>
+                         arrival time                          -8.631    <hidden>
+  -------------------------------------------------------------------
+                         slack                                  1.734    <hidden>
+
+Slack (MET) :             1.734ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/tmp_85_reg_3109_reg[0]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/tmp_91_reg_3142_reg[0]/S
+                            (rising edge-triggered cell FDSE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        7.658ns  (logic 3.999ns (52.220%)  route 3.659ns (47.780%))
+  Logic Levels:           21  (CARRY4=18 LUT2=1 LUT4=2)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 10.924 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  <hidden>
+                                                      0.000     0.000 r  ap_clk
+                         net (fo=7211, unset)         0.973     0.973    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/ap_clk
+                         FDRE                                         r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/tmp_85_reg_3109_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+                         FDRE (Prop_fdre_C_Q)         0.518     1.491 r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/tmp_85_reg_3109_reg[0]/Q
+                         net (fo=40, unplaced)        0.818     2.309    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/tmp_85_reg_3109[0]
+                         LUT4 (Prop_lut4_I1_O)        0.295     2.604 r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry_i_3/O
+                         net (fo=1, unplaced)         0.000     2.604    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry_i_3_n_4
+                         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.533     3.137 r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry/CO[3]
+                         net (fo=1, unplaced)         0.009     3.146    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry_n_4
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     3.263 r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__0/CO[3]
+                         net (fo=1, unplaced)         0.000     3.263    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__0_n_4
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     3.380 r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__1/CO[3]
+                         net (fo=1, unplaced)         0.000     3.380    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__1_n_4
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     3.497 r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__2/CO[3]
+                         net (fo=1, unplaced)         0.000     3.497    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__2_n_4
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     3.614 r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__3/CO[3]
+                         net (fo=1, unplaced)         0.000     3.614    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__3_n_4
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     3.731 r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__4/CO[3]
+                         net (fo=1, unplaced)         0.000     3.731    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__4_n_4
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     3.848 r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__5/CO[3]
+                         net (fo=1, unplaced)         0.000     3.848    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__5_n_4
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     3.965 r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__6/CO[3]
+                         net (fo=1, unplaced)         0.000     3.965    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__6_n_4
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     4.082 r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__7/CO[3]
+                         net (fo=41, unplaced)        0.995     5.077    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__7_n_4
+                         LUT4 (Prop_lut4_I2_O)        0.124     5.201 r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry_i_3/O
+                         net (fo=1, unplaced)         0.000     5.201    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry_i_3_n_4
+                         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.533     5.734 r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry/CO[3]
+                         net (fo=1, unplaced)         0.009     5.743    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry_n_4
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     5.860 r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__0/CO[3]
+                         net (fo=1, unplaced)         0.000     5.860    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__0_n_4
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     5.977 r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__1/CO[3]
+                         net (fo=1, unplaced)         0.000     5.977    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__1_n_4
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     6.094 r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__2/CO[3]
+                         net (fo=1, unplaced)         0.000     6.094    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__2_n_4
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     6.211 r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__3/CO[3]
+                         net (fo=1, unplaced)         0.000     6.211    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__3_n_4
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     6.328 r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__4/CO[3]
+                         net (fo=1, unplaced)         0.000     6.328    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__4_n_4
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     6.445 r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__5/CO[3]
+                         net (fo=1, unplaced)         0.000     6.445    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__5_n_4
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     6.562 r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__6/CO[3]
+                         net (fo=1, unplaced)         0.000     6.562    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__6_n_4
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     6.679 r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__7/CO[3]
+                         net (fo=28, unplaced)        0.986     7.665    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__7_n_4
+                         LUT2 (Prop_lut2_I1_O)        0.124     7.789 r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/tmp_91_reg_3142[0]_i_1/O
+                         net (fo=26, unplaced)        0.842     8.631    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/tmp_91_reg_3142[0]_i_1_n_4
+                         FDSE                                         r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/tmp_91_reg_3142_reg[0]/S
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)    10.000    10.000 r  <hidden>
+                                                      0.000    10.000 r  ap_clk
+                         net (fo=7211, unset)         0.924    10.924    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/ap_clk
+                         FDSE                                         r  bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/tmp_91_reg_3142_reg[0]/C
+                         clock pessimism              0.000    10.924    <hidden>
+                         clock uncertainty           -0.035    10.889    <hidden>
+                         FDSE (Setup_fdse_C_S)       -0.524    10.365    bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/tmp_91_reg_3142_reg[0]
+  -------------------------------------------------------------------
+                         required time                         10.365    <hidden>
+                         arrival time                          -8.631    <hidden>
+  -------------------------------------------------------------------
+                         slack                                  1.734    <hidden>
+
+
+
+

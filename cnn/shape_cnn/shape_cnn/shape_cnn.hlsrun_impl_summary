@@ -1,0 +1,270 @@
+<ENTRY>
+{
+ "thisFile": "/home/rubisrage/Projects/vivado-projects/assignment_2_vitis/shape_cnn/shape_cnn/shape_cnn.hlsrun_impl_summary",
+ "connectId": "",
+ "serverToken": "",
+ "timestamp": "0"
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Sat Nov 21 01:00:53 2026",
+ "timestampMillis": "1795219253448",
+ "buildStep": {
+  "cmdId": "acda046e-bf50-45fb-bbaf-2223654872f8",
+  "name": "vitis-run",
+  "logFile": "/home/rubisrage/Projects/vivado-projects/assignment_2_vitis/shape_cnn/shape_cnn/logs/shape_cnn.steps.log",
+  "commandLine": "/home/rubisrage/tools/xilinx-sdu/2026.1/Vitis/bin/unwrapped/lnx64.o/vitis-run  --mode hls --impl --config /home/rubisrage/Projects/vivado-projects/assignment_2_vitis/shape_cnn/hls_config.cfg --work_dir shape_cnn ",
+  "args": [
+   "--mode",
+   "hls",
+   "--impl",
+   "--config",
+   "/home/rubisrage/Projects/vivado-projects/assignment_2_vitis/shape_cnn/hls_config.cfg",
+   "--work_dir",
+   "shape_cnn"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/rubisrage/Projects/vivado-projects/assignment_2_vitis/shape_cnn"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sat Nov 21 01:00:53 2026",
+ "timestampMillis": "1795219253448",
+ "status": {
+  "cmdId": "acda046e-bf50-45fb-bbaf-2223654872f8",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_FlowMetaData",
+ "dateTimestamp": "Sat Nov 21 01:00:55 2026",
+ "timestampMillis": "1795219255326",
+ "buildSummary": {
+  "hardwarePlatform": "",
+  "hardwareDsa": "",
+  "platformDirectory": "",
+  "runtime": "",
+  "systemConfig": "",
+  "flow": "BF_RUN",
+  "target": "TT_HLS_IMPL",
+  "kernels": [
+   {
+    "base": {
+     "type": "KERNEL",
+     "name": "ds_cnn",
+     "file": "",
+     "reports": [],
+     "uuid": ""
+    },
+    "sources": [
+     "/home/rubisrage/Projects/vivado-projects/assignment_2_vitis/shape_cnn/shape_cnn.cpp",
+     "/home/rubisrage/Projects/vivado-projects/assignment_2_vitis/shape_cnn/ds_cnn_weights.h",
+     "/home/rubisrage/Projects/vivado-projects/assignment_2_vitis/shape_cnn/ds_cnn_weights_data.h"
+    ],
+    "psSources": [],
+    "cuNames": [],
+    "type": "HLS",
+    "frequency": 0,
+    "freqUnits": ""
+   }
+  ],
+  "toolVersion": "2026.1"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Sat Nov 21 01:00:55 2026",
+ "timestampMillis": "1795219255326",
+ "buildStep": {
+  "cmdId": "4fec0f07-7a04-44c8-95ae-80a439d262c5",
+  "name": "",
+  "logFile": "/home/rubisrage/Projects/vivado-projects/assignment_2_vitis/shape_cnn/shape_cnn/hls/hls.log",
+  "commandLine": "",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/home/rubisrage/Projects/vivado-projects/assignment_2_vitis/shape_cnn"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sat Nov 21 01:00:55 2026",
+ "timestampMillis": "1795219255326",
+ "status": {
+  "cmdId": "4fec0f07-7a04-44c8-95ae-80a439d262c5",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Nov 21 01:00:55 2026",
+ "timestampMillis": "1795219255327",
+ "report": {
+  "path": "/home/rubisrage/Projects/vivado-projects/assignment_2_vitis/shape_cnn/shape_cnn/hls/impl/verilog",
+  "name": "",
+  "fileType": "DIR",
+  "reportType": "HLS_RTL_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Nov 21 01:00:55 2026",
+ "timestampMillis": "1795219255328",
+ "report": {
+  "path": "/home/rubisrage/Projects/vivado-projects/assignment_2_vitis/shape_cnn/shape_cnn/hls/impl/report/verilog/export_syn.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "HLS_RTL_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Nov 21 01:00:55 2026",
+ "timestampMillis": "1795219255328",
+ "report": {
+  "path": "/home/rubisrage/Projects/vivado-projects/assignment_2_vitis/shape_cnn/shape_cnn/hls/impl/report/verilog/export_syn.xml",
+  "name": "",
+  "fileType": "XML",
+  "reportType": "HLS_RTL_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Nov 21 01:00:55 2026",
+ "timestampMillis": "1795219255328",
+ "report": {
+  "path": "/home/rubisrage/Projects/vivado-projects/assignment_2_vitis/shape_cnn/shape_cnn/hls/impl/verilog",
+  "name": "",
+  "fileType": "DIR",
+  "reportType": "HLS_PLACE_AND_ROUTE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Nov 21 01:00:55 2026",
+ "timestampMillis": "1795219255328",
+ "report": {
+  "path": "/home/rubisrage/Projects/vivado-projects/assignment_2_vitis/shape_cnn/shape_cnn/hls/impl/report/verilog/export_impl.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "HLS_PLACE_AND_ROUTE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Nov 21 01:00:55 2026",
+ "timestampMillis": "1795219255328",
+ "report": {
+  "path": "/home/rubisrage/Projects/vivado-projects/assignment_2_vitis/shape_cnn/shape_cnn/hls/impl/report/verilog/export_impl.xml",
+  "name": "",
+  "fileType": "XML",
+  "reportType": "HLS_PLACE_AND_ROUTE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Nov 21 01:04:05 2026",
+ "timestampMillis": "1795219445111",
+ "report": {
+  "path": "/home/rubisrage/Projects/vivado-projects/assignment_2_vitis/shape_cnn/shape_cnn/hls",
+  "name": "",
+  "fileType": "DIR",
+  "reportType": "HLS_RTL_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Nov 21 01:04:05 2026",
+ "timestampMillis": "1795219445111",
+ "report": {
+  "path": "/home/rubisrage/Projects/vivado-projects/assignment_2_vitis/shape_cnn/shape_cnn/hls",
+  "name": "",
+  "fileType": "DIR",
+  "reportType": "HLS_PLACE_AND_ROUTE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sat Nov 21 01:04:05 2026",
+ "timestampMillis": "1795219445112",
+ "status": {
+  "cmdId": "4fec0f07-7a04-44c8-95ae-80a439d262c5",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sat Nov 21 01:04:05 2026",
+ "timestampMillis": "1795219445190",
+ "status": {
+  "cmdId": "acda046e-bf50-45fb-bbaf-2223654872f8",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Nov 21 01:04:05 2026",
+ "timestampMillis": "1795219445191",
+ "report": {
+  "path": "",
+  "name": "",
+  "fileType": "HTML",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Nov 21 01:04:05 2026",
+ "timestampMillis": "1795219445191",
+ "report": {
+  "path": "",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>

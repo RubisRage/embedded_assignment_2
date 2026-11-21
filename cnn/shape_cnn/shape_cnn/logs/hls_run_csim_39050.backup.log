@@ -1,0 +1,61 @@
+  **** HLS Build v2026.1 6493734
+INFO: [HLS 200-2005] Using work_dir /home/rubisrage/Projects/vivado-projects/assignment_2_vitis/shape_cnn/shape_cnn 
+INFO: [HLS 200-2176] Writing Vitis IDE component file /home/rubisrage/Projects/vivado-projects/assignment_2_vitis/shape_cnn/shape_cnn/vitis-comp.json
+INFO: [HLS 200-10] Creating and opening component '/home/rubisrage/Projects/vivado-projects/assignment_2_vitis/shape_cnn/shape_cnn'.
+INFO: [HLS 200-2174] Applying component config ini file hls_config.cfg
+INFO: [HLS 200-1465] Applying config ini 'syn.file=shape_cnn.cpp' from hls_config.cfg(10)
+INFO: [HLS 200-10] Adding design file '/home/rubisrage/Projects/vivado-projects/assignment_2_vitis/shape_cnn/shape_cnn.cpp' to the project
+INFO: [HLS 200-1465] Applying config ini 'syn.file=ds_cnn_weights.h' from hls_config.cfg(11)
+INFO: [HLS 200-10] Adding design file '/home/rubisrage/Projects/vivado-projects/assignment_2_vitis/shape_cnn/ds_cnn_weights.h' to the project
+INFO: [HLS 200-1465] Applying config ini 'syn.file=ds_cnn_weights_data.h' from hls_config.cfg(12)
+INFO: [HLS 200-10] Adding design file '/home/rubisrage/Projects/vivado-projects/assignment_2_vitis/shape_cnn/ds_cnn_weights_data.h' to the project
+INFO: [HLS 200-1465] Applying config ini 'tb.file=tb_shape_cnn.cpp' from hls_config.cfg(9)
+INFO: [HLS 200-10] Adding test bench file '/home/rubisrage/Projects/vivado-projects/assignment_2_vitis/shape_cnn/tb_shape_cnn.cpp' to the project
+INFO: [HLS 200-1465] Applying config ini 'syn.top=ds_cnn' from hls_config.cfg(8)
+INFO: [HLS 200-1465] Applying config ini 'part=xc7z020clg400-1' from hls_config.cfg(1)
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+INFO: [HLS 200-1465] Applying config ini 'clock=10' from hls_config.cfg(6)
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1465] Applying config ini 'clock_uncertainty=27%' from hls_config.cfg(7)
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 2.7ns.
+INFO: [HLS 200-1465] Applying config ini 'package.output.format=ip_catalog' from hls_config.cfg(4)
+INFO: [HLS 200-2176] Writing Vitis IDE component file /home/rubisrage/Projects/vivado-projects/assignment_2_vitis/shape_cnn/shape_cnn/vitis-comp.json
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [HLS 200-2191] C-Simulation will use clang-16 as the compiler
+INFO: [HLS 200-2036] Building debug C Simulation binaries
+   Compiling ../../../../shape_cnn.cpp in debug mode
+   Generating csim.exe
+BASE_DIR: /home/rubisrage/Projects/vivado-projects/cnn_env/CNN_guest_lecture/datasets/shape_dataset_test
+IMG: 60x80 (flat 4800)
+Normalization: (x01 - 0.5)/0.25 (matches training)
+Samples/class: 1
+
+===== GT CLASS 0 (Circle) testing 1 files from /home/rubisrage/Projects/vivado-projects/cnn_env/CNN_guest_lecture/datasets/shape_dataset_test/Circle =====
+File: circle_00019.txt | PRED: 0 (Circle) | GT: 0 (Circle) | logits: [9.23047, 7.05859, -5.15234, -4.23438]
+
+===== GT CLASS 1 (Figure Eight) testing 1 files from /home/rubisrage/Projects/vivado-projects/cnn_env/CNN_guest_lecture/datasets/shape_dataset_test/Figure Eight =====
+File: figure_eight_00001.txt | PRED: 2 (Square) | GT: 1 (Figure Eight) | logits: [-21.0117, -0.429688, 7.72266, 2.61719]
+
+===== GT CLASS 2 (Square) testing 1 files from /home/rubisrage/Projects/vivado-projects/cnn_env/CNN_guest_lecture/datasets/shape_dataset_test/Square =====
+File: square_00014.txt | PRED: 1 (Figure Eight) | GT: 2 (Square) | logits: [-7.20703, 0.960938, -4.42578, 0.6875]
+
+✅ Finished testing Depthwise Separable CNN.
+Total: 3  Correct: 1  Accuracy: 0.3333
+
+Confusion Matrix (rows=GT, cols=Pred) counts:
+
+             GT \ Pred                Circle          Figure Eight                Square
+                Circle                     1                     0                     0
+          Figure Eight                     0                     0                     1
+                Square                     0                     1                     0
+
+Confusion Matrix (rows normalized):
+
+             GT \ Pred                Circle          Figure Eight                Square
+                Circle                 1.000                 0.000                 0.000
+          Figure Eight                 0.000                 0.000                 1.000
+                Square                 0.000                 1.000                 0.000
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-112] Total CPU user time: 3.59 seconds. Total CPU system time: 0.59 seconds. Total elapsed time: 4.18 seconds; peak allocated memory: 261.844 MB.
+INFO: [vitis-run 60-791] Total elapsed time: 0h 0m 7s

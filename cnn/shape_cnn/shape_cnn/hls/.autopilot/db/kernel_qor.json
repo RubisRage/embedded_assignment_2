@@ -1,0 +1,358 @@
+{
+    "name": "ds_cnn",
+    "type": "function",
+    "pipelined": "yes",
+    "dataflowed": "no",
+    "original_ti": 91972,
+    "original_tl": 91971,
+    "calculated_ti": -1,
+    "calculated_tl": -1,
+    "assume_ti": -1,
+    "assume_tl": -1,
+    "CIs": [
+        {
+            "ID": 0,
+            "name": "ds_cnn_Pipeline_VITIS_LOOP_240_1",
+            "type": "function",
+            "pipelined": "yes",
+            "dataflowed": "no",
+            "original_ti": 4802,
+            "original_tl": 4802,
+            "calculated_ti": -1,
+            "calculated_tl": -1,
+            "assume_ti": -1,
+            "assume_tl": -1,
+            "CIs": [],
+            "loops": [
+                {
+                    "name": "VITIS_LOOP_240_1",
+                    "type": "loop",
+                    "trip_count": 4800,
+                    "pipelined": "yes",
+                    "dataflowed": "no",
+                    "original_ti": 4800,
+                    "original_tl": 4801,
+                    "calculated_ti": -1,
+                    "calculated_tl": -1,
+                    "assume_ti": -1,
+                    "assume_tl": -1,
+                    "CIs": [],
+                    "loops": []
+                }
+            ]
+        },
+        {
+            "ID": 1,
+            "name": "conv1_relu_maxpool",
+            "type": "function",
+            "pipelined": "yes",
+            "dataflowed": "no",
+            "original_ti": 19214,
+            "original_tl": 19214,
+            "calculated_ti": -1,
+            "calculated_tl": -1,
+            "assume_ti": -1,
+            "assume_tl": -1,
+            "CIs": [],
+            "loops": [
+                {
+                    "name": "VITIS_LOOP_35_1_VITIS_LOOP_36_2_VITIS_LOOP_37_3",
+                    "type": "loop",
+                    "trip_count": 19200,
+                    "pipelined": "yes",
+                    "dataflowed": "no",
+                    "original_ti": 19200,
+                    "original_tl": 19213,
+                    "calculated_ti": -1,
+                    "calculated_tl": -1,
+                    "assume_ti": -1,
+                    "assume_tl": -1,
+                    "CIs": [],
+                    "loops": []
+                }
+            ]
+        },
+        {
+            "ID": 2,
+            "name": "depthwise_pointwise_relu_fused",
+            "type": "function",
+            "pipelined": "yes",
+            "dataflowed": "no",
+            "original_ti": 67441,
+            "original_tl": 67441,
+            "calculated_ti": -1,
+            "calculated_tl": -1,
+            "assume_ti": -1,
+            "assume_tl": -1,
+            "CIs": [],
+            "loops": [
+                {
+                    "name": "VITIS_LOOP_87_1",
+                    "type": "loop",
+                    "trip_count": 30,
+                    "pipelined": "no",
+                    "dataflowed": "no",
+                    "original_ti": 67440,
+                    "original_tl": 67440,
+                    "calculated_ti": -1,
+                    "calculated_tl": -1,
+                    "assume_ti": -1,
+                    "assume_tl": -1,
+                    "CIs": [],
+                    "loops": [
+                        {
+                            "name": "VITIS_LOOP_88_2",
+                            "type": "loop",
+                            "trip_count": 40,
+                            "pipelined": "no",
+                            "dataflowed": "no",
+                            "original_ti": 2240,
+                            "original_tl": 2240,
+                            "calculated_ti": -1,
+                            "calculated_tl": -1,
+                            "assume_ti": -1,
+                            "assume_tl": -1,
+                            "CIs": [
+                                {
+                                    "ID": 0,
+                                    "name": "depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_94_3",
+                                    "type": "function",
+                                    "pipelined": "yes",
+                                    "dataflowed": "no",
+                                    "original_ti": 25,
+                                    "original_tl": 25,
+                                    "calculated_ti": -1,
+                                    "calculated_tl": -1,
+                                    "assume_ti": -1,
+                                    "assume_tl": -1,
+                                    "CIs": [],
+                                    "loops": [
+                                        {
+                                            "name": "VITIS_LOOP_94_3",
+                                            "type": "loop",
+                                            "trip_count": 16,
+                                            "pipelined": "yes",
+                                            "dataflowed": "no",
+                                            "original_ti": 16,
+                                            "original_tl": 24,
+                                            "calculated_ti": -1,
+                                            "calculated_tl": -1,
+                                            "assume_ti": -1,
+                                            "assume_tl": -1,
+                                            "CIs": [],
+                                            "loops": []
+                                        }
+                                    ]
+                                },
+                                {
+                                    "ID": 1,
+                                    "name": "depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6",
+                                    "type": "function",
+                                    "pipelined": "yes",
+                                    "dataflowed": "no",
+                                    "original_ti": 21,
+                                    "original_tl": 21,
+                                    "calculated_ti": -1,
+                                    "calculated_tl": -1,
+                                    "assume_ti": -1,
+                                    "assume_tl": -1,
+                                    "CIs": [],
+                                    "loops": [
+                                        {
+                                            "name": "VITIS_LOOP_120_6",
+                                            "type": "loop",
+                                            "trip_count": 8,
+                                            "pipelined": "yes",
+                                            "dataflowed": "no",
+                                            "original_ti": 8,
+                                            "original_tl": 20,
+                                            "calculated_ti": -1,
+                                            "calculated_tl": -1,
+                                            "assume_ti": -1,
+                                            "assume_tl": -1,
+                                            "CIs": [],
+                                            "loops": []
+                                        }
+                                    ]
+                                }
+                            ],
+                            "loops": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "ID": 3,
+            "name": "avgpool6x8",
+            "type": "function",
+            "pipelined": "yes",
+            "dataflowed": "no",
+            "original_ti": 233,
+            "original_tl": 233,
+            "calculated_ti": -1,
+            "calculated_tl": -1,
+            "assume_ti": -1,
+            "assume_tl": -1,
+            "CIs": [],
+            "loops": [
+                {
+                    "name": "VITIS_LOOP_145_1_VITIS_LOOP_146_2_VITIS_LOOP_147_3",
+                    "type": "loop",
+                    "trip_count": 200,
+                    "pipelined": "yes",
+                    "dataflowed": "no",
+                    "original_ti": 200,
+                    "original_tl": 232,
+                    "calculated_ti": -1,
+                    "calculated_tl": -1,
+                    "assume_ti": -1,
+                    "assume_tl": -1,
+                    "CIs": [],
+                    "loops": []
+                }
+            ]
+        },
+        {
+            "ID": 4,
+            "name": "cls_gap_logits_argmax",
+            "type": "function",
+            "pipelined": "yes",
+            "dataflowed": "no",
+            "original_ti": 263,
+            "original_tl": 263,
+            "calculated_ti": -1,
+            "calculated_tl": -1,
+            "assume_ti": -1,
+            "assume_tl": -1,
+            "CIs": [
+                {
+                    "ID": 0,
+                    "name": "cls_gap_logits_argmax_Pipeline_VITIS_LOOP_177_2_VITIS_LOOP_178_3_VITIS_LOOP_179_s",
+                    "type": "function",
+                    "pipelined": "yes",
+                    "dataflowed": "no",
+                    "original_ti": 208,
+                    "original_tl": 208,
+                    "calculated_ti": -1,
+                    "calculated_tl": -1,
+                    "assume_ti": -1,
+                    "assume_tl": -1,
+                    "CIs": [],
+                    "loops": [
+                        {
+                            "name": "VITIS_LOOP_177_2_VITIS_LOOP_178_3_VITIS_LOOP_179_4",
+                            "type": "loop",
+                            "trip_count": 200,
+                            "pipelined": "yes",
+                            "dataflowed": "no",
+                            "original_ti": 200,
+                            "original_tl": 207,
+                            "calculated_ti": -1,
+                            "calculated_tl": -1,
+                            "assume_ti": -1,
+                            "assume_tl": -1,
+                            "CIs": [],
+                            "loops": []
+                        }
+                    ]
+                },
+                {
+                    "ID": 1,
+                    "name": "cls_gap_logits_argmax_Pipeline_VITIS_LOOP_187_5",
+                    "type": "function",
+                    "pipelined": "yes",
+                    "dataflowed": "no",
+                    "original_ti": 14,
+                    "original_tl": 14,
+                    "calculated_ti": -1,
+                    "calculated_tl": -1,
+                    "assume_ti": -1,
+                    "assume_tl": -1,
+                    "CIs": [],
+                    "loops": [
+                        {
+                            "name": "VITIS_LOOP_187_5",
+                            "type": "loop",
+                            "trip_count": 8,
+                            "pipelined": "yes",
+                            "dataflowed": "no",
+                            "original_ti": 8,
+                            "original_tl": 13,
+                            "calculated_ti": -1,
+                            "calculated_tl": -1,
+                            "assume_ti": -1,
+                            "assume_tl": -1,
+                            "CIs": [],
+                            "loops": []
+                        }
+                    ]
+                },
+                {
+                    "ID": 2,
+                    "name": "cls_gap_logits_argmax_Pipeline_VITIS_LOOP_194_6",
+                    "type": "function",
+                    "pipelined": "yes",
+                    "dataflowed": "no",
+                    "original_ti": 24,
+                    "original_tl": 24,
+                    "calculated_ti": -1,
+                    "calculated_tl": -1,
+                    "assume_ti": -1,
+                    "assume_tl": -1,
+                    "CIs": [],
+                    "loops": [
+                        {
+                            "name": "VITIS_LOOP_194_6",
+                            "type": "loop",
+                            "trip_count": 6,
+                            "pipelined": "yes",
+                            "dataflowed": "no",
+                            "original_ti": 6,
+                            "original_tl": 23,
+                            "calculated_ti": -1,
+                            "calculated_tl": -1,
+                            "assume_ti": -1,
+                            "assume_tl": -1,
+                            "CIs": [],
+                            "loops": []
+                        }
+                    ]
+                },
+                {
+                    "ID": 3,
+                    "name": "cls_gap_logits_argmax_Pipeline_VITIS_LOOP_207_8",
+                    "type": "function",
+                    "pipelined": "yes",
+                    "dataflowed": "no",
+                    "original_ti": 7,
+                    "original_tl": 7,
+                    "calculated_ti": -1,
+                    "calculated_tl": -1,
+                    "assume_ti": -1,
+                    "assume_tl": -1,
+                    "CIs": [],
+                    "loops": [
+                        {
+                            "name": "VITIS_LOOP_207_8",
+                            "type": "loop",
+                            "trip_count": 5,
+                            "pipelined": "yes",
+                            "dataflowed": "no",
+                            "original_ti": 5,
+                            "original_tl": 6,
+                            "calculated_ti": -1,
+                            "calculated_tl": -1,
+                            "assume_ti": -1,
+                            "assume_tl": -1,
+                            "CIs": [],
+                            "loops": []
+                        }
+                    ]
+                }
+            ],
+            "loops": []
+        }
+    ],
+    "loops": []
+}

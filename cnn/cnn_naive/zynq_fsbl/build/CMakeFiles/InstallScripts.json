@@ -1,0 +1,7 @@
+{
+	"InstallScripts" : 
+	[
+		"/home/rubisrage/Projects/vivado-projects/assignment_2_vitis/cnn_naive/zynq_fsbl/build/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

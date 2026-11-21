@@ -1,0 +1,542 @@
+  **** HLS Build v2026.1 6493734
+INFO: [HLS 200-2005] Using work_dir /home/rubisrage/Projects/vivado-projects/assignment_2_vitis/shape_cnn/shape_cnn 
+INFO: [HLS 200-2176] Writing Vitis IDE component file /home/rubisrage/Projects/vivado-projects/assignment_2_vitis/shape_cnn/shape_cnn/vitis-comp.json
+INFO: [HLS 200-10] Creating and opening component '/home/rubisrage/Projects/vivado-projects/assignment_2_vitis/shape_cnn/shape_cnn'.
+INFO: [HLS 200-2174] Applying component config ini file hls_config.cfg
+INFO: [HLS 200-1465] Applying config ini 'syn.file=shape_cnn.cpp' from hls_config.cfg(10)
+INFO: [HLS 200-10] Adding design file '/home/rubisrage/Projects/vivado-projects/assignment_2_vitis/shape_cnn/shape_cnn.cpp' to the project
+INFO: [HLS 200-1465] Applying config ini 'syn.file=ds_cnn_weights.h' from hls_config.cfg(11)
+INFO: [HLS 200-10] Adding design file '/home/rubisrage/Projects/vivado-projects/assignment_2_vitis/shape_cnn/ds_cnn_weights.h' to the project
+INFO: [HLS 200-1465] Applying config ini 'syn.file=ds_cnn_weights_data.h' from hls_config.cfg(12)
+INFO: [HLS 200-10] Adding design file '/home/rubisrage/Projects/vivado-projects/assignment_2_vitis/shape_cnn/ds_cnn_weights_data.h' to the project
+INFO: [HLS 200-1465] Applying config ini 'tb.file=tb_shape_cnn.cpp' from hls_config.cfg(9)
+INFO: [HLS 200-10] Adding test bench file '/home/rubisrage/Projects/vivado-projects/assignment_2_vitis/shape_cnn/tb_shape_cnn.cpp' to the project
+INFO: [HLS 200-1465] Applying config ini 'syn.top=ds_cnn' from hls_config.cfg(8)
+INFO: [HLS 200-1465] Applying config ini 'part=xc7z020clg400-1' from hls_config.cfg(1)
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+INFO: [HLS 200-1465] Applying config ini 'clock=10' from hls_config.cfg(6)
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1465] Applying config ini 'clock_uncertainty=27%' from hls_config.cfg(7)
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 2.7ns.
+INFO: [HLS 200-1465] Applying config ini 'package.output.format=ip_catalog' from hls_config.cfg(4)
+INFO: [HLS 200-2176] Writing Vitis IDE component file /home/rubisrage/Projects/vivado-projects/assignment_2_vitis/shape_cnn/shape_cnn/vitis-comp.json
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 1.52 seconds. CPU system time: 0.24 seconds. Elapsed time: 1.76 seconds; current allocated memory: 261.887 MB.
+INFO: [HLS 200-2191] C-Synthesis will use clang-16 as the compiler
+INFO: [HLS 200-10] Analyzing design file 'shape_cnn.cpp' ... 
+WARNING: [HLS 207-7023] missing argument for 'variable' (shape_cnn.cpp:33:1)
+WARNING: [HLS 207-7023] missing argument for 'variable' (shape_cnn.cpp:85:1)
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 4.17 seconds. CPU system time: 0.38 seconds. Elapsed time: 4.96 seconds; current allocated memory: 264.660 MB.
+INFO: [HLS 200-1995] There were 10,440 instructions in the design after the 'Compile/Link' phase of compilation. See the Design Size Report for more details (/home/rubisrage/Projects/vivado-projects/assignment_2_vitis/shape_cnn/shape_cnn/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 214-131] Inlining function 'relu_dt(ap_fixed<16, 8, (ap_q_mode)0, (ap_o_mode)0, 0>)' into 'conv1_relu_maxpool(ap_fixed<16, 8, (ap_q_mode)0, (ap_o_mode)0, 0> (*) [80], ap_fixed<16, 8, (ap_q_mode)0, (ap_o_mode)0, 0> (*) [40][16])' (shape_cnn.cpp:69:18)
+INFO: [HLS 214-131] Inlining function 'relu_dt(ap_fixed<16, 8, (ap_q_mode)0, (ap_o_mode)0, 0>)' into 'depthwise_pointwise_relu_fused(ap_fixed<16, 8, (ap_q_mode)0, (ap_o_mode)0, 0> (*) [40][16], ap_fixed<16, 8, (ap_q_mode)0, (ap_o_mode)0, 0> (*) [40][8])' (shape_cnn.cpp:130:23)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_153_4' is marked as complete unroll implied by the pipeline pragma (shape_cnn.cpp:153:23)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_154_5' is marked as complete unroll implied by the pipeline pragma (shape_cnn.cpp:154:23)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_100_4' is marked as complete unroll implied by the pipeline pragma (shape_cnn.cpp:100:27)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_101_5' is marked as complete unroll implied by the pipeline pragma (shape_cnn.cpp:101:27)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_126_7' is marked as complete unroll implied by the pipeline pragma (shape_cnn.cpp:126:27)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_45_4' is marked as complete unroll implied by the pipeline pragma (shape_cnn.cpp:45:22)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_52_5' is marked as complete unroll implied by the pipeline pragma (shape_cnn.cpp:52:26)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_53_6' is marked as complete unroll implied by the pipeline pragma (shape_cnn.cpp:53:26)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_153_4' (shape_cnn.cpp:153:23) in function 'avgpool6x8' completely with a factor of 6 (shape_cnn.cpp:141:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_154_5' (shape_cnn.cpp:154:23) in function 'avgpool6x8' completely with a factor of 8 (shape_cnn.cpp:141:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_100_4' (shape_cnn.cpp:100:27) in function 'depthwise_pointwise_relu_fused' completely with a factor of 3 (shape_cnn.cpp:83:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_101_5' (shape_cnn.cpp:101:27) in function 'depthwise_pointwise_relu_fused' completely with a factor of 3 (shape_cnn.cpp:83:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_126_7' (shape_cnn.cpp:126:27) in function 'depthwise_pointwise_relu_fused' completely with a factor of 16 (shape_cnn.cpp:83:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_45_4' (shape_cnn.cpp:45:22) in function 'conv1_relu_maxpool' completely with a factor of 4 (shape_cnn.cpp:31:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_52_5' (shape_cnn.cpp:52:26) in function 'conv1_relu_maxpool' completely with a factor of 3 (shape_cnn.cpp:31:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_53_6' (shape_cnn.cpp:53:26) in function 'conv1_relu_maxpool' completely with a factor of 3 (shape_cnn.cpp:31:0)
+INFO: [HLS 200-1995] There were 9,138 instructions in the design after the 'Unroll/Inline' phase of compilation. See the Design Size Report for more details (/home/rubisrage/Projects/vivado-projects/assignment_2_vitis/shape_cnn/shape_cnn/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 3,642 instructions in the design after the 'Unroll/Inline (step 2)' phase of compilation. See the Design Size Report for more details (/home/rubisrage/Projects/vivado-projects/assignment_2_vitis/shape_cnn/shape_cnn/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 3,313 instructions in the design after the 'Unroll/Inline (step 3)' phase of compilation. See the Design Size Report for more details (/home/rubisrage/Projects/vivado-projects/assignment_2_vitis/shape_cnn/shape_cnn/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 3,272 instructions in the design after the 'Unroll/Inline (step 4)' phase of compilation. See the Design Size Report for more details (/home/rubisrage/Projects/vivado-projects/assignment_2_vitis/shape_cnn/shape_cnn/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 214-248] Applying array_partition to 'dw_relu': Complete partitioning on dimension 1. (shape_cnn.cpp:90:12)
+INFO: [HLS 214-248] Applying array_partition to 'gap': Complete partitioning on dimension 1. (shape_cnn.cpp:170:11)
+INFO: [HLS 214-248] Applying array_partition to 'logits': Complete partitioning on dimension 1. (shape_cnn.cpp:191:11)
+INFO: [HLS 200-1995] There were 3,573 instructions in the design after the 'Array/Struct' phase of compilation. See the Design Size Report for more details (/home/rubisrage/Projects/vivado-projects/assignment_2_vitis/shape_cnn/shape_cnn/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 3,479 instructions in the design after the 'Array/Struct (step 2)' phase of compilation. See the Design Size Report for more details (/home/rubisrage/Projects/vivado-projects/assignment_2_vitis/shape_cnn/shape_cnn/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 3,479 instructions in the design after the 'Array/Struct (step 3)' phase of compilation. See the Design Size Report for more details (/home/rubisrage/Projects/vivado-projects/assignment_2_vitis/shape_cnn/shape_cnn/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 3,475 instructions in the design after the 'Array/Struct (step 4)' phase of compilation. See the Design Size Report for more details (/home/rubisrage/Projects/vivado-projects/assignment_2_vitis/shape_cnn/shape_cnn/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 3,533 instructions in the design after the 'Array/Struct (step 5)' phase of compilation. See the Design Size Report for more details (/home/rubisrage/Projects/vivado-projects/assignment_2_vitis/shape_cnn/shape_cnn/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 3,499 instructions in the design after the 'Performance' phase of compilation. See the Design Size Report for more details (/home/rubisrage/Projects/vivado-projects/assignment_2_vitis/shape_cnn/shape_cnn/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 214-376] Pipelining loop< VITIS_LOOP_174_1> at shape_cnn.cpp:174:23 due to pipeline_loops threshold
+INFO: [HLS 214-376] Pipelining loop< VITIS_LOOP_187_5> at shape_cnn.cpp:187:23 due to pipeline_loops threshold
+INFO: [HLS 214-376] Pipelining loop< VITIS_LOOP_194_6> at shape_cnn.cpp:194:23 due to pipeline_loops threshold
+INFO: [HLS 214-376] Pipelining loop< VITIS_LOOP_207_8> at shape_cnn.cpp:207:23 due to pipeline_loops threshold
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_196_7' is marked as complete unroll implied by the pipeline pragma (shape_cnn.cpp:196:27)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_196_7' (shape_cnn.cpp:196:27) in function 'cls_gap_logits_argmax' completely with a factor of 8 (shape_cnn.cpp:167:0)
+INFO: [HLS 200-1995] There were 3,771 instructions in the design after the 'Performance (step 2)' phase of compilation. See the Design Size Report for more details (/home/rubisrage/Projects/vivado-projects/assignment_2_vitis/shape_cnn/shape_cnn/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 214-449] Partitioning array 'weights::CONV1_W' dimension 1 due to constant index. (./ds_cnn_weights_data.h:9:0)
+INFO: [HLS 214-449] Partitioning array 'weights::DW_W' dimension 2 due to constant index. (./ds_cnn_weights_data.h:18:0)
+INFO: [HLS 214-449] Partitioning array 'weights::PW_W' dimension 1 due to constant index. (./ds_cnn_weights_data.h:27:0)
+INFO: [HLS 214-449] Partitioning array 'weights::CLS_W' dimension 1 due to constant index. (./ds_cnn_weights_data.h:36:0)
+INFO: [HLS 214-270] Inferring pragma 'array_partition type=cyclic factor=3 dim=1' for array 'ds_cnn(ap_fixed<16, 8, (ap_q_mode)0, (ap_o_mode)0, 0> const*, int*, ap_fixed<16, 8, (ap_q_mode)0, (ap_o_mode)0, 0>*)::pw' due to pipeline pragma (shape_cnn.cpp:149:1)
+INFO: [HLS 214-270] Inferring pragma 'array_partition type=cyclic factor=8 dim=2' for array 'ds_cnn(ap_fixed<16, 8, (ap_q_mode)0, (ap_o_mode)0, 0> const*, int*, ap_fixed<16, 8, (ap_q_mode)0, (ap_o_mode)0, 0>*)::pw' due to pipeline pragma (shape_cnn.cpp:149:1)
+INFO: [HLS 214-270] Inferring pragma 'array_partition type=cyclic factor=2 dim=1' for array 'ds_cnn(ap_fixed<16, 8, (ap_q_mode)0, (ap_o_mode)0, 0> const*, int*, ap_fixed<16, 8, (ap_q_mode)0, (ap_o_mode)0, 0>*)::img' due to pipeline pragma (shape_cnn.cpp:39:1)
+INFO: [HLS 214-270] Inferring pragma 'array_partition type=cyclic factor=4 dim=2' for array 'ds_cnn(ap_fixed<16, 8, (ap_q_mode)0, (ap_o_mode)0, 0> const*, int*, ap_fixed<16, 8, (ap_q_mode)0, (ap_o_mode)0, 0>*)::img' due to pipeline pragma (shape_cnn.cpp:39:1)
+INFO: [HLS 214-270] Inferring pragma 'array_partition type=cyclic factor=3 dim=1' for array 'ds_cnn(ap_fixed<16, 8, (ap_q_mode)0, (ap_o_mode)0, 0> const*, int*, ap_fixed<16, 8, (ap_q_mode)0, (ap_o_mode)0, 0>*)::pool1' due to pipeline pragma (shape_cnn.cpp:96:1)
+INFO: [HLS 214-270] Inferring pragma 'array_partition type=cyclic factor=3 dim=2' for array 'ds_cnn(ap_fixed<16, 8, (ap_q_mode)0, (ap_o_mode)0, 0> const*, int*, ap_fixed<16, 8, (ap_q_mode)0, (ap_o_mode)0, 0>*)::pool1' due to pipeline pragma (shape_cnn.cpp:96:1)
+INFO: [HLS 214-248] Applying array_partition to '_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E5pool1': Cyclic partitioning with factor 3 on dimension 1. Cyclic partitioning with factor 3 on dimension 2. (shape_cnn.cpp:231:0)
+INFO: [HLS 214-248] Applying array_partition to '_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E3img': Cyclic partitioning with factor 2 on dimension 1. Cyclic partitioning with factor 4 on dimension 2. (shape_cnn.cpp:230:0)
+INFO: [HLS 214-248] Applying array_partition to '_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E2pw': Cyclic partitioning with factor 3 on dimension 1. Cyclic partitioning with factor 8 on dimension 2. (shape_cnn.cpp:232:0)
+INFO: [HLS 214-248] Applying array_partition to '_ZN7weights7CONV1_WE': Complete partitioning on dimension 1. (./ds_cnn_weights_data.h:9:0)
+INFO: [HLS 214-248] Applying array_partition to '_ZN7weights5CLS_WE': Complete partitioning on dimension 1. (./ds_cnn_weights_data.h:36:0)
+INFO: [HLS 214-248] Applying array_partition to '_ZN7weights4PW_WE': Complete partitioning on dimension 1. (./ds_cnn_weights_data.h:27:0)
+INFO: [HLS 214-248] Applying array_partition to '_ZN7weights4DW_WE': Complete partitioning on dimension 2. (./ds_cnn_weights_data.h:18:0)
+INFO: [HLS 200-1995] There were 7,205 instructions in the design after the 'Performance (step 3)' phase of compilation. See the Design Size Report for more details (/home/rubisrage/Projects/vivado-projects/assignment_2_vitis/shape_cnn/shape_cnn/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 4,517 instructions in the design after the 'Performance (step 4)' phase of compilation. See the Design Size Report for more details (/home/rubisrage/Projects/vivado-projects/assignment_2_vitis/shape_cnn/shape_cnn/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 214-115] Multiple burst reads of length 4800 and bit width 16 in loop 'VITIS_LOOP_240_1'(shape_cnn.cpp:240:19) has been inferred on bundle 'gmem'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (shape_cnn.cpp:240:19)
+INFO: [HLS 200-1995] There were 4,510 instructions in the design after the 'HW Transforms' phase of compilation. See the Design Size Report for more details (/home/rubisrage/Projects/vivado-projects/assignment_2_vitis/shape_cnn/shape_cnn/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 4,574 instructions in the design after the 'HW Transforms (step 2)' phase of compilation. See the Design Size Report for more details (/home/rubisrage/Projects/vivado-projects/assignment_2_vitis/shape_cnn/shape_cnn/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 3.86 seconds. CPU system time: 0.29 seconds. Elapsed time: 7.82 seconds; current allocated memory: 267.707 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 267.707 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.11 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.15 seconds; current allocated memory: 271.297 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.15 seconds. CPU system time: 0 seconds. Elapsed time: 0.15 seconds; current allocated memory: 274.152 MB.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (shape_cnn.cpp:96:1) to (shape_cnn.cpp:116:20) in function 'depthwise_pointwise_relu_fused'... converting 17 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (shape_cnn.cpp:39:1) to (shape_cnn.cpp:73:20) in function 'conv1_relu_maxpool'... converting 25 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (shape_cnn.cpp:174:31) to (shape_cnn.cpp:174:23) in function 'cls_gap_logits_argmax'... converting 3 basic blocks.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.62 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.64 seconds; current allocated memory: 302.922 MB.
+INFO: [HLS 200-2061] Successfully converted nested loops 'VITIS_LOOP_36_2'(shape_cnn.cpp:36:18) and 'VITIS_LOOP_37_3'(shape_cnn.cpp:37:18) in function 'conv1_relu_maxpool' into perfectly nested loops.
+INFO: [HLS 200-2061] Successfully converted nested loops 'VITIS_LOOP_35_1'(shape_cnn.cpp:35:18) and 'VITIS_LOOP_36_2'(shape_cnn.cpp:36:18) in function 'conv1_relu_maxpool' into perfectly nested loops.
+INFO: [HLS 200-2061] Successfully converted nested loops 'VITIS_LOOP_178_3'(shape_cnn.cpp:178:23) and 'VITIS_LOOP_179_4'(shape_cnn.cpp:179:23) in function 'cls_gap_logits_argmax' into perfectly nested loops.
+INFO: [HLS 200-2061] Successfully converted nested loops 'VITIS_LOOP_177_2'(shape_cnn.cpp:177:23) and 'VITIS_LOOP_178_3'(shape_cnn.cpp:178:23) in function 'cls_gap_logits_argmax' into perfectly nested loops.
+INFO: [HLS 200-2061] Successfully converted nested loops 'VITIS_LOOP_146_2'(shape_cnn.cpp:146:19) and 'VITIS_LOOP_147_3'(shape_cnn.cpp:147:19) in function 'avgpool6x8' into perfectly nested loops.
+INFO: [HLS 200-2061] Successfully converted nested loops 'VITIS_LOOP_145_1'(shape_cnn.cpp:145:19) and 'VITIS_LOOP_146_2'(shape_cnn.cpp:146:19) in function 'avgpool6x8' into perfectly nested loops.
+INFO: [HLS 200-2259] Flattening a loop nest with inner loop 'VITIS_LOOP_37_3' (shape_cnn.cpp:37:18) and outer loop 'VITIS_LOOP_36_2' (shape_cnn.cpp:36:18) in function 'conv1_relu_maxpool' successfully.
+INFO: [HLS 200-2259] Flattening a loop nest with inner loop 'VITIS_LOOP_36_2_VITIS_LOOP_37_3'  and outer loop 'VITIS_LOOP_35_1' (shape_cnn.cpp:35:18) in function 'conv1_relu_maxpool' successfully.
+INFO: [HLS 200-2259] Flattening a loop nest with inner loop 'VITIS_LOOP_179_4' (shape_cnn.cpp:179:23) and outer loop 'VITIS_LOOP_178_3' (shape_cnn.cpp:178:23) in function 'cls_gap_logits_argmax' successfully.
+INFO: [HLS 200-2259] Flattening a loop nest with inner loop 'VITIS_LOOP_178_3_VITIS_LOOP_179_4'  and outer loop 'VITIS_LOOP_177_2' (shape_cnn.cpp:177:23) in function 'cls_gap_logits_argmax' successfully.
+INFO: [HLS 200-2259] Flattening a loop nest with inner loop 'VITIS_LOOP_147_3' (shape_cnn.cpp:147:19) and outer loop 'VITIS_LOOP_146_2' (shape_cnn.cpp:146:19) in function 'avgpool6x8' successfully.
+INFO: [HLS 200-2259] Flattening a loop nest with inner loop 'VITIS_LOOP_146_2_VITIS_LOOP_147_3'  and outer loop 'VITIS_LOOP_145_1' (shape_cnn.cpp:145:19) in function 'avgpool6x8' successfully.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.55 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.58 seconds; current allocated memory: 409.281 MB.
+INFO: [HLS 200-2255] Checking Wire Delay Status: Wire Delay Mode is ON
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'ds_cnn' ...
+WARNING: [SYN 201-103] Legalizing function name 'cls_gap_logits_argmax_Pipeline_VITIS_LOOP_177_2_VITIS_LOOP_178_3_VITIS_LOOP_179_' to 'cls_gap_logits_argmax_Pipeline_VITIS_LOOP_177_2_VITIS_LOOP_178_3_VITIS_LOOP_179_s'.
+WARNING: [SYN 201-107] Renaming port name 'ds_cnn/bins' to 'ds_cnn/bins_r' to avoid the conflict with HDL keywords or other object names.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'ds_cnn_Pipeline_VITIS_LOOP_240_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_240_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 3, loop 'VITIS_LOOP_240_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.06 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.1 seconds; current allocated memory: 411.797 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 411.797 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'conv1_relu_maxpool' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_35_1_VITIS_LOOP_36_2_VITIS_LOOP_37_3'.
+WARNING: [HLS 200-887] Cannot meet target clock period from 'icmp' operation 1 bit ('icmp_ln37', shape_cnn.cpp:37) to 'store' operation ('oc_write_ln37', shape_cnn.cpp:37) of variable 'add_ln37', shape_cnn.cpp:37 5 bit on local variable 'oc', shape_cnn.cpp:37 (combination delay: 7.341 ns) to honor II or Latency constraint in region 'VITIS_LOOP_35_1_VITIS_LOOP_36_2_VITIS_LOOP_37_3'.
+Resolution: For help on HLS 200-887 see docs.amd.com/access/sources/dita/topic?Doc_Version=2026.1%20English&url=ug1448-hls-guidance&resourceid=200-887.html
+INFO: [SCHED 204-61] Discarding stage scheduling solution.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 14, loop 'VITIS_LOOP_35_1_VITIS_LOOP_36_2_VITIS_LOOP_37_3'
+WARNING: [HLS 200-871] Estimated clock period (7.341 ns) exceeds the target (target clock period: 10.000 ns, clock uncertainty: 2.700 ns, effective delay budget: 7.300 ns).
+Resolution: For help on HLS 200-871 see docs.amd.com/access/sources/dita/topic?Doc_Version=2026.1%20English&url=ug1448-hls-guidance&resourceid=200-871.html
+WARNING: [HLS 200-1016] The critical path in module 'conv1_relu_maxpool' consists of the following:
+	'load' operation 5 bit ('oc_load', shape_cnn.cpp:37) on local variable 'oc', shape_cnn.cpp:37 [63]  (0.000 ns)
+	'icmp' operation 1 bit ('icmp_ln37', shape_cnn.cpp:37) [74]  (1.780 ns)
+	'and' operation 1 bit ('and_ln35', shape_cnn.cpp:35) [75]  (0.978 ns)
+	'or' operation 1 bit ('empty', shape_cnn.cpp:35) [77]  (0.000 ns)
+	'select' operation 5 bit ('oc_mid2', shape_cnn.cpp:35) [78]  (1.215 ns)
+	'add' operation 5 bit ('add_ln37', shape_cnn.cpp:37) [936]  (1.780 ns)
+	'store' operation ('oc_write_ln37', shape_cnn.cpp:37) of variable 'add_ln37', shape_cnn.cpp:37 5 bit on local variable 'oc', shape_cnn.cpp:37 [943]  (1.588 ns)
+
+Resolution: For help on HLS 200-1016 see docs.amd.com/access/sources/dita/topic?Doc_Version=2026.1%20English&url=ug1448-hls-guidance&resourceid=200-1016.html
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.31 seconds. CPU system time: 0 seconds. Elapsed time: 0.32 seconds; current allocated memory: 424.574 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.06 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 424.574 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_94_3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_94_3'.
+INFO: [SCHED 204-61] Discarding stage scheduling solution.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 9, loop 'VITIS_LOOP_94_3'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.19 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.19 seconds; current allocated memory: 424.992 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 424.992 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_120_6'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 13, loop 'VITIS_LOOP_120_6'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.11 seconds. CPU system time: 0 seconds. Elapsed time: 0.11 seconds; current allocated memory: 427.602 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 427.602 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'depthwise_pointwise_relu_fused' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 427.602 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.02 seconds; current allocated memory: 427.602 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'avgpool6x8' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_145_1_VITIS_LOOP_146_2_VITIS_LOOP_147_3'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 33, loop 'VITIS_LOOP_145_1_VITIS_LOOP_146_2_VITIS_LOOP_147_3'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.09 seconds. CPU system time: 0 seconds. Elapsed time: 0.09 seconds; current allocated memory: 430.719 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 430.719 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'cls_gap_logits_argmax_Pipeline_VITIS_LOOP_177_2_VITIS_LOOP_178_3_VITIS_LOOP_179_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_177_2_VITIS_LOOP_178_3_VITIS_LOOP_179_4'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 8, loop 'VITIS_LOOP_177_2_VITIS_LOOP_178_3_VITIS_LOOP_179_4'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.06 seconds. CPU system time: 0 seconds. Elapsed time: 0.07 seconds; current allocated memory: 432.277 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 432.277 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'cls_gap_logits_argmax_Pipeline_VITIS_LOOP_187_5' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_187_5'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 6, loop 'VITIS_LOOP_187_5'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.06 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 433.105 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 433.105 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'cls_gap_logits_argmax_Pipeline_VITIS_LOOP_194_6' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_194_6'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 18, loop 'VITIS_LOOP_194_6'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.1 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.1 seconds; current allocated memory: 438.094 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 438.094 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'cls_gap_logits_argmax_Pipeline_VITIS_LOOP_207_8' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_207_8'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'VITIS_LOOP_207_8'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 438.094 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 438.094 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'cls_gap_logits_argmax' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 438.094 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.01 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.01 seconds; current allocated memory: 438.094 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'ds_cnn' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 438.094 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 438.094 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'ds_cnn_Pipeline_VITIS_LOOP_240_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'ds_cnn_Pipeline_VITIS_LOOP_240_1' pipeline 'VITIS_LOOP_240_1' pipeline type 'loop pipeline'
+WARNING: [RTGEN 206-101] Setting dangling out port 'ds_cnn_Pipeline_VITIS_LOOP_240_1/m_axi_gmem_0_ARVALID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'ds_cnn_Pipeline_VITIS_LOOP_240_1/m_axi_gmem_0_ARADDR' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'ds_cnn_Pipeline_VITIS_LOOP_240_1/m_axi_gmem_0_ARID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'ds_cnn_Pipeline_VITIS_LOOP_240_1/m_axi_gmem_0_ARLEN' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'ds_cnn_Pipeline_VITIS_LOOP_240_1/m_axi_gmem_0_ARSIZE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'ds_cnn_Pipeline_VITIS_LOOP_240_1/m_axi_gmem_0_ARBURST' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'ds_cnn_Pipeline_VITIS_LOOP_240_1/m_axi_gmem_0_ARLOCK' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'ds_cnn_Pipeline_VITIS_LOOP_240_1/m_axi_gmem_0_ARCACHE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'ds_cnn_Pipeline_VITIS_LOOP_240_1/m_axi_gmem_0_ARPROT' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'ds_cnn_Pipeline_VITIS_LOOP_240_1/m_axi_gmem_0_ARQOS' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'ds_cnn_Pipeline_VITIS_LOOP_240_1/m_axi_gmem_0_ARREGION' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'ds_cnn_Pipeline_VITIS_LOOP_240_1/m_axi_gmem_0_ARUSER' to 0.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'ds_cnn_Pipeline_VITIS_LOOP_240_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 438.094 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'conv1_relu_maxpool' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'conv1_relu_maxpool' pipeline 'VITIS_LOOP_35_1_VITIS_LOOP_36_2_VITIS_LOOP_37_3' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'mul_11s_16s_26_1_1': 20 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_12s_16s_27_1_1': 16 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_5ns_7ns_11_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_6ns_8ns_13_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'urem_5ns_3ns_2_9_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'urem_6ns_3ns_2_10_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'conv1_relu_maxpool'.
+INFO: [RTMG 210-279] Implementing memory 'ds_cnn_conv1_relu_maxpool_weights_CONV1_B_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'ds_cnn_conv1_relu_maxpool_p_ZN7weights7CONV1_WE_0_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'ds_cnn_conv1_relu_maxpool_p_ZN7weights7CONV1_WE_1_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'ds_cnn_conv1_relu_maxpool_p_ZN7weights7CONV1_WE_2_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'ds_cnn_conv1_relu_maxpool_p_ZN7weights7CONV1_WE_3_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'ds_cnn_conv1_relu_maxpool_p_ZN7weights7CONV1_WE_4_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'ds_cnn_conv1_relu_maxpool_p_ZN7weights7CONV1_WE_5_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'ds_cnn_conv1_relu_maxpool_p_ZN7weights7CONV1_WE_6_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'ds_cnn_conv1_relu_maxpool_p_ZN7weights7CONV1_WE_7_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'ds_cnn_conv1_relu_maxpool_p_ZN7weights7CONV1_WE_8_ROM_AUTO_1R' using auto ROMs.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.13 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.14 seconds; current allocated memory: 446.535 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_94_3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_94_3_weights_DW_B_ROM_AUTO_1R' to 'depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_94_3_weights_DW_B_ROM_AUTObkb' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_94_3_p_ZN7weights4DW_WE_0_ROM_AUTO_1R' to 'depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_94_3_p_ZN7weights4DW_WE_0_cud' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_94_3_p_ZN7weights4DW_WE_1_ROM_AUTO_1R' to 'depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_94_3_p_ZN7weights4DW_WE_1_dEe' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_94_3_p_ZN7weights4DW_WE_2_ROM_AUTO_1R' to 'depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_94_3_p_ZN7weights4DW_WE_2_eOg' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_94_3_p_ZN7weights4DW_WE_3_ROM_AUTO_1R' to 'depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_94_3_p_ZN7weights4DW_WE_3_fYi' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_94_3_p_ZN7weights4DW_WE_4_ROM_AUTO_1R' to 'depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_94_3_p_ZN7weights4DW_WE_4_g8j' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_94_3_p_ZN7weights4DW_WE_5_ROM_AUTO_1R' to 'depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_94_3_p_ZN7weights4DW_WE_5_hbi' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_94_3_p_ZN7weights4DW_WE_6_ROM_AUTO_1R' to 'depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_94_3_p_ZN7weights4DW_WE_6_ibs' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_94_3_p_ZN7weights4DW_WE_7_ROM_AUTO_1R' to 'depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_94_3_p_ZN7weights4DW_WE_7_jbC' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_94_3_p_ZN7weights4DW_WE_8_ROM_AUTO_1R' to 'depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_94_3_p_ZN7weights4DW_WE_8_kbM' due to the length limit 80
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_94_3' pipeline 'VITIS_LOOP_94_3' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'mul_10s_15ns_25_1_1': 4 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_9s_15ns_24_1_1': 5 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sparsemux_7_2_15_1_1': 18 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_94_3'.
+INFO: [RTMG 210-279] Implementing memory 'ds_cnn_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_94_3_weights_DW_B_ROM_AUTObkb' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'ds_cnn_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_94_3_p_ZN7weights4DW_WE_0_cud' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'ds_cnn_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_94_3_p_ZN7weights4DW_WE_1_dEe' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'ds_cnn_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_94_3_p_ZN7weights4DW_WE_2_eOg' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'ds_cnn_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_94_3_p_ZN7weights4DW_WE_3_fYi' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'ds_cnn_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_94_3_p_ZN7weights4DW_WE_4_g8j' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'ds_cnn_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_94_3_p_ZN7weights4DW_WE_5_hbi' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'ds_cnn_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_94_3_p_ZN7weights4DW_WE_6_ibs' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'ds_cnn_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_94_3_p_ZN7weights4DW_WE_7_jbC' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'ds_cnn_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_94_3_p_ZN7weights4DW_WE_8_kbM' using auto ROMs.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.3 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.32 seconds; current allocated memory: 467.938 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_weights_PW_B_ROM_AUTO_1R' to 'depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_weights_PW_B_ROM_AUTlbW' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_p_ZN7weights4PW_WE_0_ROM_AUTO_1R' to 'depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_p_ZN7weights4PW_WE_0mb6' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_p_ZN7weights4PW_WE_1_ROM_AUTO_1R' to 'depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_p_ZN7weights4PW_WE_1ncg' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_p_ZN7weights4PW_WE_2_ROM_AUTO_1R' to 'depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_p_ZN7weights4PW_WE_2ocq' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_p_ZN7weights4PW_WE_3_ROM_AUTO_1R' to 'depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_p_ZN7weights4PW_WE_3pcA' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_p_ZN7weights4PW_WE_4_ROM_AUTO_1R' to 'depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_p_ZN7weights4PW_WE_4qcK' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_p_ZN7weights4PW_WE_5_ROM_AUTO_1R' to 'depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_p_ZN7weights4PW_WE_5rcU' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_p_ZN7weights4PW_WE_6_ROM_AUTO_1R' to 'depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_p_ZN7weights4PW_WE_6sc4' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_p_ZN7weights4PW_WE_7_ROM_AUTO_1R' to 'depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_p_ZN7weights4PW_WE_7tde' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_p_ZN7weights4PW_WE_8_ROM_AUTO_1R' to 'depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_p_ZN7weights4PW_WE_8udo' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_p_ZN7weights4PW_WE_9_ROM_AUTO_1R' to 'depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_p_ZN7weights4PW_WE_9vdy' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_p_ZN7weights4PW_WE_10_ROM_AUTO_1R' to 'depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_p_ZN7weights4PW_WE_1wdI' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_p_ZN7weights4PW_WE_11_ROM_AUTO_1R' to 'depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_p_ZN7weights4PW_WE_1xdS' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_p_ZN7weights4PW_WE_12_ROM_AUTO_1R' to 'depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_p_ZN7weights4PW_WE_1yd2' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_p_ZN7weights4PW_WE_13_ROM_AUTO_1R' to 'depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_p_ZN7weights4PW_WE_1zec' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_p_ZN7weights4PW_WE_14_ROM_AUTO_1R' to 'depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_p_ZN7weights4PW_WE_1Aem' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_p_ZN7weights4PW_WE_15_ROM_AUTO_1R' to 'depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_p_ZN7weights4PW_WE_1Bew' due to the length limit 80
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6' pipeline 'VITIS_LOOP_120_6' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'mul_11s_16s_26_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_13s_16s_28_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_14s_16s_29_1_1': 11 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_15s_16s_30_1_1': 3 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6'.
+INFO: [RTMG 210-279] Implementing memory 'ds_cnn_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_weights_PW_B_ROM_AUTlbW' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'ds_cnn_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_p_ZN7weights4PW_WE_0mb6' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'ds_cnn_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_p_ZN7weights4PW_WE_1ncg' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'ds_cnn_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_p_ZN7weights4PW_WE_2ocq' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'ds_cnn_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_p_ZN7weights4PW_WE_3pcA' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'ds_cnn_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_p_ZN7weights4PW_WE_4qcK' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'ds_cnn_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_p_ZN7weights4PW_WE_5rcU' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'ds_cnn_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_p_ZN7weights4PW_WE_6sc4' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'ds_cnn_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_p_ZN7weights4PW_WE_7tde' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'ds_cnn_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_p_ZN7weights4PW_WE_8udo' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'ds_cnn_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_p_ZN7weights4PW_WE_9vdy' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'ds_cnn_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_p_ZN7weights4PW_WE_1wdI' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'ds_cnn_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_p_ZN7weights4PW_WE_1xdS' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'ds_cnn_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_p_ZN7weights4PW_WE_1yd2' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'ds_cnn_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_p_ZN7weights4PW_WE_1zec' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'ds_cnn_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_p_ZN7weights4PW_WE_1Aem' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'ds_cnn_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_p_ZN7weights4PW_WE_1Bew' using auto ROMs.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.2 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.21 seconds; current allocated memory: 479.684 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'depthwise_pointwise_relu_fused' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'mul_5ns_7ns_11_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_64ns_66ns_129_5_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_6ns_8ns_13_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'depthwise_pointwise_relu_fused'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.14 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.14 seconds; current allocated memory: 491.227 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'avgpool6x8' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'avgpool6x8' pipeline 'VITIS_LOOP_145_1_VITIS_LOOP_146_2_VITIS_LOOP_147_3' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'avgpool6x8'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.13 seconds. CPU system time: 0 seconds. Elapsed time: 0.14 seconds; current allocated memory: 498.070 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'cls_gap_logits_argmax_Pipeline_VITIS_LOOP_177_2_VITIS_LOOP_178_3_VITIS_LOOP_179_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'cls_gap_logits_argmax_Pipeline_VITIS_LOOP_177_2_VITIS_LOOP_178_3_VITIS_LOOP_179_s' pipeline 'VITIS_LOOP_177_2_VITIS_LOOP_178_3_VITIS_LOOP_179_4' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'sparsemux_17_3_38_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'cls_gap_logits_argmax_Pipeline_VITIS_LOOP_177_2_VITIS_LOOP_178_3_VITIS_LOOP_179_s'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.11 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.12 seconds; current allocated memory: 507.672 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'cls_gap_logits_argmax_Pipeline_VITIS_LOOP_187_5' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'cls_gap_logits_argmax_Pipeline_VITIS_LOOP_187_5' pipeline 'VITIS_LOOP_187_5' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'sparsemux_17_3_38_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'cls_gap_logits_argmax_Pipeline_VITIS_LOOP_187_5'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.07 seconds. CPU system time: 0 seconds. Elapsed time: 0.07 seconds; current allocated memory: 511.672 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'cls_gap_logits_argmax_Pipeline_VITIS_LOOP_194_6' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'cls_gap_logits_argmax_Pipeline_VITIS_LOOP_194_6_p_ZN7weights5CLS_WE_0_ROM_AUTO_1R' to 'cls_gap_logits_argmax_Pipeline_VITIS_LOOP_194_6_p_ZN7weights5CLS_WE_0_ROM_AUTCeG' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'cls_gap_logits_argmax_Pipeline_VITIS_LOOP_194_6_p_ZN7weights5CLS_WE_1_ROM_AUTO_1R' to 'cls_gap_logits_argmax_Pipeline_VITIS_LOOP_194_6_p_ZN7weights5CLS_WE_1_ROM_AUTDeQ' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'cls_gap_logits_argmax_Pipeline_VITIS_LOOP_194_6_p_ZN7weights5CLS_WE_2_ROM_AUTO_1R' to 'cls_gap_logits_argmax_Pipeline_VITIS_LOOP_194_6_p_ZN7weights5CLS_WE_2_ROM_AUTEe0' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'cls_gap_logits_argmax_Pipeline_VITIS_LOOP_194_6_p_ZN7weights5CLS_WE_3_ROM_AUTO_1R' to 'cls_gap_logits_argmax_Pipeline_VITIS_LOOP_194_6_p_ZN7weights5CLS_WE_3_ROM_AUTFfa' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'cls_gap_logits_argmax_Pipeline_VITIS_LOOP_194_6_p_ZN7weights5CLS_WE_4_ROM_AUTO_1R' to 'cls_gap_logits_argmax_Pipeline_VITIS_LOOP_194_6_p_ZN7weights5CLS_WE_4_ROM_AUTGfk' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'cls_gap_logits_argmax_Pipeline_VITIS_LOOP_194_6_p_ZN7weights5CLS_WE_5_ROM_AUTO_1R' to 'cls_gap_logits_argmax_Pipeline_VITIS_LOOP_194_6_p_ZN7weights5CLS_WE_5_ROM_AUTHfu' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'cls_gap_logits_argmax_Pipeline_VITIS_LOOP_194_6_p_ZN7weights5CLS_WE_6_ROM_AUTO_1R' to 'cls_gap_logits_argmax_Pipeline_VITIS_LOOP_194_6_p_ZN7weights5CLS_WE_6_ROM_AUTIfE' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'cls_gap_logits_argmax_Pipeline_VITIS_LOOP_194_6_p_ZN7weights5CLS_WE_7_ROM_AUTO_1R' to 'cls_gap_logits_argmax_Pipeline_VITIS_LOOP_194_6_p_ZN7weights5CLS_WE_7_ROM_AUTJfO' due to the length limit 80
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'cls_gap_logits_argmax_Pipeline_VITIS_LOOP_194_6' pipeline 'VITIS_LOOP_194_6' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'mul_38s_11s_49_2_1': 3 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_38s_12s_50_2_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_38s_13s_51_2_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_38s_15s_52_2_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'cls_gap_logits_argmax_Pipeline_VITIS_LOOP_194_6'.
+INFO: [RTMG 210-279] Implementing memory 'ds_cnn_cls_gap_logits_argmax_Pipeline_VITIS_LOOP_194_6_weights_CLS_B_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'ds_cnn_cls_gap_logits_argmax_Pipeline_VITIS_LOOP_194_6_p_ZN7weights5CLS_WE_0_ROM_AUTCeG' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'ds_cnn_cls_gap_logits_argmax_Pipeline_VITIS_LOOP_194_6_p_ZN7weights5CLS_WE_1_ROM_AUTDeQ' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'ds_cnn_cls_gap_logits_argmax_Pipeline_VITIS_LOOP_194_6_p_ZN7weights5CLS_WE_2_ROM_AUTEe0' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'ds_cnn_cls_gap_logits_argmax_Pipeline_VITIS_LOOP_194_6_p_ZN7weights5CLS_WE_3_ROM_AUTFfa' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'ds_cnn_cls_gap_logits_argmax_Pipeline_VITIS_LOOP_194_6_p_ZN7weights5CLS_WE_4_ROM_AUTGfk' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'ds_cnn_cls_gap_logits_argmax_Pipeline_VITIS_LOOP_194_6_p_ZN7weights5CLS_WE_5_ROM_AUTHfu' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'ds_cnn_cls_gap_logits_argmax_Pipeline_VITIS_LOOP_194_6_p_ZN7weights5CLS_WE_6_ROM_AUTIfE' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'ds_cnn_cls_gap_logits_argmax_Pipeline_VITIS_LOOP_194_6_p_ZN7weights5CLS_WE_7_ROM_AUTJfO' using auto ROMs.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.1 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.11 seconds; current allocated memory: 515.410 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'cls_gap_logits_argmax_Pipeline_VITIS_LOOP_207_8' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'cls_gap_logits_argmax_Pipeline_VITIS_LOOP_207_8' pipeline 'VITIS_LOOP_207_8' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'sparsemux_11_3_38_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'cls_gap_logits_argmax_Pipeline_VITIS_LOOP_207_8'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.12 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.14 seconds; current allocated memory: 526.695 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'cls_gap_logits_argmax' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'cls_gap_logits_argmax'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.04 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.05 seconds; current allocated memory: 530.172 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'ds_cnn' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ds_cnn/gmem' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ds_cnn/input_img' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ds_cnn/pred_out' to 's_axilite & ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ds_cnn/logits_out' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'ds_cnn' to 's_axilite & ap_ctrl_hs'.
+INFO: [SYN 201-210] Renamed object name 'p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E3img_0_0_RAM_2P_BRAM_1R1W' to 'p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E3img_0_KfY' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E3img_0_1_RAM_2P_BRAM_1R1W' to 'p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E3img_0_Lf8' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E3img_0_2_RAM_2P_BRAM_1R1W' to 'p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E3img_0_Mgi' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E3img_0_3_RAM_2P_BRAM_1R1W' to 'p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E3img_0_Ngs' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E3img_1_0_RAM_2P_BRAM_1R1W' to 'p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E3img_1_OgC' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E3img_1_1_RAM_2P_BRAM_1R1W' to 'p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E3img_1_PgM' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E3img_1_2_RAM_2P_BRAM_1R1W' to 'p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E3img_1_QgW' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E3img_1_3_RAM_2P_BRAM_1R1W' to 'p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E3img_1_Rg6' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E5pool1_0_0_RAM_2P_BRAM_1R1W' to 'p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E5pool1_Shg' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E5pool1_0_1_RAM_2P_BRAM_1R1W' to 'p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E5pool1_Thq' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E5pool1_0_2_RAM_2P_BRAM_1R1W' to 'p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E5pool1_UhA' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E5pool1_1_0_RAM_2P_BRAM_1R1W' to 'p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E5pool1_VhK' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E5pool1_1_1_RAM_2P_BRAM_1R1W' to 'p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E5pool1_WhU' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E5pool1_1_2_RAM_2P_BRAM_1R1W' to 'p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E5pool1_Xh4' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E5pool1_2_0_RAM_2P_BRAM_1R1W' to 'p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E5pool1_Yie' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E5pool1_2_1_RAM_2P_BRAM_1R1W' to 'p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E5pool1_Zio' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E5pool1_2_2_RAM_2P_BRAM_1R1W' to 'p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E5pool1_0iy' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E2pw_0_0_RAM_2P_BRAM_1R1W' to 'p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E2pw_0_01iI' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E2pw_0_1_RAM_2P_BRAM_1R1W' to 'p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E2pw_0_12iS' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E2pw_0_2_RAM_2P_BRAM_1R1W' to 'p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E2pw_0_23i2' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E2pw_0_3_RAM_2P_BRAM_1R1W' to 'p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E2pw_0_34jc' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E2pw_0_4_RAM_2P_BRAM_1R1W' to 'p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E2pw_0_45jm' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E2pw_0_5_RAM_2P_BRAM_1R1W' to 'p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E2pw_0_56jw' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E2pw_0_6_RAM_2P_BRAM_1R1W' to 'p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E2pw_0_67jG' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E2pw_0_7_RAM_2P_BRAM_1R1W' to 'p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E2pw_0_78jQ' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E2pw_1_0_RAM_2P_BRAM_1R1W' to 'p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E2pw_1_09j0' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E2pw_1_1_RAM_2P_BRAM_1R1W' to 'p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E2pw_1_1bak' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E2pw_1_2_RAM_2P_BRAM_1R1W' to 'p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E2pw_1_2bbk' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E2pw_1_3_RAM_2P_BRAM_1R1W' to 'p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E2pw_1_3bck' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E2pw_1_4_RAM_2P_BRAM_1R1W' to 'p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E2pw_1_4bdk' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E2pw_1_5_RAM_2P_BRAM_1R1W' to 'p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E2pw_1_5bek' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E2pw_1_6_RAM_2P_BRAM_1R1W' to 'p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E2pw_1_6bfk' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E2pw_1_7_RAM_2P_BRAM_1R1W' to 'p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E2pw_1_7bgk' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E2pw_2_0_RAM_2P_BRAM_1R1W' to 'p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E2pw_2_0bhl' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E2pw_2_1_RAM_2P_BRAM_1R1W' to 'p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E2pw_2_1bil' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E2pw_2_2_RAM_2P_BRAM_1R1W' to 'p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E2pw_2_2bjl' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E2pw_2_3_RAM_2P_BRAM_1R1W' to 'p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E2pw_2_3bkl' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E2pw_2_4_RAM_2P_BRAM_1R1W' to 'p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E2pw_2_4bll' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E2pw_2_5_RAM_2P_BRAM_1R1W' to 'p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E2pw_2_5bml' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E2pw_2_6_RAM_2P_BRAM_1R1W' to 'p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E2pw_2_6bnm' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E2pw_2_7_RAM_2P_BRAM_1R1W' to 'p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E2pw_2_7bom' due to the length limit 80
+INFO: [RTGEN 206-100] Bundling port 'input_img', 'pred_out', 'logits_out' and 'return' to AXI-Lite port control.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'ds_cnn'.
+INFO: [RTMG 210-278] Implementing memory 'ds_cnn_p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E3img_0_KfY' using block RAMs.
+INFO: [RTMG 210-278] Implementing memory 'ds_cnn_p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E5pool1_Shg' using block RAMs.
+INFO: [RTMG 210-278] Implementing memory 'ds_cnn_p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E2pw_0_01iI' using block RAMs.
+INFO: [RTMG 210-278] Implementing memory 'ds_cnn_bins_r_RAM_2P_LUTRAM_1R1W' using distributed RAMs.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.09 seconds. CPU system time: 0 seconds. Elapsed time: 0.09 seconds; current allocated memory: 532.762 MB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0.29 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.31 seconds; current allocated memory: 540.031 MB.
+INFO: [HLS 200-1603] Design has inferred MAXI bursts and missed bursts, see Vitis HLS GUI synthesis summary report for detailed information.
+INFO: [HLS 200-2225] Wrote inferred directives to file /home/rubisrage/Projects/vivado-projects/assignment_2_vitis/shape_cnn/shape_cnn/hls/syn/inferred_directives.ini
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 0.7 seconds. CPU system time: 0.03 seconds. Elapsed time: 0.73 seconds; current allocated memory: 563.645 MB.
+INFO: [VHDL 208-304] Generating VHDL RTL for ds_cnn.
+INFO: [VLOG 209-307] Generating Verilog RTL for ds_cnn.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 136.22 MHz
+INFO: [HLS 200-112] Total CPU user time: 14.91 seconds. Total CPU system time: 1.14 seconds. Total elapsed time: 20.24 seconds; peak allocated memory: 563.645 MB.
+INFO: [v++ 60-791] Total elapsed time: 0h 0m 23s

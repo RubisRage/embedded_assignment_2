@@ -1,0 +1,237 @@
+
+
+================================================================
+== Vitis HLS Report for 'cls_gap_logits_argmax_Pipeline_VITIS_LOOP_187_5'
+================================================================
+* Date:           Sat Nov 21 01:00:40 2026
+
+* Version:        2026.1 (Build 6493734 on Jun 16 2026)
+* Project:        shape_cnn
+* Solution:       hls
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  5.627 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+-------------------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval |      Pipeline     |
+    |   min   |   max   |    min   |    max   | min | max |        Type       |
+    +---------+---------+----------+----------+-----+-----+-------------------+
+    |       14|       14|  0.140 us|  0.140 us|    0|    0|  loop pipeline stp|
+    +---------+---------+----------+----------+-----+-----+-------------------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                    |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |      Loop Name     |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- VITIS_LOOP_187_5  |       12|       12|         6|          1|        N/A|     8|       yes|
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-----+--------+-------+-----+
+|       Name      | BRAM_18K| DSP |   FF   |  LUT  | URAM|
++-----------------+---------+-----+--------+-------+-----+
+|DSP              |        -|    -|       -|      -|    -|
+|Expression       |        -|    -|       0|    484|    -|
+|FIFO             |        -|    -|       -|      -|    -|
+|Instance         |        -|    -|       0|     42|    -|
+|Memory           |        -|    -|       -|      -|    -|
+|Multiplexer      |        -|    -|       0|    236|    -|
+|Register         |        -|    -|     317|     64|    -|
++-----------------+---------+-----+--------+-------+-----+
+|Total            |        0|    0|     317|    826|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Available        |      280|  220|  106400|  53200|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Utilization (%)  |        0|    0|      ~0|      1|    0|
++-----------------+---------+-----+--------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    +----------------------------+-----------------------+---------+----+---+----+-----+
+    |          Instance          |         Module        | BRAM_18K| DSP| FF| LUT| URAM|
+    +----------------------------+-----------------------+---------+----+---+----+-----+
+    |sparsemux_17_3_38_1_1_U322  |sparsemux_17_3_38_1_1  |        0|   0|  0|  42|    0|
+    +----------------------------+-----------------------+---------+----+---+----+-----+
+    |Total                       |                       |        0|   0|  0|  42|    0|
+    +----------------------------+-----------------------+---------+----+---+----+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +-----------------------+----------+----+---+----+------------+------------+
+    |     Variable Name     | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +-----------------------+----------+----+---+----+------------+------------+
+    |add_ln187_fu_267_p2    |         +|   0|  0|  13|           4|           1|
+    |add_ln188_1_fu_361_p2  |         +|   0|  0|  54|          54|          54|
+    |add_ln188_fu_344_p2    |         +|   0|  0|  54|          54|          54|
+    |gap_8_fu_479_p2        |         +|   0|  0|  42|          35|          35|
+    |sub_ln188_1_fu_394_p2  |         -|   0|  0|  54|          54|          54|
+    |sub_ln188_2_fu_403_p2  |         -|   0|  0|  61|          54|          54|
+    |sub_ln188_fu_378_p2    |         -|   0|  0|  54|          54|          54|
+    |and_ln188_1_fu_549_p2  |       and|   0|  0|   2|           1|           1|
+    |and_ln188_2_fu_555_p2  |       and|   0|  0|   2|           1|           1|
+    |and_ln188_3_fu_573_p2  |       and|   0|  0|   2|           1|           1|
+    |and_ln188_fu_511_p2    |       and|   0|  0|   2|           1|           1|
+    |ap_condition_553       |       and|   0|  0|   2|           1|           1|
+    |ap_condition_560       |       and|   0|  0|   2|           1|           1|
+    |ap_condition_565       |       and|   0|  0|   2|           1|           1|
+    |ap_condition_569       |       and|   0|  0|   2|           1|           1|
+    |ap_condition_576       |       and|   0|  0|   2|           1|           1|
+    |ap_condition_581       |       and|   0|  0|   2|           1|           1|
+    |ap_condition_585       |       and|   0|  0|   2|           1|           1|
+    |ap_condition_592       |       and|   0|  0|   2|           1|           1|
+    |ap_condition_597       |       and|   0|  0|   2|           1|           1|
+    |ap_condition_601       |       and|   0|  0|   2|           1|           1|
+    |ap_condition_608       |       and|   0|  0|   2|           1|           1|
+    |ap_condition_613       |       and|   0|  0|   2|           1|           1|
+    |ap_condition_617       |       and|   0|  0|   2|           1|           1|
+    |ap_condition_624       |       and|   0|  0|   2|           1|           1|
+    |ap_condition_629       |       and|   0|  0|   2|           1|           1|
+    |ap_condition_633       |       and|   0|  0|   2|           1|           1|
+    |ap_condition_640       |       and|   0|  0|   2|           1|           1|
+    |ap_condition_645       |       and|   0|  0|   2|           1|           1|
+    |ap_condition_649       |       and|   0|  0|   2|           1|           1|
+    |ap_condition_656       |       and|   0|  0|   2|           1|           1|
+    |ap_condition_661       |       and|   0|  0|   2|           1|           1|
+    |ap_condition_665       |       and|   0|  0|   2|           1|           1|
+    |ap_condition_672       |       and|   0|  0|   2|           1|           1|
+    |ap_condition_677       |       and|   0|  0|   2|           1|           1|
+    |icmp_ln187_fu_261_p2   |      icmp|   0|  0|  13|           4|           5|
+    |icmp_ln188_fu_408_p2   |      icmp|   0|  0|  61|          54|          54|
+    |or_ln188_1_fu_578_p2   |        or|   0|  0|   2|           1|           1|
+    |or_ln188_2_fu_521_p2   |        or|   0|  0|   2|           1|           1|
+    |or_ln188_3_fu_561_p2   |        or|   0|  0|   2|           1|           1|
+    |or_ln188_fu_543_p2     |        or|   0|  0|   2|           1|           1|
+    |ap_enable_pp0          |       xor|   0|  0|   2|           1|           2|
+    |xor_ln188_1_fu_516_p2  |       xor|   0|  0|   2|           1|           2|
+    |xor_ln188_2_fu_527_p2  |       xor|   0|  0|   2|           1|           1|
+    |xor_ln188_3_fu_537_p2  |       xor|   0|  0|   2|           1|           2|
+    |xor_ln188_4_fu_532_p2  |       xor|   0|  0|   2|           1|           1|
+    |xor_ln188_5_fu_567_p2  |       xor|   0|  0|   2|           1|           2|
+    |xor_ln188_fu_505_p2    |       xor|   0|  0|   2|           1|           2|
+    +-----------------------+----------+----+---+----+------------+------------+
+    |Total                  |          |   0|  0| 484|         406|         409|
+    +-----------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-------------------------+----+-----------+-----+-----------+
+    |           Name          | LUT| Input Size| Bits| Total Bits|
+    +-------------------------+----+-----------+-----+-----------+
+    |ap_done_int              |   9|          2|    1|          2|
+    |ap_enable_reg_pp0_iter1  |   9|          2|    1|          2|
+    |ap_sig_allocacmp_ic_2    |   9|          2|    4|          8|
+    |gap_1_o                  |  25|          5|   38|        190|
+    |gap_2_o                  |  25|          5|   38|        190|
+    |gap_3_o                  |  25|          5|   38|        190|
+    |gap_4_o                  |  25|          5|   38|        190|
+    |gap_5_o                  |  25|          5|   38|        190|
+    |gap_6_o                  |  25|          5|   38|        190|
+    |gap_7_o                  |  25|          5|   38|        190|
+    |gap_o                    |  25|          5|   38|        190|
+    |ic_fu_104                |   9|          2|    4|          8|
+    +-------------------------+----+-----------+-----+-----------+
+    |Total                    | 236|         48|  314|       1540|
+    +-------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +----------------------------------+----+----+-----+-----------+
+    |               Name               | FF | LUT| Bits| Const Bits|
+    +----------------------------------+----+----+-----+-----------+
+    |add_ln188_1_reg_612               |  44|   0|   54|         10|
+    |and_ln188_1_reg_646               |   1|   0|    1|          0|
+    |ap_CS_fsm                         |   1|   0|    1|          0|
+    |ap_done_reg                       |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter1           |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter2           |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter3           |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter4           |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter5           |   1|   0|    1|          0|
+    |ap_loop_exit_ready_pp0_iter1_reg  |   1|   0|    1|          0|
+    |ap_loop_exit_ready_pp0_iter2_reg  |   1|   0|    1|          0|
+    |ap_loop_exit_ready_pp0_iter3_reg  |   1|   0|    1|          0|
+    |ap_loop_exit_ready_pp0_iter4_reg  |   1|   0|    1|          0|
+    |ic_fu_104                         |   4|   0|    4|          0|
+    |or_ln188_1_reg_654                |   1|   0|    1|          0|
+    |sub_ln188_1_reg_617               |  51|   0|   54|          3|
+    |tmp_268_reg_627                   |   1|   0|    1|          0|
+    |tmp_269_reg_641                   |   1|   0|    1|          0|
+    |tmp_reg_602                       |  38|   0|   38|          0|
+    |trunc_ln187_reg_595               |   3|   0|    3|          0|
+    |trunc_ln_reg_636                  |  34|   0|   34|          0|
+    |tmp_reg_602                       |  64|  32|   38|          0|
+    |trunc_ln187_reg_595               |  64|  32|    3|          0|
+    +----------------------------------+----+----+-----+-----------+
+    |Total                             | 317|  64|  243|         13|
+    +----------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++----------------+-----+-----+------------+-------------------------------------------------+--------------+
+|    RTL Ports   | Dir | Bits|  Protocol  |                  Source Object                  |    C Type    |
++----------------+-----+-----+------------+-------------------------------------------------+--------------+
+|ap_clk          |   in|    1|  ap_ctrl_hs|  cls_gap_logits_argmax_Pipeline_VITIS_LOOP_187_5|  return value|
+|ap_rst          |   in|    1|  ap_ctrl_hs|  cls_gap_logits_argmax_Pipeline_VITIS_LOOP_187_5|  return value|
+|ap_start        |   in|    1|  ap_ctrl_hs|  cls_gap_logits_argmax_Pipeline_VITIS_LOOP_187_5|  return value|
+|ap_done         |  out|    1|  ap_ctrl_hs|  cls_gap_logits_argmax_Pipeline_VITIS_LOOP_187_5|  return value|
+|ap_idle         |  out|    1|  ap_ctrl_hs|  cls_gap_logits_argmax_Pipeline_VITIS_LOOP_187_5|  return value|
+|ap_ready        |  out|    1|  ap_ctrl_hs|  cls_gap_logits_argmax_Pipeline_VITIS_LOOP_187_5|  return value|
+|gap_i           |   in|   38|     ap_ovld|                                              gap|       pointer|
+|gap_o           |  out|   38|     ap_ovld|                                              gap|       pointer|
+|gap_o_ap_vld    |  out|    1|     ap_ovld|                                              gap|       pointer|
+|gap_7_i         |   in|   38|     ap_ovld|                                            gap_7|       pointer|
+|gap_7_o         |  out|   38|     ap_ovld|                                            gap_7|       pointer|
+|gap_7_o_ap_vld  |  out|    1|     ap_ovld|                                            gap_7|       pointer|
+|gap_6_i         |   in|   38|     ap_ovld|                                            gap_6|       pointer|
+|gap_6_o         |  out|   38|     ap_ovld|                                            gap_6|       pointer|
+|gap_6_o_ap_vld  |  out|    1|     ap_ovld|                                            gap_6|       pointer|
+|gap_5_i         |   in|   38|     ap_ovld|                                            gap_5|       pointer|
+|gap_5_o         |  out|   38|     ap_ovld|                                            gap_5|       pointer|
+|gap_5_o_ap_vld  |  out|    1|     ap_ovld|                                            gap_5|       pointer|
+|gap_4_i         |   in|   38|     ap_ovld|                                            gap_4|       pointer|
+|gap_4_o         |  out|   38|     ap_ovld|                                            gap_4|       pointer|
+|gap_4_o_ap_vld  |  out|    1|     ap_ovld|                                            gap_4|       pointer|
+|gap_3_i         |   in|   38|     ap_ovld|                                            gap_3|       pointer|
+|gap_3_o         |  out|   38|     ap_ovld|                                            gap_3|       pointer|
+|gap_3_o_ap_vld  |  out|    1|     ap_ovld|                                            gap_3|       pointer|
+|gap_2_i         |   in|   38|     ap_ovld|                                            gap_2|       pointer|
+|gap_2_o         |  out|   38|     ap_ovld|                                            gap_2|       pointer|
+|gap_2_o_ap_vld  |  out|    1|     ap_ovld|                                            gap_2|       pointer|
+|gap_1_i         |   in|   38|     ap_ovld|                                            gap_1|       pointer|
+|gap_1_o         |  out|   38|     ap_ovld|                                            gap_1|       pointer|
+|gap_1_o_ap_vld  |  out|    1|     ap_ovld|                                            gap_1|       pointer|
++----------------+-----+-----+------------+-------------------------------------------------+--------------+
+

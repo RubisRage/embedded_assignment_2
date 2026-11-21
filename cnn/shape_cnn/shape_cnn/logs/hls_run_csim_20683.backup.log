@@ -1,0 +1,189 @@
+  **** HLS Build v2026.1 6493734
+INFO: [HLS 200-2005] Using work_dir /home/rubisrage/Projects/vivado-projects/assignment_2_vitis/shape_cnn/shape_cnn 
+INFO: [HLS 200-2176] Writing Vitis IDE component file /home/rubisrage/Projects/vivado-projects/assignment_2_vitis/shape_cnn/shape_cnn/vitis-comp.json
+INFO: [HLS 200-10] Creating and opening component '/home/rubisrage/Projects/vivado-projects/assignment_2_vitis/shape_cnn/shape_cnn'.
+INFO: [HLS 200-2174] Applying component config ini file hls_config.cfg
+INFO: [HLS 200-1465] Applying config ini 'syn.file=shape_cnn.cpp' from hls_config.cfg(10)
+INFO: [HLS 200-10] Adding design file '/home/rubisrage/Projects/vivado-projects/assignment_2_vitis/shape_cnn/shape_cnn.cpp' to the project
+INFO: [HLS 200-1465] Applying config ini 'syn.file=ds_cnn_weights.h' from hls_config.cfg(11)
+INFO: [HLS 200-10] Adding design file '/home/rubisrage/Projects/vivado-projects/assignment_2_vitis/shape_cnn/ds_cnn_weights.h' to the project
+INFO: [HLS 200-1465] Applying config ini 'syn.file=ds_cnn_weights_data.h' from hls_config.cfg(12)
+INFO: [HLS 200-10] Adding design file '/home/rubisrage/Projects/vivado-projects/assignment_2_vitis/shape_cnn/ds_cnn_weights_data.h' to the project
+INFO: [HLS 200-1465] Applying config ini 'tb.file=tb_shape_cnn.cpp' from hls_config.cfg(9)
+INFO: [HLS 200-10] Adding test bench file '/home/rubisrage/Projects/vivado-projects/assignment_2_vitis/shape_cnn/tb_shape_cnn.cpp' to the project
+INFO: [HLS 200-1465] Applying config ini 'syn.top=ds_cnn' from hls_config.cfg(8)
+INFO: [HLS 200-1465] Applying config ini 'part=xc7z020clg400-1' from hls_config.cfg(1)
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+INFO: [HLS 200-1465] Applying config ini 'clock=10' from hls_config.cfg(6)
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1465] Applying config ini 'clock_uncertainty=27%' from hls_config.cfg(7)
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 2.7ns.
+INFO: [HLS 200-1465] Applying config ini 'package.output.format=ip_catalog' from hls_config.cfg(4)
+INFO: [HLS 200-2176] Writing Vitis IDE component file /home/rubisrage/Projects/vivado-projects/assignment_2_vitis/shape_cnn/shape_cnn/vitis-comp.json
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [HLS 200-2191] C-Simulation will use clang-16 as the compiler
+INFO: [HLS 200-2036] Building debug C Simulation binaries
+make: 'csim.exe' is up to date.
+BASE_DIR: /home/rubisrage/Projects/vivado-projects/cnn_env/CNN_guest_lecture/datasets/generated3_6class_txt/test
+IMG: 60x80 (flat 4800)
+Normalization: (x01 - 0.5)/0.25 (matches training)
+Samples/class: 20
+
+===== GT CLASS 0 (Circle) testing 20 files from /home/rubisrage/Projects/vivado-projects/cnn_env/CNN_guest_lecture/datasets/generated3_6class_txt/test/Circle =====
+File: circle_09749.txt | PRED: 0 (Circle) | GT: 0 (Circle) | logits: [8.60547, 4.39062, -9.69141, -2.13281]
+File: circle_08729.txt | PRED: 1 (Ellipse) | GT: 0 (Circle) | logits: [1.38672, 6.62109, -6.22656, -3.1875]
+File: circle_09288.txt | PRED: 0 (Circle) | GT: 0 (Circle) | logits: [17.2344, 7.84766, -12.5273, -4.21875]
+File: circle_08944.txt | PRED: 0 (Circle) | GT: 0 (Circle) | logits: [7.73047, 4.66406, -5.90234, -2.22656]
+File: circle_09196.txt | PRED: 0 (Circle) | GT: 0 (Circle) | logits: [18.9922, 10.2539, -16.043, -5.02344]
+File: circle_09100.txt | PRED: 0 (Circle) | GT: 0 (Circle) | logits: [6.13672, 4.65234, -5.68359, -3.20703]
+File: circle_09611.txt | PRED: 0 (Circle) | GT: 0 (Circle) | logits: [6.54297, 4.75781, -3.29688, -3.08984]
+File: circle_09786.txt | PRED: 0 (Circle) | GT: 0 (Circle) | logits: [4.59375, 1.62109, -4.58203, -1.89062]
+File: circle_08513.txt | PRED: 0 (Circle) | GT: 0 (Circle) | logits: [10.3477, 6.35547, -5.51172, -4.22266]
+File: circle_09961.txt | PRED: 0 (Circle) | GT: 0 (Circle) | logits: [6.44922, 3.6875, -5.71094, -1.79297]
+File: circle_08106.txt | PRED: 0 (Circle) | GT: 0 (Circle) | logits: [7.94141, 4.19141, -9.41406, -3.17969]
+File: circle_08930.txt | PRED: 0 (Circle) | GT: 0 (Circle) | logits: [9.63281, 4.89453, -4.86328, -2.57812]
+File: circle_09810.txt | PRED: 0 (Circle) | GT: 0 (Circle) | logits: [10.1914, 5.66406, -11.0781, -2.72656]
+File: circle_08829.txt | PRED: 0 (Circle) | GT: 0 (Circle) | logits: [13.6016, 9.90234, -5.12109, -5.71875]
+File: circle_09298.txt | PRED: 0 (Circle) | GT: 0 (Circle) | logits: [8.85156, 7.54297, -6.48438, -3.16797]
+File: circle_08570.txt | PRED: 0 (Circle) | GT: 0 (Circle) | logits: [17.9609, 8.30859, -10.5195, -4.46094]
+File: circle_08862.txt | PRED: 0 (Circle) | GT: 0 (Circle) | logits: [10.1758, 7.26562, -6.02344, -4.23828]
+File: circle_08615.txt | PRED: 0 (Circle) | GT: 0 (Circle) | logits: [11.4531, 6.51172, -11.8516, -3.08984]
+File: circle_08462.txt | PRED: 0 (Circle) | GT: 0 (Circle) | logits: [14.8203, 8.41406, -7.67578, -4.16406]
+File: circle_08626.txt | PRED: 0 (Circle) | GT: 0 (Circle) | logits: [16.9531, 8.67188, -8.52344, -4.49609]
+
+===== GT CLASS 1 (Ellipse) testing 20 files from /home/rubisrage/Projects/vivado-projects/cnn_env/CNN_guest_lecture/datasets/generated3_6class_txt/test/Ellipse =====
+File: ellipse_08094.txt | PRED: 1 (Ellipse) | GT: 1 (Ellipse) | logits: [0.789062, 2.58203, -5.20312, -0.746094]
+File: ellipse_09338.txt | PRED: 1 (Ellipse) | GT: 1 (Ellipse) | logits: [-0.410156, 4.30859, -4.75781, -1.08203]
+File: ellipse_09373.txt | PRED: 1 (Ellipse) | GT: 1 (Ellipse) | logits: [-2.07031, 4.96484, -3.26562, -2.20312]
+File: ellipse_08680.txt | PRED: 1 (Ellipse) | GT: 1 (Ellipse) | logits: [7.10156, 7.42578, -8.61328, -2.85938]
+File: ellipse_08253.txt | PRED: 0 (Circle) | GT: 1 (Ellipse) | logits: [10.1562, 7.45312, -9.10547, -3.24219]
+File: ellipse_08068.txt | PRED: 1 (Ellipse) | GT: 1 (Ellipse) | logits: [-0.214844, 4.10938, -4.98047, -1.08203]
+File: ellipse_08839.txt | PRED: 1 (Ellipse) | GT: 1 (Ellipse) | logits: [-10.668, 3.49609, -5.65234, 0.480469]
+File: ellipse_09731.txt | PRED: 1 (Ellipse) | GT: 1 (Ellipse) | logits: [4.21484, 5.83984, -6.69141, -2.08203]
+File: ellipse_09851.txt | PRED: 1 (Ellipse) | GT: 1 (Ellipse) | logits: [1.28516, 4.73047, -6.64844, -1.42969]
+File: ellipse_08032.txt | PRED: 1 (Ellipse) | GT: 1 (Ellipse) | logits: [1.84375, 4.56641, -5.97656, -1.60938]
+File: ellipse_09268.txt | PRED: 1 (Ellipse) | GT: 1 (Ellipse) | logits: [4.79297, 6.35547, -6.83203, -2.34375]
+File: ellipse_09671.txt | PRED: 1 (Ellipse) | GT: 1 (Ellipse) | logits: [5.86328, 6.02734, -6.95703, -3.52344]
+File: ellipse_09460.txt | PRED: 1 (Ellipse) | GT: 1 (Ellipse) | logits: [2.08203, 5.05078, -5.84375, -2.6875]
+File: ellipse_09397.txt | PRED: 0 (Circle) | GT: 1 (Ellipse) | logits: [7.33203, 5.21875, -3.93359, -2.36719]
+File: ellipse_08224.txt | PRED: 1 (Ellipse) | GT: 1 (Ellipse) | logits: [-2.32422, 3.40625, -4.38281, -1.6875]
+File: ellipse_08303.txt | PRED: 0 (Circle) | GT: 1 (Ellipse) | logits: [5.47656, 3.51953, -8.47656, -2.76172]
+File: ellipse_09344.txt | PRED: 1 (Ellipse) | GT: 1 (Ellipse) | logits: [4.10547, 5.78516, -8.57031, -2.01172]
+File: ellipse_08115.txt | PRED: 1 (Ellipse) | GT: 1 (Ellipse) | logits: [-12.2969, 2.49609, -5.33203, -0.121094]
+File: ellipse_09492.txt | PRED: 1 (Ellipse) | GT: 1 (Ellipse) | logits: [1.67188, 4.08594, -6.0625, -1.26953]
+File: ellipse_09165.txt | PRED: 1 (Ellipse) | GT: 1 (Ellipse) | logits: [0.414062, 4.14453, -5.16797, -2.33203]
+
+===== GT CLASS 2 (Figure Eight) testing 20 files from /home/rubisrage/Projects/vivado-projects/cnn_env/CNN_guest_lecture/datasets/generated3_6class_txt/test/Figure Eight =====
+File: figure_eight_09516.txt | PRED: 2 (Figure Eight) | GT: 2 (Figure Eight) | logits: [-11.6914, 1.33984, 8.29688, 0.894531]
+File: figure_eight_08426.txt | PRED: 2 (Figure Eight) | GT: 2 (Figure Eight) | logits: [-23.4297, -1.30469, 8.88672, 3.07422]
+File: figure_eight_08448.txt | PRED: 2 (Figure Eight) | GT: 2 (Figure Eight) | logits: [-17.832, -1.25781, 11.9609, 2.28906]
+File: figure_eight_09960.txt | PRED: 2 (Figure Eight) | GT: 2 (Figure Eight) | logits: [-13.8438, 0.71875, 7.48828, 0.21875]
+File: figure_eight_09082.txt | PRED: 2 (Figure Eight) | GT: 2 (Figure Eight) | logits: [-29.8477, -1.57031, 15.9375, 3.85547]
+File: figure_eight_09665.txt | PRED: 2 (Figure Eight) | GT: 2 (Figure Eight) | logits: [0.105469, 7.18359, 13.793, -2.46094]
+File: figure_eight_08903.txt | PRED: 2 (Figure Eight) | GT: 2 (Figure Eight) | logits: [-15.7148, 2.28906, 15.8242, 0.925781]
+File: figure_eight_09339.txt | PRED: 2 (Figure Eight) | GT: 2 (Figure Eight) | logits: [-23.6797, -1.69531, 11.1953, 3.15234]
+File: figure_eight_08859.txt | PRED: 2 (Figure Eight) | GT: 2 (Figure Eight) | logits: [-25.7188, -0.824219, 6.43359, 2.28516]
+File: figure_eight_09850.txt | PRED: 2 (Figure Eight) | GT: 2 (Figure Eight) | logits: [-15.7422, 0.0820312, 9.42578, 0.625]
+File: figure_eight_09562.txt | PRED: 2 (Figure Eight) | GT: 2 (Figure Eight) | logits: [-23.4023, -1.14062, 9.25, 2.89062]
+File: figure_eight_09934.txt | PRED: 2 (Figure Eight) | GT: 2 (Figure Eight) | logits: [-19.082, -1.53125, 11.082, 2.58203]
+File: figure_eight_08160.txt | PRED: 2 (Figure Eight) | GT: 2 (Figure Eight) | logits: [-19.7695, 0.160156, 14.7227, 2.10547]
+File: figure_eight_08082.txt | PRED: 2 (Figure Eight) | GT: 2 (Figure Eight) | logits: [-13.3516, 0.515625, 3.32031, 1.46094]
+File: figure_eight_08753.txt | PRED: 2 (Figure Eight) | GT: 2 (Figure Eight) | logits: [-21.125, 1.06641, 13.8086, 0.820312]
+File: figure_eight_08668.txt | PRED: 2 (Figure Eight) | GT: 2 (Figure Eight) | logits: [-11.625, 4.30078, 14.0078, -0.0898438]
+File: figure_eight_08023.txt | PRED: 2 (Figure Eight) | GT: 2 (Figure Eight) | logits: [-16.207, 2.30078, 6.5, 1.29688]
+File: figure_eight_09789.txt | PRED: 2 (Figure Eight) | GT: 2 (Figure Eight) | logits: [-31.0352, -0.503906, 18.8867, 3.66406]
+File: figure_eight_09148.txt | PRED: 2 (Figure Eight) | GT: 2 (Figure Eight) | logits: [-21, -3.90234, 8.41797, 3.53906]
+File: figure_eight_08970.txt | PRED: 2 (Figure Eight) | GT: 2 (Figure Eight) | logits: [-16.0781, 0.335938, 11.3242, 0.570312]
+
+===== GT CLASS 3 (Rectangle) testing 20 files from /home/rubisrage/Projects/vivado-projects/cnn_env/CNN_guest_lecture/datasets/generated3_6class_txt/test/Rectangle =====
+File: rectangle_09245.txt | PRED: 3 (Rectangle) | GT: 3 (Rectangle) | logits: [-26.8633, 0.226562, 0.390625, 2.14453]
+File: rectangle_08724.txt | PRED: 1 (Ellipse) | GT: 3 (Rectangle) | logits: [0.683594, 5.10938, -6.30469, -1.39844]
+File: rectangle_09705.txt | PRED: 3 (Rectangle) | GT: 3 (Rectangle) | logits: [-40.0859, -6.54297, -0.988281, 5.85156]
+File: rectangle_08434.txt | PRED: 4 (Square) | GT: 3 (Rectangle) | logits: [-17.2773, -1.99219, -5.14062, 1.61328]
+File: rectangle_09575.txt | PRED: 1 (Ellipse) | GT: 3 (Rectangle) | logits: [-8.27734, 1.70703, -6.03906, -0.25]
+File: rectangle_09988.txt | PRED: 4 (Square) | GT: 3 (Rectangle) | logits: [-15.4102, -2.82812, -1.01562, 1.76172]
+File: rectangle_09160.txt | PRED: 4 (Square) | GT: 3 (Rectangle) | logits: [-13.8711, -3.54688, -1.82422, 1.87891]
+File: rectangle_09381.txt | PRED: 1 (Ellipse) | GT: 3 (Rectangle) | logits: [-8.08203, 0.839844, -1.77734, 0.828125]
+File: rectangle_09890.txt | PRED: 1 (Ellipse) | GT: 3 (Rectangle) | logits: [-10.0234, 2.46094, -2.83594, -0.5]
+File: rectangle_09812.txt | PRED: 1 (Ellipse) | GT: 3 (Rectangle) | logits: [-1.73047, 3.60156, -4.08203, -0.6875]
+File: rectangle_08544.txt | PRED: 1 (Ellipse) | GT: 3 (Rectangle) | logits: [2.55859, 4.82031, -12.8438, -1.23828]
+File: rectangle_09249.txt | PRED: 5 (Triangle) | GT: 3 (Rectangle) | logits: [-8.3125, 0.203125, -5.02734, 0.15625]
+File: rectangle_09881.txt | PRED: 1 (Ellipse) | GT: 3 (Rectangle) | logits: [-4.92188, 1.60547, -3.01172, 0.175781]
+File: rectangle_08543.txt | PRED: 4 (Square) | GT: 3 (Rectangle) | logits: [-14.9023, -1.64062, -2.32031, 2.35156]
+File: rectangle_09167.txt | PRED: 1 (Ellipse) | GT: 3 (Rectangle) | logits: [0.734375, 5.48828, -7.98438, -2.70703]
+File: rectangle_08951.txt | PRED: 1 (Ellipse) | GT: 3 (Rectangle) | logits: [-5.19531, 3.85156, -4.46094, -1.49609]
+File: rectangle_09823.txt | PRED: 1 (Ellipse) | GT: 3 (Rectangle) | logits: [-1.48828, 3.73828, -9.74219, -0.535156]
+File: rectangle_08172.txt | PRED: 4 (Square) | GT: 3 (Rectangle) | logits: [-5.89062, 0.574219, -1.87891, 0.664062]
+File: rectangle_09549.txt | PRED: 1 (Ellipse) | GT: 3 (Rectangle) | logits: [-2.51953, 1.75391, -4.91406, -1.17578]
+File: rectangle_09772.txt | PRED: 1 (Ellipse) | GT: 3 (Rectangle) | logits: [-4.99609, 2.25, -2.77734, -0.863281]
+
+===== GT CLASS 4 (Square) testing 20 files from /home/rubisrage/Projects/vivado-projects/cnn_env/CNN_guest_lecture/datasets/generated3_6class_txt/test/Square =====
+File: square_08655.txt | PRED: 4 (Square) | GT: 4 (Square) | logits: [-41.3242, -7.6875, -9.63281, 7.71484]
+File: square_08717.txt | PRED: 4 (Square) | GT: 4 (Square) | logits: [-6.98438, -0.300781, -3.66797, -0.0390625]
+File: square_09220.txt | PRED: 4 (Square) | GT: 4 (Square) | logits: [-40.3203, -7.84375, -5.9375, 7.4375]
+File: square_09564.txt | PRED: 4 (Square) | GT: 4 (Square) | logits: [-8.74609, -0.03125, -6.20312, 0.199219]
+File: square_08606.txt | PRED: 4 (Square) | GT: 4 (Square) | logits: [-12.8945, -1.30859, -3.41406, 0.972656]
+File: square_08300.txt | PRED: 5 (Triangle) | GT: 4 (Square) | logits: [-5.0625, -0.128906, -5.85547, -0.210938]
+File: square_09315.txt | PRED: 4 (Square) | GT: 4 (Square) | logits: [-40.0469, -7.54688, -11.3711, 7.43359]
+File: square_09511.txt | PRED: 5 (Triangle) | GT: 4 (Square) | logits: [-2.92188, -0.164062, -6.32422, -0.457031]
+File: square_09807.txt | PRED: 1 (Ellipse) | GT: 4 (Square) | logits: [-3.08594, 2.33984, -3.20312, -1.23438]
+File: square_08905.txt | PRED: 4 (Square) | GT: 4 (Square) | logits: [-5.76172, 0.609375, -7.29297, 0.648438]
+File: square_09625.txt | PRED: 4 (Square) | GT: 4 (Square) | logits: [-8.32031, 0.808594, -5.43359, 0.851562]
+File: square_09595.txt | PRED: 4 (Square) | GT: 4 (Square) | logits: [-11.4531, 0.160156, -6.19141, 0.664062]
+File: square_08561.txt | PRED: 4 (Square) | GT: 4 (Square) | logits: [-10.0898, -1.83984, -1.75781, 0.828125]
+File: square_09245.txt | PRED: 1 (Ellipse) | GT: 4 (Square) | logits: [-2.30469, 3.23047, -5.49609, -0.570312]
+File: square_08794.txt | PRED: 4 (Square) | GT: 4 (Square) | logits: [-12.9414, -0.765625, -3.23438, 0.867188]
+File: square_09265.txt | PRED: 4 (Square) | GT: 4 (Square) | logits: [-14.9219, -1.23047, -2.5, 2.23828]
+File: square_09793.txt | PRED: 1 (Ellipse) | GT: 4 (Square) | logits: [1.81641, 2.21094, -1.1875, -0.949219]
+File: square_08081.txt | PRED: 1 (Ellipse) | GT: 4 (Square) | logits: [1.80078, 4.74609, -9.11328, -1.36328]
+File: square_08352.txt | PRED: 1 (Ellipse) | GT: 4 (Square) | logits: [1.50781, 6.70312, -1.87109, -3.1875]
+File: square_08473.txt | PRED: 1 (Ellipse) | GT: 4 (Square) | logits: [-5.67188, 0.53125, -7.53516, -0.394531]
+
+===== GT CLASS 5 (Triangle) testing 20 files from /home/rubisrage/Projects/vivado-projects/cnn_env/CNN_guest_lecture/datasets/generated3_6class_txt/test/Triangle =====
+File: triangle_09796.txt | PRED: 1 (Ellipse) | GT: 5 (Triangle) | logits: [1.27734, 5.49609, -13.2109, -2.64844]
+File: triangle_09222.txt | PRED: 1 (Ellipse) | GT: 5 (Triangle) | logits: [0.441406, 4.78516, -13.0586, -2.31641]
+File: triangle_08382.txt | PRED: 5 (Triangle) | GT: 5 (Triangle) | logits: [-3.03125, 1.24609, -7.23828, 0.15625]
+File: triangle_09279.txt | PRED: 1 (Ellipse) | GT: 5 (Triangle) | logits: [-5.30078, 3.625, -10.8828, -1.30078]
+File: triangle_09894.txt | PRED: 5 (Triangle) | GT: 5 (Triangle) | logits: [-4.94922, 3.63672, -20.4336, -1.12891]
+File: triangle_09283.txt | PRED: 1 (Ellipse) | GT: 5 (Triangle) | logits: [5.66016, 5.92969, -9.85156, -2.23438]
+File: triangle_08264.txt | PRED: 1 (Ellipse) | GT: 5 (Triangle) | logits: [4.86719, 5.58594, -11.3047, -3.25781]
+File: triangle_09281.txt | PRED: 1 (Ellipse) | GT: 5 (Triangle) | logits: [3.69922, 4.8125, -10.125, -1.60156]
+File: triangle_08503.txt | PRED: 5 (Triangle) | GT: 5 (Triangle) | logits: [-3.17969, 0.417969, -7.78906, 0.167969]
+File: triangle_09296.txt | PRED: 1 (Ellipse) | GT: 5 (Triangle) | logits: [2.39453, 4.26172, -8.25781, -1.34375]
+File: triangle_09226.txt | PRED: 1 (Ellipse) | GT: 5 (Triangle) | logits: [2.65625, 3.79688, -8.79297, -2.36719]
+File: triangle_09934.txt | PRED: 0 (Circle) | GT: 5 (Triangle) | logits: [8.11719, 8.10547, -8.54688, -3.16016]
+File: triangle_08081.txt | PRED: 5 (Triangle) | GT: 5 (Triangle) | logits: [-2.88672, 3.07422, -11.7695, -0.378906]
+File: triangle_09368.txt | PRED: 1 (Ellipse) | GT: 5 (Triangle) | logits: [0.332031, 4.93359, -8.22266, -2.43359]
+File: triangle_08085.txt | PRED: 5 (Triangle) | GT: 5 (Triangle) | logits: [-8.18359, 2.33203, -6.80859, 0.503906]
+File: triangle_09633.txt | PRED: 1 (Ellipse) | GT: 5 (Triangle) | logits: [-9.38672, 2.66406, -8.69141, -0.617188]
+File: triangle_08673.txt | PRED: 5 (Triangle) | GT: 5 (Triangle) | logits: [-7.95703, 2.6875, -13.1602, 0.5625]
+File: triangle_09347.txt | PRED: 5 (Triangle) | GT: 5 (Triangle) | logits: [-19.6406, -0.773438, -12.8242, 3.05859]
+File: triangle_08763.txt | PRED: 1 (Ellipse) | GT: 5 (Triangle) | logits: [-0.414062, 5.58594, -15.0117, -2.40234]
+File: triangle_08750.txt | PRED: 5 (Triangle) | GT: 5 (Triangle) | logits: [-31.5195, -3.87891, -15.2969, 4.28125]
+
+✅ Finished testing Depthwise Separable CNN.
+Total: 120  Correct: 78  Accuracy: 0.6500
+
+Confusion Matrix (rows=GT, cols=Pred) counts:
+
+             GT \ Pred                Circle               Ellipse          Figure Eight             Rectangle                Square              Triangle
+                Circle                    19                     1                     0                     0                     0                     0
+               Ellipse                     3                    17                     0                     0                     0                     0
+          Figure Eight                     0                     0                    20                     0                     0                     0
+             Rectangle                     0                    12                     0                     2                     5                     1
+                Square                     0                     6                     0                     0                    12                     2
+              Triangle                     1                    11                     0                     0                     0                     8
+
+Confusion Matrix (rows normalized):
+
+             GT \ Pred                Circle               Ellipse          Figure Eight             Rectangle                Square              Triangle
+                Circle                 0.950                 0.050                 0.000                 0.000                 0.000                 0.000
+               Ellipse                 0.150                 0.850                 0.000                 0.000                 0.000                 0.000
+          Figure Eight                 0.000                 0.000                 1.000                 0.000                 0.000                 0.000
+             Rectangle                 0.000                 0.600                 0.000                 0.100                 0.250                 0.050
+                Square                 0.000                 0.300                 0.000                 0.000                 0.600                 0.100
+              Triangle                 0.050                 0.550                 0.000                 0.000                 0.000                 0.400
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-112] Total CPU user time: 30.81 seconds. Total CPU system time: 0.5 seconds. Total elapsed time: 31.69 seconds; peak allocated memory: 261.840 MB.
+INFO: [vitis-run 60-791] Total elapsed time: 0h 0m 35s

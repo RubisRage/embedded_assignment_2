@@ -1,0 +1,377 @@
+================================================================
+== Vivado RTL Synthesis Results
+================================================================
++ General Information:
+    * Date:            Sat Nov 21 01:04:05 CET 2026
+    * Version:         2026.1 (Build 6493734 on Jun 16 2026)
+    * Project:         shape_cnn
+    * Solution:        hls
+    * Product family:  zynq
+    * Target device:   xc7z020-clg400-1
+
+
+================================================================
+== Run Constraints & Options
+================================================================
++ Design Constraints & Options:
+    * RTL Synthesis target clock:  10 ns
+    * C-Synthesis target clock:    10 ns
+    * C-Synthesis uncertainty:     27%
+
++ RTL Synthesis Options:
+    * config_export -vivado_synth_strategy:     default
+    * config_export -vivado_synth_design_args:  -directive sdx_optimization_effort_high
+
++ Reporting Options:
+    * config_export -vivado_report_level:      2
+    * config_export -vivado_max_timing_paths:  10
+
+
+================================================================
+== RTL Synthesis Resource Summary
+================================================================
+LUT:              7559
+FF:               6739
+DSP:              92
+BRAM:             69
+URAM:             0
+SRL:              135
+
+
+================================================================
+== RTL Synthesis Timing Summary
+================================================================
+* Timing was met
++----------------+-------------+
+| Timing         | Period (ns) |
++----------------+-------------+
+| Target         | 10.000      |
+| Post-Synthesis | 8.266       |
++----------------+-------------+
+
+
+================================================================
+== RTL Synthesis Resources
+================================================================
++------------------------------------------------------------------------------------------------------+-----+----+-----+------+------+-----+--------+------+---------+----------+--------+
+| Name                                                                                                 | LUT | FF | DSP | BRAM | URAM | SRL | Pragma | Impl | Latency | Variable | Source |
++------------------------------------------------------------------------------------------------------+-----+----+-----+------+------+-----+--------+------+---------+----------+--------+
+| inst                                                                                                 |     |    |     |      |      | 135 |        |      |         |          |        |
+|   (inst)                                                                                             |     |    |     |      |      | 1   |        |      |         |          |        |
+|   bins_r_U                                                                                           |     |    |     |      |      |     |        |      |         |          |        |
+|   control_s_axi_U                                                                                    |     |    |     |      |      |     |        |      |         |          |        |
+|     (control_s_axi_U)                                                                                |     |    |     |      |      |     |        |      |         |          |        |
+|   gmem_m_axi_U                                                                                       |     |    |     |      |      | 69  |        |      |         |          |        |
+|   grp_avgpool6x8_fu_491                                                                              |     |    |     |      |      | 16  |        |      |         |          |        |
+|     (grp_avgpool6x8_fu_491)                                                                          |     |    |     |      |      | 16  |        |      |         |          |        |
+|     flow_control_loop_pipe_sequential_init_U                                                         |     |    |     |      |      |     |        |      |         |          |        |
+|   grp_cls_gap_logits_argmax_fu_545                                                                   |     |    |     |      |      | 10  |        |      |         |          |        |
+|     (grp_cls_gap_logits_argmax_fu_545)                                                               |     |    |     |      |      |     |        |      |         |          |        |
+|     grp_cls_gap_logits_argmax_Pipeline_VITIS_LOOP_177_2_VITIS_LOOP_178_3_VITIS_LOOP_179_s_fu_154     |     |    |     |      |      | 1   |        |      |         |          |        |
+|       (grp_cls_gap_logits_argmax_Pipeline_VITIS_LOOP_177_2_VITIS_LOOP_178_3_VITIS_LOOP_179_s_fu_154) |     |    |     |      |      | 1   |        |      |         |          |        |
+|       flow_control_loop_pipe_sequential_init_U                                                       |     |    |     |      |      |     |        |      |         |          |        |
+|     grp_cls_gap_logits_argmax_Pipeline_VITIS_LOOP_187_5_fu_168                                       |     |    |     |      |      | 4   |        |      |         |          |        |
+|       (grp_cls_gap_logits_argmax_Pipeline_VITIS_LOOP_187_5_fu_168)                                   |     |    |     |      |      | 4   |        |      |         |          |        |
+|       flow_control_loop_pipe_sequential_init_U                                                       |     |    |     |      |      |     |        |      |         |          |        |
+|     grp_cls_gap_logits_argmax_Pipeline_VITIS_LOOP_194_6_fu_180                                       |     |    |     |      |      | 5   |        |      |         |          |        |
+|       (grp_cls_gap_logits_argmax_Pipeline_VITIS_LOOP_194_6_fu_180)                                   |     |    |     |      |      | 5   |        |      |         |          |        |
+|       flow_control_loop_pipe_sequential_init_U                                                       |     |    |     |      |      |     |        |      |         |          |        |
+|       mul_38s_11s_49_2_1_U331                                                                        |     |    |     |      |      |     |        |      |         |          |        |
+|       mul_38s_11s_49_2_1_U332                                                                        |     |    |     |      |      |     |        |      |         |          |        |
+|       mul_38s_11s_49_2_1_U333                                                                        |     |    |     |      |      |     |        |      |         |          |        |
+|       mul_38s_12s_50_2_1_U334                                                                        |     |    |     |      |      |     |        |      |         |          |        |
+|       mul_38s_12s_50_2_1_U335                                                                        |     |    |     |      |      |     |        |      |         |          |        |
+|       mul_38s_13s_51_2_1_U336                                                                        |     |    |     |      |      |     |        |      |         |          |        |
+|       mul_38s_13s_51_2_1_U337                                                                        |     |    |     |      |      |     |        |      |         |          |        |
+|       mul_38s_15s_52_2_1_U338                                                                        |     |    |     |      |      |     |        |      |         |          |        |
+|       weights_CLS_B_U                                                                                |     |    |     |      |      |     |        |      |         |          |        |
+|     grp_cls_gap_logits_argmax_Pipeline_VITIS_LOOP_207_8_fu_218                                       |     |    |     |      |      |     |        |      |         |          |        |
+|       flow_control_loop_pipe_sequential_init_U                                                       |     |    |     |      |      |     |        |      |         |          |        |
+|   grp_conv1_relu_maxpool_fu_309                                                                      |     |    |     |      |      | 27  |        |      |         |          |        |
+|     (grp_conv1_relu_maxpool_fu_309)                                                                  |     |    |     |      |      | 18  |        |      |         |          |        |
+|     flow_control_loop_pipe_sequential_init_U                                                         |     |    |     |      |      |     |        |      |         |          |        |
+|     mul_5ns_7ns_11_1_1_U12                                                                           |     |    |     |      |      |     |        |      |         |          |        |
+|     mul_6ns_8ns_13_1_1_U13                                                                           |     |    |     |      |      |     |        |      |         |          |        |
+|     p_ZN7weights7CONV1_WE_0_U                                                                        |     |    |     |      |      |     |        |      |         |          |        |
+|     p_ZN7weights7CONV1_WE_1_U                                                                        |     |    |     |      |      |     |        |      |         |          |        |
+|     p_ZN7weights7CONV1_WE_2_U                                                                        |     |    |     |      |      |     |        |      |         |          |        |
+|     p_ZN7weights7CONV1_WE_3_U                                                                        |     |    |     |      |      |     |        |      |         |          |        |
+|     p_ZN7weights7CONV1_WE_4_U                                                                        |     |    |     |      |      |     |        |      |         |          |        |
+|     p_ZN7weights7CONV1_WE_5_U                                                                        |     |    |     |      |      |     |        |      |         |          |        |
+|     p_ZN7weights7CONV1_WE_6_U                                                                        |     |    |     |      |      |     |        |      |         |          |        |
+|     p_ZN7weights7CONV1_WE_7_U                                                                        |     |    |     |      |      |     |        |      |         |          |        |
+|     p_ZN7weights7CONV1_WE_8_U                                                                        |     |    |     |      |      |     |        |      |         |          |        |
+|     urem_5ns_3ns_2_9_1_U11                                                                           |     |    |     |      |      |     |        |      |         |          |        |
+|     urem_6ns_3ns_2_10_1_U14                                                                          |     |    |     |      |      |     |        |      |         |          |        |
+|     weights_CONV1_B_U                                                                                |     |    |     |      |      |     |        |      |         |          |        |
+|   grp_depthwise_pointwise_relu_fused_fu_367                                                          |     |    |     |      |      | 12  |        |      |         |          |        |
+|     (grp_depthwise_pointwise_relu_fused_fu_367)                                                      |     |    |     |      |      |     |        |      |         |          |        |
+|     grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426                              |     |    |     |      |      | 6   |        |      |         |          |        |
+|       (grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426)                          |     |    |     |      |      | 6   |        |      |         |          |        |
+|       flow_control_loop_pipe_sequential_init_U                                                       |     |    |     |      |      |     |        |      |         |          |        |
+|       p_ZN7weights4PW_WE_12_U                                                                        |     |    |     |      |      |     |        |      |         |          |        |
+|       p_ZN7weights4PW_WE_13_U                                                                        |     |    |     |      |      |     |        |      |         |          |        |
+|       p_ZN7weights4PW_WE_14_U                                                                        |     |    |     |      |      |     |        |      |         |          |        |
+|       p_ZN7weights4PW_WE_15_U                                                                        |     |    |     |      |      |     |        |      |         |          |        |
+|       weights_PW_B_U                                                                                 |     |    |     |      |      |     |        |      |         |          |        |
+|     grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_94_3_fu_349                               |     |    |     |      |      | 6   |        |      |         |          |        |
+|       (grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_94_3_fu_349)                           |     |    |     |      |      | 6   |        |      |         |          |        |
+|       flow_control_loop_pipe_sequential_init_U                                                       |     |    |     |      |      |     |        |      |         |          |        |
+|       p_ZN7weights4DW_WE_6_U                                                                         |     |    |     |      |      |     |        |      |         |          |        |
+|       p_ZN7weights4DW_WE_7_U                                                                         |     |    |     |      |      |     |        |      |         |          |        |
+|       p_ZN7weights4DW_WE_8_U                                                                         |     |    |     |      |      |     |        |      |         |          |        |
+|       weights_DW_B_U                                                                                 |     |    |     |      |      |     |        |      |         |          |        |
+|     mul_5ns_7ns_11_1_1_U250                                                                          |     |    |     |      |      |     |        |      |         |          |        |
+|     mul_64ns_66ns_129_5_1_U249                                                                       |     |    |     |      |      |     |        |      |         |          |        |
+|     mul_6ns_8ns_13_1_1_U251                                                                          |     |    |     |      |      |     |        |      |         |          |        |
+|   grp_ds_cnn_Pipeline_VITIS_LOOP_240_1_fu_286                                                        |     |    |     |      |      |     |        |      |         |          |        |
+|     (grp_ds_cnn_Pipeline_VITIS_LOOP_240_1_fu_286)                                                    |     |    |     |      |      |     |        |      |         |          |        |
+|     flow_control_loop_pipe_sequential_init_U                                                         |     |    |     |      |      |     |        |      |         |          |        |
+|   p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E2pw_0_0_U                    |     |    |     |      |      |     |        |      |         |          |        |
+|   p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E2pw_0_1_U                    |     |    |     |      |      |     |        |      |         |          |        |
+|   p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E2pw_0_2_U                    |     |    |     |      |      |     |        |      |         |          |        |
+|   p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E2pw_0_3_U                    |     |    |     |      |      |     |        |      |         |          |        |
+|   p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E2pw_0_4_U                    |     |    |     |      |      |     |        |      |         |          |        |
+|   p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E2pw_0_5_U                    |     |    |     |      |      |     |        |      |         |          |        |
+|   p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E2pw_0_6_U                    |     |    |     |      |      |     |        |      |         |          |        |
+|   p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E2pw_0_7_U                    |     |    |     |      |      |     |        |      |         |          |        |
+|   p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E2pw_1_0_U                    |     |    |     |      |      |     |        |      |         |          |        |
+|   p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E2pw_1_1_U                    |     |    |     |      |      |     |        |      |         |          |        |
+|   p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E2pw_1_2_U                    |     |    |     |      |      |     |        |      |         |          |        |
+|   p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E2pw_1_3_U                    |     |    |     |      |      |     |        |      |         |          |        |
+|   p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E2pw_1_4_U                    |     |    |     |      |      |     |        |      |         |          |        |
+|   p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E2pw_1_5_U                    |     |    |     |      |      |     |        |      |         |          |        |
+|   p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E2pw_1_6_U                    |     |    |     |      |      |     |        |      |         |          |        |
+|   p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E2pw_1_7_U                    |     |    |     |      |      |     |        |      |         |          |        |
+|   p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E2pw_2_0_U                    |     |    |     |      |      |     |        |      |         |          |        |
+|   p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E2pw_2_1_U                    |     |    |     |      |      |     |        |      |         |          |        |
+|   p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E2pw_2_2_U                    |     |    |     |      |      |     |        |      |         |          |        |
+|   p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E2pw_2_3_U                    |     |    |     |      |      |     |        |      |         |          |        |
+|   p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E2pw_2_4_U                    |     |    |     |      |      |     |        |      |         |          |        |
+|   p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E2pw_2_5_U                    |     |    |     |      |      |     |        |      |         |          |        |
+|   p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E2pw_2_6_U                    |     |    |     |      |      |     |        |      |         |          |        |
+|   p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E2pw_2_7_U                    |     |    |     |      |      |     |        |      |         |          |        |
+|   p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E3img_0_0_U                   |     |    |     |      |      |     |        |      |         |          |        |
+|   p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E3img_0_1_U                   |     |    |     |      |      |     |        |      |         |          |        |
+|   p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E3img_0_2_U                   |     |    |     |      |      |     |        |      |         |          |        |
+|   p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E3img_0_3_U                   |     |    |     |      |      |     |        |      |         |          |        |
+|   p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E3img_1_0_U                   |     |    |     |      |      |     |        |      |         |          |        |
+|   p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E3img_1_1_U                   |     |    |     |      |      |     |        |      |         |          |        |
+|   p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E3img_1_2_U                   |     |    |     |      |      |     |        |      |         |          |        |
+|   p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E3img_1_3_U                   |     |    |     |      |      |     |        |      |         |          |        |
+|   p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E5pool1_0_0_U                 |     |    |     |      |      |     |        |      |         |          |        |
+|   p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E5pool1_0_1_U                 |     |    |     |      |      |     |        |      |         |          |        |
+|   p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E5pool1_0_2_U                 |     |    |     |      |      |     |        |      |         |          |        |
+|   p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E5pool1_1_0_U                 |     |    |     |      |      |     |        |      |         |          |        |
+|   p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E5pool1_1_1_U                 |     |    |     |      |      |     |        |      |         |          |        |
+|   p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E5pool1_1_2_U                 |     |    |     |      |      |     |        |      |         |          |        |
+|   p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E5pool1_2_0_U                 |     |    |     |      |      |     |        |      |         |          |        |
+|   p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E5pool1_2_1_U                 |     |    |     |      |      |     |        |      |         |          |        |
+|   p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E5pool1_2_2_U                 |     |    |     |      |      |     |        |      |         |          |        |
++------------------------------------------------------------------------------------------------------+-----+----+-----+------+------+-----+--------+------+---------+----------+--------+
+
+
+================================================================
+== RTL Synthesis Fail Fast
+================================================================
++-----------------------------------------------------------+-----------+--------+--------+
+| Criteria                                                  | Guideline | Actual | Status |
++-----------------------------------------------------------+-----------+--------+--------+
+| LUT                                                       | 70%       | 14.21% | OK     |
+| FD                                                        | 50%       | 6.33%  | OK     |
+| LUTRAM+SRL                                                | 25%       | 1.60%  | OK     |
+| MUXF7                                                     | 15%       | 0.19%  | OK     |
+| DSP                                                       | 80%       | 41.82% | OK     |
+| RAMB/FIFO                                                 | 80%       | 24.64% | OK     |
+| DSP+RAMB+URAM (Avg)                                       | 70%       | 33.23% | OK     |
+| BUFGCE* + BUFGCTRL                                        | 24        | 0      | OK     |
+| DONT_TOUCH (cells/nets)                                   | 0         | 2      | REVIEW |
+| MARK_DEBUG (nets)                                         | 0         | 0      | OK     |
+| Control Sets                                              | 998       | 138    | OK     |
+| Average Fanout for modules > 100k cells                   | 4         | 2.37   | OK     |
+| Max Average Fanout for modules > 100k cells               | 4         | 0      | OK     |
+| Non-FD high fanout nets > 10k loads                       | 0         | 0      | OK     |
++-----------------------------------------------------------+-----------+--------+--------+
+| TIMING-6 (No common primary clock between related clocks) | 0         | 0      | OK     |
+| TIMING-7 (No common node between related clocks)          | 0         | 0      | OK     |
+| TIMING-8 (No common period between related clocks)        | 0         | 0      | OK     |
+| TIMING-14 (LUT on the clock tree)                         | 0         | 0      | OK     |
+| TIMING-35 (No common node in paths with the same clock)   | 0         | 0      | OK     |
++-----------------------------------------------------------+-----------+--------+--------+
+| Number of paths above max LUT budgeting (0.575ns)         | 0         | 0      | OK     |
+| Number of paths above max Net budgeting (0.403ns)         | 0         | 0      | OK     |
++-----------------------------------------------------------+-----------+--------+--------+
+
+
+================================================================
+== RTL Synthesis Timing Paths
+================================================================
+* Timing was met
++-------+-------+----------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------+--------------+------------+----------------+----------------+--------------+
+| Path  | SLACK | STARTPOINT PIN                                                                                                                         | ENDPOINT PIN                                                                                                                           | LOGIC LEVELS | MAX FANOUT | DATAPATH DELAY | DATAPATH LOGIC | DATAPATH NET |
+|       |       |                                                                                                                                        |                                                                                                                                        |              |            |                |          DELAY |        DELAY |
++-------+-------+----------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------+--------------+------------+----------------+----------------+--------------+
+| Path1 | 1.734 | grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/tmp_85_reg_3109_reg[0]/C | grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/tmp_42_reg_3152_reg[0]/S |           21 |         41 |          7.658 |          3.999 |        3.659 |
+| Path2 | 1.734 | grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/tmp_85_reg_3109_reg[0]/C | grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/tmp_42_reg_3152_reg[1]/S |           21 |         41 |          7.658 |          3.999 |        3.659 |
+| Path3 | 1.734 | grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/tmp_85_reg_3109_reg[0]/C | grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/tmp_42_reg_3152_reg[2]/S |           21 |         41 |          7.658 |          3.999 |        3.659 |
+| Path4 | 1.734 | grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/tmp_85_reg_3109_reg[0]/C | grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/tmp_42_reg_3152_reg[3]/S |           21 |         41 |          7.658 |          3.999 |        3.659 |
+| Path5 | 1.734 | grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/tmp_85_reg_3109_reg[0]/C | grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/tmp_42_reg_3152_reg[4]/S |           21 |         41 |          7.658 |          3.999 |        3.659 |
++-------+-------+----------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------+--------------+------------+----------------+----------------+--------------+
+
+    +-------------------------------------------------------------------------------------------------------------------------------------------------+----------------------+
+    | Path1 Cells                                                                                                                                     | Primitive Type       |
+    +-------------------------------------------------------------------------------------------------------------------------------------------------+----------------------+
+    | grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/tmp_85_reg_3109_reg[0]            | FLOP_LATCH.flop.FDRE |
+    | grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry_i_3 | LUT.others.LUT4      |
+    | grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry     | CARRY.others.CARRY4  |
+    | grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__0  | CARRY.others.CARRY4  |
+    | grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__1  | CARRY.others.CARRY4  |
+    | grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__2  | CARRY.others.CARRY4  |
+    | grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__3  | CARRY.others.CARRY4  |
+    | grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__4  | CARRY.others.CARRY4  |
+    | grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__5  | CARRY.others.CARRY4  |
+    | grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__6  | CARRY.others.CARRY4  |
+    | grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__7  | CARRY.others.CARRY4  |
+    | grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry_i_3 | LUT.others.LUT4      |
+    | grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry     | CARRY.others.CARRY4  |
+    | grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__0  | CARRY.others.CARRY4  |
+    | grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__1  | CARRY.others.CARRY4  |
+    | grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__2  | CARRY.others.CARRY4  |
+    | grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__3  | CARRY.others.CARRY4  |
+    | grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__4  | CARRY.others.CARRY4  |
+    | grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__5  | CARRY.others.CARRY4  |
+    | grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__6  | CARRY.others.CARRY4  |
+    | grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__7  | CARRY.others.CARRY4  |
+    | grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/tmp_91_reg_3142[0]_i_1            | LUT.others.LUT2      |
+    | grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/tmp_42_reg_3152_reg[0]            | FLOP_LATCH.flop.FDSE |
+    +-------------------------------------------------------------------------------------------------------------------------------------------------+----------------------+
+
+    +-------------------------------------------------------------------------------------------------------------------------------------------------+----------------------+
+    | Path2 Cells                                                                                                                                     | Primitive Type       |
+    +-------------------------------------------------------------------------------------------------------------------------------------------------+----------------------+
+    | grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/tmp_85_reg_3109_reg[0]            | FLOP_LATCH.flop.FDRE |
+    | grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry_i_3 | LUT.others.LUT4      |
+    | grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry     | CARRY.others.CARRY4  |
+    | grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__0  | CARRY.others.CARRY4  |
+    | grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__1  | CARRY.others.CARRY4  |
+    | grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__2  | CARRY.others.CARRY4  |
+    | grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__3  | CARRY.others.CARRY4  |
+    | grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__4  | CARRY.others.CARRY4  |
+    | grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__5  | CARRY.others.CARRY4  |
+    | grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__6  | CARRY.others.CARRY4  |
+    | grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__7  | CARRY.others.CARRY4  |
+    | grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry_i_3 | LUT.others.LUT4      |
+    | grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry     | CARRY.others.CARRY4  |
+    | grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__0  | CARRY.others.CARRY4  |
+    | grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__1  | CARRY.others.CARRY4  |
+    | grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__2  | CARRY.others.CARRY4  |
+    | grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__3  | CARRY.others.CARRY4  |
+    | grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__4  | CARRY.others.CARRY4  |
+    | grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__5  | CARRY.others.CARRY4  |
+    | grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__6  | CARRY.others.CARRY4  |
+    | grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__7  | CARRY.others.CARRY4  |
+    | grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/tmp_91_reg_3142[0]_i_1            | LUT.others.LUT2      |
+    | grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/tmp_42_reg_3152_reg[1]            | FLOP_LATCH.flop.FDSE |
+    +-------------------------------------------------------------------------------------------------------------------------------------------------+----------------------+
+
+    +-------------------------------------------------------------------------------------------------------------------------------------------------+----------------------+
+    | Path3 Cells                                                                                                                                     | Primitive Type       |
+    +-------------------------------------------------------------------------------------------------------------------------------------------------+----------------------+
+    | grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/tmp_85_reg_3109_reg[0]            | FLOP_LATCH.flop.FDRE |
+    | grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry_i_3 | LUT.others.LUT4      |
+    | grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry     | CARRY.others.CARRY4  |
+    | grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__0  | CARRY.others.CARRY4  |
+    | grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__1  | CARRY.others.CARRY4  |
+    | grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__2  | CARRY.others.CARRY4  |
+    | grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__3  | CARRY.others.CARRY4  |
+    | grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__4  | CARRY.others.CARRY4  |
+    | grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__5  | CARRY.others.CARRY4  |
+    | grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__6  | CARRY.others.CARRY4  |
+    | grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__7  | CARRY.others.CARRY4  |
+    | grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry_i_3 | LUT.others.LUT4      |
+    | grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry     | CARRY.others.CARRY4  |
+    | grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__0  | CARRY.others.CARRY4  |
+    | grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__1  | CARRY.others.CARRY4  |
+    | grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__2  | CARRY.others.CARRY4  |
+    | grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__3  | CARRY.others.CARRY4  |
+    | grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__4  | CARRY.others.CARRY4  |
+    | grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__5  | CARRY.others.CARRY4  |
+    | grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__6  | CARRY.others.CARRY4  |
+    | grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__7  | CARRY.others.CARRY4  |
+    | grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/tmp_91_reg_3142[0]_i_1            | LUT.others.LUT2      |
+    | grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/tmp_42_reg_3152_reg[2]            | FLOP_LATCH.flop.FDSE |
+    +-------------------------------------------------------------------------------------------------------------------------------------------------+----------------------+
+
+    +-------------------------------------------------------------------------------------------------------------------------------------------------+----------------------+
+    | Path4 Cells                                                                                                                                     | Primitive Type       |
+    +-------------------------------------------------------------------------------------------------------------------------------------------------+----------------------+
+    | grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/tmp_85_reg_3109_reg[0]            | FLOP_LATCH.flop.FDRE |
+    | grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry_i_3 | LUT.others.LUT4      |
+    | grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry     | CARRY.others.CARRY4  |
+    | grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__0  | CARRY.others.CARRY4  |
+    | grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__1  | CARRY.others.CARRY4  |
+    | grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__2  | CARRY.others.CARRY4  |
+    | grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__3  | CARRY.others.CARRY4  |
+    | grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__4  | CARRY.others.CARRY4  |
+    | grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__5  | CARRY.others.CARRY4  |
+    | grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__6  | CARRY.others.CARRY4  |
+    | grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__7  | CARRY.others.CARRY4  |
+    | grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry_i_3 | LUT.others.LUT4      |
+    | grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry     | CARRY.others.CARRY4  |
+    | grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__0  | CARRY.others.CARRY4  |
+    | grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__1  | CARRY.others.CARRY4  |
+    | grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__2  | CARRY.others.CARRY4  |
+    | grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__3  | CARRY.others.CARRY4  |
+    | grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__4  | CARRY.others.CARRY4  |
+    | grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__5  | CARRY.others.CARRY4  |
+    | grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__6  | CARRY.others.CARRY4  |
+    | grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__7  | CARRY.others.CARRY4  |
+    | grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/tmp_91_reg_3142[0]_i_1            | LUT.others.LUT2      |
+    | grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/tmp_42_reg_3152_reg[3]            | FLOP_LATCH.flop.FDSE |
+    +-------------------------------------------------------------------------------------------------------------------------------------------------+----------------------+
+
+    +-------------------------------------------------------------------------------------------------------------------------------------------------+----------------------+
+    | Path5 Cells                                                                                                                                     | Primitive Type       |
+    +-------------------------------------------------------------------------------------------------------------------------------------------------+----------------------+
+    | grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/tmp_85_reg_3109_reg[0]            | FLOP_LATCH.flop.FDRE |
+    | grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry_i_3 | LUT.others.LUT4      |
+    | grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry     | CARRY.others.CARRY4  |
+    | grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__0  | CARRY.others.CARRY4  |
+    | grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__1  | CARRY.others.CARRY4  |
+    | grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__2  | CARRY.others.CARRY4  |
+    | grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__3  | CARRY.others.CARRY4  |
+    | grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__4  | CARRY.others.CARRY4  |
+    | grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__5  | CARRY.others.CARRY4  |
+    | grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__6  | CARRY.others.CARRY4  |
+    | grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__7  | CARRY.others.CARRY4  |
+    | grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry_i_3 | LUT.others.LUT4      |
+    | grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry     | CARRY.others.CARRY4  |
+    | grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__0  | CARRY.others.CARRY4  |
+    | grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__1  | CARRY.others.CARRY4  |
+    | grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__2  | CARRY.others.CARRY4  |
+    | grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__3  | CARRY.others.CARRY4  |
+    | grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__4  | CARRY.others.CARRY4  |
+    | grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__5  | CARRY.others.CARRY4  |
+    | grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__6  | CARRY.others.CARRY4  |
+    | grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__7  | CARRY.others.CARRY4  |
+    | grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/tmp_91_reg_3142[0]_i_1            | LUT.others.LUT2      |
+    | grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/tmp_42_reg_3152_reg[4]            | FLOP_LATCH.flop.FDSE |
+    +-------------------------------------------------------------------------------------------------------------------------------------------------+----------------------+
+
+
+================================================================
+== RTL Synthesis Vivado Reports
+================================================================
++--------------------------+---------------------------------------------------------------+
+| Report Type              | Report Location                                               |
++--------------------------+---------------------------------------------------------------+
+| design_analysis          | impl/verilog/report/ds_cnn_design_analysis_synth.rpt          |
+| failfast                 | impl/verilog/report/ds_cnn_failfast_synth.rpt                 |
+| power                    | impl/verilog/report/ds_cnn_power_synth.rpt                    |
+| timing                   | impl/verilog/report/ds_cnn_timing_synth.rpt                   |
+| timing_paths             | impl/verilog/report/ds_cnn_timing_paths_synth.rpt             |
+| utilization              | impl/verilog/report/ds_cnn_utilization_synth.rpt              |
+| utilization_hierarchical | impl/verilog/report/ds_cnn_utilization_hierarchical_synth.rpt |
++--------------------------+---------------------------------------------------------------+
+
+

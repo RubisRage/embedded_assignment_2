@@ -1,0 +1,4 @@
+domain_path: /home/rubisrage/Projects/vivado-projects/assignment_2_vitis/cnn_naive/zynq_fsbl/zynq_fsbl_bsp
+app_src_dir: /home/rubisrage/tools/xilinx-sdu/2026.1/Vitis/data/embeddedsw/lib/sw_apps/zynq_fsbl
+template: zynq_fsbl
+lang: c

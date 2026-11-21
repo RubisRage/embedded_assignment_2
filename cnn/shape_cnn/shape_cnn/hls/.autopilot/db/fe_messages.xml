@@ -1,0 +1,260 @@
+<xilinx:hls_fe_msgs>
+    <msg msg_groups="PRAGMA_INVALID" msg_id="207-7023" msg_severity="WARNING" msg_loc="shape_cnn.cpp:33:1" msg_body="missing argument for 'variable'">
+        <args ClangWarningOption="invalid-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INVALID" msg_id="207-7023" msg_severity="WARNING" msg_loc="shape_cnn.cpp:85:1" msg_body="missing argument for 'variable'">
+        <args ClangWarningOption="invalid-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="shape_cnn.cpp:20:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="relu_dt" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="shape_cnn.cpp:32:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="conv1_relu_maxpool" ARG_PragmaIsValid="1" ARG_PragmaOptions="off" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="shape_cnn.cpp:33:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="conv1_relu_maxpool" ARG_PragmaIsValid="0" ARG_PragmaOptions="op=mul impl=dsp" ARG_PragmaType="bind_op" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="shape_cnn.cpp:39:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="conv1_relu_maxpool" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="shape_cnn.cpp:84:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="depthwise_pointwise_relu_fused" ARG_PragmaIsValid="1" ARG_PragmaOptions="off" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="shape_cnn.cpp:85:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="depthwise_pointwise_relu_fused" ARG_PragmaIsValid="0" ARG_PragmaOptions="op=mul impl=dsp" ARG_PragmaType="bind_op" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="shape_cnn.cpp:91:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="depthwise_pointwise_relu_fused" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=dw_relu complete dim=1" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="shape_cnn.cpp:96:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="depthwise_pointwise_relu_fused" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="shape_cnn.cpp:122:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="depthwise_pointwise_relu_fused" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="shape_cnn.cpp:142:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="avgpool6x8" ARG_PragmaIsValid="1" ARG_PragmaOptions="off" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="shape_cnn.cpp:149:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="avgpool6x8" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="shape_cnn.cpp:168:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="cls_gap_logits_argmax" ARG_PragmaIsValid="1" ARG_PragmaOptions="off" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="shape_cnn.cpp:171:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="cls_gap_logits_argmax" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=gap complete dim=1" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="shape_cnn.cpp:181:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="cls_gap_logits_argmax" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="shape_cnn.cpp:192:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="cls_gap_logits_argmax" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=logits complete dim=1" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="directive:1:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="ds_cnn" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=ds_cnn" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="shape_cnn.cpp:223:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="ds_cnn" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi port=input_img offset=slave bundle=gmem depth=4800" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="shape_cnn.cpp:224:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="ds_cnn" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=input_img bundle=control" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="shape_cnn.cpp:225:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="ds_cnn" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=pred_out bundle=control" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="shape_cnn.cpp:226:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="ds_cnn" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=logits_out bundle=control" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="shape_cnn.cpp:227:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="ds_cnn" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=return bundle=control" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="shape_cnn.cpp:235:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="ds_cnn" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=img type=ram_2p impl=bram" ARG_PragmaType="bind_storage" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="shape_cnn.cpp:236:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="ds_cnn" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=pool1 type=ram_2p impl=bram" ARG_PragmaType="bind_storage" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="shape_cnn.cpp:237:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="ds_cnn" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=pw type=ram_2p impl=bram" ARG_PragmaType="bind_storage" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="shape_cnn.cpp:238:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="ds_cnn" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=bins type=ram_2p impl=lutram" ARG_PragmaType="bind_storage" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="shape_cnn.cpp:241:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="ds_cnn" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-131" msg_severity="INFO" msg_loc="shape_cnn.cpp:69:18" msg_body="Inlining function 'relu_dt(ap_fixed&lt;16, 8, (ap_q_mode)0, (ap_o_mode)0, 0&gt;)' into 'conv1_relu_maxpool(ap_fixed&lt;16, 8, (ap_q_mode)0, (ap_o_mode)0, 0&gt; (*) [80], ap_fixed&lt;16, 8, (ap_q_mode)0, (ap_o_mode)0, 0&gt; (*) [40][16])'">
+        <args Callee="relu_dt(ap_fixed&lt;16, 8, (ap_q_mode)0, (ap_o_mode)0, 0&gt;)" Callee-DebugLoc="File shape_cnn.cpp Line 19 Column 0" Caller="conv1_relu_maxpool(ap_fixed&lt;16, 8, (ap_q_mode)0, (ap_o_mode)0, 0&gt; (*) [80], ap_fixed&lt;16, 8, (ap_q_mode)0, (ap_o_mode)0, 0&gt; (*) [40][16])" Caller-DebugLoc="File shape_cnn.cpp Line 31 Column 0"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_ACK" msg_id="214-490" msg_severity="INFO" msg_loc="shape_cnn.cpp:20:1" msg_body="inline   false _ZL7relu_dt8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EE shape_cnn.cpp:20:1">
+        <args PragmaFunction="_ZL7relu_dt8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EE" PragmaIsAuto="false" PragmaSrcLoc="shape_cnn.cpp:20:1" PragmaSrcLoc-DebugLoc="File shape_cnn.cpp Line 20 Column 1" PragmaType="inline"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-131" msg_severity="INFO" msg_loc="shape_cnn.cpp:130:23" msg_body="Inlining function 'relu_dt(ap_fixed&lt;16, 8, (ap_q_mode)0, (ap_o_mode)0, 0&gt;)' into 'depthwise_pointwise_relu_fused(ap_fixed&lt;16, 8, (ap_q_mode)0, (ap_o_mode)0, 0&gt; (*) [40][16], ap_fixed&lt;16, 8, (ap_q_mode)0, (ap_o_mode)0, 0&gt; (*) [40][8])'">
+        <args Callee="relu_dt(ap_fixed&lt;16, 8, (ap_q_mode)0, (ap_o_mode)0, 0&gt;)" Callee-DebugLoc="File shape_cnn.cpp Line 19 Column 0" Caller="depthwise_pointwise_relu_fused(ap_fixed&lt;16, 8, (ap_q_mode)0, (ap_o_mode)0, 0&gt; (*) [40][16], ap_fixed&lt;16, 8, (ap_q_mode)0, (ap_o_mode)0, 0&gt; (*) [40][8])" Caller-DebugLoc="File shape_cnn.cpp Line 83 Column 0"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="shape_cnn.cpp:153:23" msg_body="Loop 'VITIS_LOOP_153_4' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="VITIS_LOOP_153_4"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="shape_cnn.cpp:154:23" msg_body="Loop 'VITIS_LOOP_154_5' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="VITIS_LOOP_154_5"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="shape_cnn.cpp:100:27" msg_body="Loop 'VITIS_LOOP_100_4' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="VITIS_LOOP_100_4"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="shape_cnn.cpp:101:27" msg_body="Loop 'VITIS_LOOP_101_5' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="VITIS_LOOP_101_5"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="shape_cnn.cpp:126:27" msg_body="Loop 'VITIS_LOOP_126_7' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="VITIS_LOOP_126_7"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="shape_cnn.cpp:45:22" msg_body="Loop 'VITIS_LOOP_45_4' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="VITIS_LOOP_45_4"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="shape_cnn.cpp:52:26" msg_body="Loop 'VITIS_LOOP_52_5' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="VITIS_LOOP_52_5"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="shape_cnn.cpp:53:26" msg_body="Loop 'VITIS_LOOP_53_6' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="VITIS_LOOP_53_6"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="shape_cnn.cpp:141:0" msg_body="Unrolling loop 'VITIS_LOOP_153_4' (shape_cnn.cpp:153:23) in function 'avgpool6x8' completely with a factor of 6">
+        <args Factor="6" LoopLoc="shape_cnn.cpp:153:23" LoopName="VITIS_LOOP_153_4"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="shape_cnn.cpp:141:0" msg_body="Unrolling loop 'VITIS_LOOP_154_5' (shape_cnn.cpp:154:23) in function 'avgpool6x8' completely with a factor of 8">
+        <args Factor="8" LoopLoc="shape_cnn.cpp:154:23" LoopName="VITIS_LOOP_154_5"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="shape_cnn.cpp:83:0" msg_body="Unrolling loop 'VITIS_LOOP_100_4' (shape_cnn.cpp:100:27) in function 'depthwise_pointwise_relu_fused' completely with a factor of 3">
+        <args Factor="3" LoopLoc="shape_cnn.cpp:100:27" LoopName="VITIS_LOOP_100_4"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="shape_cnn.cpp:83:0" msg_body="Unrolling loop 'VITIS_LOOP_101_5' (shape_cnn.cpp:101:27) in function 'depthwise_pointwise_relu_fused' completely with a factor of 3">
+        <args Factor="3" LoopLoc="shape_cnn.cpp:101:27" LoopName="VITIS_LOOP_101_5"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="shape_cnn.cpp:83:0" msg_body="Unrolling loop 'VITIS_LOOP_126_7' (shape_cnn.cpp:126:27) in function 'depthwise_pointwise_relu_fused' completely with a factor of 16">
+        <args Factor="16" LoopLoc="shape_cnn.cpp:126:27" LoopName="VITIS_LOOP_126_7"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="shape_cnn.cpp:31:0" msg_body="Unrolling loop 'VITIS_LOOP_45_4' (shape_cnn.cpp:45:22) in function 'conv1_relu_maxpool' completely with a factor of 4">
+        <args Factor="4" LoopLoc="shape_cnn.cpp:45:22" LoopName="VITIS_LOOP_45_4"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="shape_cnn.cpp:31:0" msg_body="Unrolling loop 'VITIS_LOOP_52_5' (shape_cnn.cpp:52:26) in function 'conv1_relu_maxpool' completely with a factor of 3">
+        <args Factor="3" LoopLoc="shape_cnn.cpp:52:26" LoopName="VITIS_LOOP_52_5"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="shape_cnn.cpp:31:0" msg_body="Unrolling loop 'VITIS_LOOP_53_6' (shape_cnn.cpp:53:26) in function 'conv1_relu_maxpool' completely with a factor of 3">
+        <args Factor="3" LoopLoc="shape_cnn.cpp:53:26" LoopName="VITIS_LOOP_53_6"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_ACK" msg_id="214-487" msg_severity="INFO" msg_loc="shape_cnn.cpp:32:1" msg_body="inline off  false conv1_relu_maxpool shape_cnn.cpp:32:1">
+        <args PragmaFunction="conv1_relu_maxpool" PragmaIsAuto="false" PragmaOptions="off" PragmaSrcLoc="shape_cnn.cpp:32:1" PragmaSrcLoc-DebugLoc="File shape_cnn.cpp Line 32 Column 1" PragmaType="inline"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_ACK" msg_id="214-487" msg_severity="INFO" msg_loc="shape_cnn.cpp:84:1" msg_body="inline off  false depthwise_pointwise_relu_fused shape_cnn.cpp:84:1">
+        <args PragmaFunction="depthwise_pointwise_relu_fused" PragmaIsAuto="false" PragmaOptions="off" PragmaSrcLoc="shape_cnn.cpp:84:1" PragmaSrcLoc-DebugLoc="File shape_cnn.cpp Line 84 Column 1" PragmaType="inline"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_ACK" msg_id="214-487" msg_severity="INFO" msg_loc="shape_cnn.cpp:142:1" msg_body="inline off  false avgpool6x8 shape_cnn.cpp:142:1">
+        <args PragmaFunction="avgpool6x8" PragmaIsAuto="false" PragmaOptions="off" PragmaSrcLoc="shape_cnn.cpp:142:1" PragmaSrcLoc-DebugLoc="File shape_cnn.cpp Line 142 Column 1" PragmaType="inline"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_ACK" msg_id="214-487" msg_severity="INFO" msg_loc="shape_cnn.cpp:168:1" msg_body="inline off  false cls_gap_logits_argmax shape_cnn.cpp:168:1">
+        <args PragmaFunction="cls_gap_logits_argmax" PragmaIsAuto="false" PragmaOptions="off" PragmaSrcLoc="shape_cnn.cpp:168:1" PragmaSrcLoc-DebugLoc="File shape_cnn.cpp Line 168 Column 1" PragmaType="inline"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="shape_cnn.cpp:90:12" msg_body="Applying array_partition to 'dw_relu': Complete partitioning on dimension 1.">
+        <args Dim="1" Mode="Complete" UOName="dw_relu"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_ACK" msg_id="214-487" msg_severity="INFO" msg_loc="shape_cnn.cpp:91:1" msg_body="array_partition dim=1 type=complete variable=dw_relu false depthwise_pointwise_relu_fused shape_cnn.cpp:91:1 dw_relu shape_cnn.cpp:90:12">
+        <args PragmaFunction="depthwise_pointwise_relu_fused" PragmaIsAuto="false" PragmaOptions="dim=1 type=complete variable=dw_relu" PragmaSrcLoc="shape_cnn.cpp:91:1" PragmaSrcLoc-DebugLoc="File shape_cnn.cpp Line 91 Column 1" PragmaType="array_partition" VarLoc="shape_cnn.cpp:90:12" VarName="dw_relu"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="shape_cnn.cpp:170:11" msg_body="Applying array_partition to 'gap': Complete partitioning on dimension 1.">
+        <args Dim="1" Mode="Complete" UOName="gap"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_ACK" msg_id="214-487" msg_severity="INFO" msg_loc="shape_cnn.cpp:171:1" msg_body="array_partition dim=1 type=complete variable=gap false cls_gap_logits_argmax shape_cnn.cpp:171:1 gap shape_cnn.cpp:170:11">
+        <args PragmaFunction="cls_gap_logits_argmax" PragmaIsAuto="false" PragmaOptions="dim=1 type=complete variable=gap" PragmaSrcLoc="shape_cnn.cpp:171:1" PragmaSrcLoc-DebugLoc="File shape_cnn.cpp Line 171 Column 1" PragmaType="array_partition" VarLoc="shape_cnn.cpp:170:11" VarName="gap"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="shape_cnn.cpp:191:11" msg_body="Applying array_partition to 'logits': Complete partitioning on dimension 1.">
+        <args Dim="1" Mode="Complete" UOName="logits"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_ACK" msg_id="214-487" msg_severity="INFO" msg_loc="shape_cnn.cpp:192:1" msg_body="array_partition dim=1 type=complete variable=logits false cls_gap_logits_argmax shape_cnn.cpp:192:1 logits shape_cnn.cpp:191:11">
+        <args PragmaFunction="cls_gap_logits_argmax" PragmaIsAuto="false" PragmaOptions="dim=1 type=complete variable=logits" PragmaSrcLoc="shape_cnn.cpp:192:1" PragmaSrcLoc-DebugLoc="File shape_cnn.cpp Line 192 Column 1" PragmaType="array_partition" VarLoc="shape_cnn.cpp:191:11" VarName="logits"/>
+    </msg>
+    <msg msg_groups="AUTOMATION_VERBOSE_PASSED" msg_id="214-335" msg_severity="INFO" msg_loc="shape_cnn.cpp:174:23" msg_body="pipeline   1 cls_gap_logits_argmax config_compile -pipeline_loops 64VITIS_LOOP_174_1 shape_cnn.cpp:174:23">
+        <args LoopLoc="shape_cnn.cpp:174:23" LoopLoc-DebugLoc="File shape_cnn.cpp Line 174 Column 23" LoopName="VITIS_LOOP_174_1" PragmaFunction="cls_gap_logits_argmax" PragmaInferReason="config_compile -pipeline_loops 64" PragmaIsAuto="1" PragmaType="pipeline"/>
+    </msg>
+    <msg msg_groups="AUTOMATION_VERBOSE_PASSED" msg_id="214-335" msg_severity="INFO" msg_loc="shape_cnn.cpp:187:23" msg_body="pipeline   1 cls_gap_logits_argmax config_compile -pipeline_loops 64VITIS_LOOP_187_5 shape_cnn.cpp:187:23">
+        <args LoopLoc="shape_cnn.cpp:187:23" LoopLoc-DebugLoc="File shape_cnn.cpp Line 187 Column 23" LoopName="VITIS_LOOP_187_5" PragmaFunction="cls_gap_logits_argmax" PragmaInferReason="config_compile -pipeline_loops 64" PragmaIsAuto="1" PragmaType="pipeline"/>
+    </msg>
+    <msg msg_groups="AUTOMATION_VERBOSE_PASSED" msg_id="214-335" msg_severity="INFO" msg_loc="shape_cnn.cpp:194:23" msg_body="pipeline   1 cls_gap_logits_argmax config_compile -pipeline_loops 64VITIS_LOOP_194_6 shape_cnn.cpp:194:23">
+        <args LoopLoc="shape_cnn.cpp:194:23" LoopLoc-DebugLoc="File shape_cnn.cpp Line 194 Column 23" LoopName="VITIS_LOOP_194_6" PragmaFunction="cls_gap_logits_argmax" PragmaInferReason="config_compile -pipeline_loops 64" PragmaIsAuto="1" PragmaType="pipeline"/>
+    </msg>
+    <msg msg_groups="AUTOMATION_VERBOSE_PASSED" msg_id="214-335" msg_severity="INFO" msg_loc="shape_cnn.cpp:207:23" msg_body="pipeline   1 cls_gap_logits_argmax config_compile -pipeline_loops 64VITIS_LOOP_207_8 shape_cnn.cpp:207:23">
+        <args LoopLoc="shape_cnn.cpp:207:23" LoopLoc-DebugLoc="File shape_cnn.cpp Line 207 Column 23" LoopName="VITIS_LOOP_207_8" PragmaFunction="cls_gap_logits_argmax" PragmaInferReason="config_compile -pipeline_loops 64" PragmaIsAuto="1" PragmaType="pipeline"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="shape_cnn.cpp:196:27" msg_body="Loop 'VITIS_LOOP_196_7' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="VITIS_LOOP_196_7"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="shape_cnn.cpp:167:0" msg_body="Unrolling loop 'VITIS_LOOP_196_7' (shape_cnn.cpp:196:27) in function 'cls_gap_logits_argmax' completely with a factor of 8">
+        <args Factor="8" LoopLoc="shape_cnn.cpp:196:27" LoopName="VITIS_LOOP_196_7"/>
+    </msg>
+    <msg msg_groups="AUTOMATION PRAGMA_MISC" msg_id="214-449" msg_severity="INFO" msg_loc="./ds_cnn_weights_data.h:9:0" msg_body="Partitioning array 'weights::CONV1_W' dimension 1 due to constant index.">
+        <args Dim="1" Value="weights::CONV1_W"/>
+    </msg>
+    <msg msg_groups="AUTOMATION PRAGMA_MISC" msg_id="214-449" msg_severity="INFO" msg_loc="./ds_cnn_weights_data.h:18:0" msg_body="Partitioning array 'weights::DW_W' dimension 2 due to constant index.">
+        <args Dim="2" Value="weights::DW_W"/>
+    </msg>
+    <msg msg_groups="AUTOMATION PRAGMA_MISC" msg_id="214-449" msg_severity="INFO" msg_loc="./ds_cnn_weights_data.h:27:0" msg_body="Partitioning array 'weights::PW_W' dimension 1 due to constant index.">
+        <args Dim="1" Value="weights::PW_W"/>
+    </msg>
+    <msg msg_groups="AUTOMATION PRAGMA_MISC" msg_id="214-449" msg_severity="INFO" msg_loc="./ds_cnn_weights_data.h:36:0" msg_body="Partitioning array 'weights::CLS_W' dimension 1 due to constant index.">
+        <args Dim="1" Value="weights::CLS_W"/>
+    </msg>
+    <msg msg_groups="AUTOMATION_VERBOSE_PASSED" msg_id="214-335" msg_severity="INFO" msg_loc="shape_cnn.cpp:232:0" msg_body="array_partition dim=1 type=cyclic factor=3 variable=ds_cnn(ap_fixed&lt;16, 8, (ap_q_mode)0, (ap_o_mode)0, 0&gt; const*, int*, ap_fixed&lt;16, 8, (ap_q_mode)0, (ap_o_mode)0, 0&gt;*)::pw 1 ds_cnn shape_cnn.cpp:232:0 shape_cnn.cpp:149:1ds_cnn(ap_fixed&lt;16, 8, (ap_q_mode)0, (ap_o_mode)0, 0&gt; const*, int*, ap_fixed&lt;16, 8, (ap_q_mode)0, (ap_o_mode)0, 0&gt;*)::pw">
+        <args PragmaFunction="ds_cnn" PragmaIsAuto="1" PragmaOptions="dim=1 type=cyclic factor=3 variable=ds_cnn(ap_fixed&lt;16, 8, (ap_q_mode)0, (ap_o_mode)0, 0&gt; const*, int*, ap_fixed&lt;16, 8, (ap_q_mode)0, (ap_o_mode)0, 0&gt;*)::pw" PragmaSrcLoc="shape_cnn.cpp:149:1" PragmaSrcLoc-DebugLoc="File shape_cnn.cpp Line 149 Column 1" PragmaType="array_partition" VarLoc="shape_cnn.cpp:232:0" VarName="ds_cnn(ap_fixed&lt;16, 8, (ap_q_mode)0, (ap_o_mode)0, 0&gt; const*, int*, ap_fixed&lt;16, 8, (ap_q_mode)0, (ap_o_mode)0, 0&gt;*)::pw"/>
+    </msg>
+    <msg msg_groups="AUTOMATION PRAGMA_MISC" msg_id="214-270" msg_severity="INFO" msg_loc="shape_cnn.cpp:149:1" msg_body="Inferring pragma 'array_partition type=cyclic factor=3 dim=1' for array 'ds_cnn(ap_fixed&lt;16, 8, (ap_q_mode)0, (ap_o_mode)0, 0&gt; const*, int*, ap_fixed&lt;16, 8, (ap_q_mode)0, (ap_o_mode)0, 0&gt;*)::pw' due to pipeline pragma">
+        <args Dim="1" Factor="3" Mode="cyclic" Name="ds_cnn(ap_fixed&lt;16, 8, (ap_q_mode)0, (ap_o_mode)0, 0&gt; const*, int*, ap_fixed&lt;16, 8, (ap_q_mode)0, (ap_o_mode)0, 0&gt;*)::pw" PragmaType="array_partition"/>
+    </msg>
+    <msg msg_groups="AUTOMATION_VERBOSE_PASSED" msg_id="214-335" msg_severity="INFO" msg_loc="shape_cnn.cpp:232:0" msg_body="array_partition dim=2 type=cyclic factor=8 variable=ds_cnn(ap_fixed&lt;16, 8, (ap_q_mode)0, (ap_o_mode)0, 0&gt; const*, int*, ap_fixed&lt;16, 8, (ap_q_mode)0, (ap_o_mode)0, 0&gt;*)::pw 1 ds_cnn shape_cnn.cpp:232:0 shape_cnn.cpp:149:1ds_cnn(ap_fixed&lt;16, 8, (ap_q_mode)0, (ap_o_mode)0, 0&gt; const*, int*, ap_fixed&lt;16, 8, (ap_q_mode)0, (ap_o_mode)0, 0&gt;*)::pw">
+        <args PragmaFunction="ds_cnn" PragmaIsAuto="1" PragmaOptions="dim=2 type=cyclic factor=8 variable=ds_cnn(ap_fixed&lt;16, 8, (ap_q_mode)0, (ap_o_mode)0, 0&gt; const*, int*, ap_fixed&lt;16, 8, (ap_q_mode)0, (ap_o_mode)0, 0&gt;*)::pw" PragmaSrcLoc="shape_cnn.cpp:149:1" PragmaSrcLoc-DebugLoc="File shape_cnn.cpp Line 149 Column 1" PragmaType="array_partition" VarLoc="shape_cnn.cpp:232:0" VarName="ds_cnn(ap_fixed&lt;16, 8, (ap_q_mode)0, (ap_o_mode)0, 0&gt; const*, int*, ap_fixed&lt;16, 8, (ap_q_mode)0, (ap_o_mode)0, 0&gt;*)::pw"/>
+    </msg>
+    <msg msg_groups="AUTOMATION PRAGMA_MISC" msg_id="214-270" msg_severity="INFO" msg_loc="shape_cnn.cpp:149:1" msg_body="Inferring pragma 'array_partition type=cyclic factor=8 dim=2' for array 'ds_cnn(ap_fixed&lt;16, 8, (ap_q_mode)0, (ap_o_mode)0, 0&gt; const*, int*, ap_fixed&lt;16, 8, (ap_q_mode)0, (ap_o_mode)0, 0&gt;*)::pw' due to pipeline pragma">
+        <args Dim="2" Factor="8" Mode="cyclic" Name="ds_cnn(ap_fixed&lt;16, 8, (ap_q_mode)0, (ap_o_mode)0, 0&gt; const*, int*, ap_fixed&lt;16, 8, (ap_q_mode)0, (ap_o_mode)0, 0&gt;*)::pw" PragmaType="array_partition"/>
+    </msg>
+    <msg msg_groups="AUTOMATION_VERBOSE_PASSED" msg_id="214-335" msg_severity="INFO" msg_loc="shape_cnn.cpp:230:0" msg_body="array_partition dim=1 type=cyclic factor=2 variable=ds_cnn(ap_fixed&lt;16, 8, (ap_q_mode)0, (ap_o_mode)0, 0&gt; const*, int*, ap_fixed&lt;16, 8, (ap_q_mode)0, (ap_o_mode)0, 0&gt;*)::img 1 ds_cnn shape_cnn.cpp:230:0 shape_cnn.cpp:39:1ds_cnn(ap_fixed&lt;16, 8, (ap_q_mode)0, (ap_o_mode)0, 0&gt; const*, int*, ap_fixed&lt;16, 8, (ap_q_mode)0, (ap_o_mode)0, 0&gt;*)::img">
+        <args PragmaFunction="ds_cnn" PragmaIsAuto="1" PragmaOptions="dim=1 type=cyclic factor=2 variable=ds_cnn(ap_fixed&lt;16, 8, (ap_q_mode)0, (ap_o_mode)0, 0&gt; const*, int*, ap_fixed&lt;16, 8, (ap_q_mode)0, (ap_o_mode)0, 0&gt;*)::img" PragmaSrcLoc="shape_cnn.cpp:39:1" PragmaSrcLoc-DebugLoc="File shape_cnn.cpp Line 39 Column 1" PragmaType="array_partition" VarLoc="shape_cnn.cpp:230:0" VarName="ds_cnn(ap_fixed&lt;16, 8, (ap_q_mode)0, (ap_o_mode)0, 0&gt; const*, int*, ap_fixed&lt;16, 8, (ap_q_mode)0, (ap_o_mode)0, 0&gt;*)::img"/>
+    </msg>
+    <msg msg_groups="AUTOMATION PRAGMA_MISC" msg_id="214-270" msg_severity="INFO" msg_loc="shape_cnn.cpp:39:1" msg_body="Inferring pragma 'array_partition type=cyclic factor=2 dim=1' for array 'ds_cnn(ap_fixed&lt;16, 8, (ap_q_mode)0, (ap_o_mode)0, 0&gt; const*, int*, ap_fixed&lt;16, 8, (ap_q_mode)0, (ap_o_mode)0, 0&gt;*)::img' due to pipeline pragma">
+        <args Dim="1" Factor="2" Mode="cyclic" Name="ds_cnn(ap_fixed&lt;16, 8, (ap_q_mode)0, (ap_o_mode)0, 0&gt; const*, int*, ap_fixed&lt;16, 8, (ap_q_mode)0, (ap_o_mode)0, 0&gt;*)::img" PragmaType="array_partition"/>
+    </msg>
+    <msg msg_groups="AUTOMATION_VERBOSE_PASSED" msg_id="214-335" msg_severity="INFO" msg_loc="shape_cnn.cpp:230:0" msg_body="array_partition dim=2 type=cyclic factor=4 variable=ds_cnn(ap_fixed&lt;16, 8, (ap_q_mode)0, (ap_o_mode)0, 0&gt; const*, int*, ap_fixed&lt;16, 8, (ap_q_mode)0, (ap_o_mode)0, 0&gt;*)::img 1 ds_cnn shape_cnn.cpp:230:0 shape_cnn.cpp:39:1ds_cnn(ap_fixed&lt;16, 8, (ap_q_mode)0, (ap_o_mode)0, 0&gt; const*, int*, ap_fixed&lt;16, 8, (ap_q_mode)0, (ap_o_mode)0, 0&gt;*)::img">
+        <args PragmaFunction="ds_cnn" PragmaIsAuto="1" PragmaOptions="dim=2 type=cyclic factor=4 variable=ds_cnn(ap_fixed&lt;16, 8, (ap_q_mode)0, (ap_o_mode)0, 0&gt; const*, int*, ap_fixed&lt;16, 8, (ap_q_mode)0, (ap_o_mode)0, 0&gt;*)::img" PragmaSrcLoc="shape_cnn.cpp:39:1" PragmaSrcLoc-DebugLoc="File shape_cnn.cpp Line 39 Column 1" PragmaType="array_partition" VarLoc="shape_cnn.cpp:230:0" VarName="ds_cnn(ap_fixed&lt;16, 8, (ap_q_mode)0, (ap_o_mode)0, 0&gt; const*, int*, ap_fixed&lt;16, 8, (ap_q_mode)0, (ap_o_mode)0, 0&gt;*)::img"/>
+    </msg>
+    <msg msg_groups="AUTOMATION PRAGMA_MISC" msg_id="214-270" msg_severity="INFO" msg_loc="shape_cnn.cpp:39:1" msg_body="Inferring pragma 'array_partition type=cyclic factor=4 dim=2' for array 'ds_cnn(ap_fixed&lt;16, 8, (ap_q_mode)0, (ap_o_mode)0, 0&gt; const*, int*, ap_fixed&lt;16, 8, (ap_q_mode)0, (ap_o_mode)0, 0&gt;*)::img' due to pipeline pragma">
+        <args Dim="2" Factor="4" Mode="cyclic" Name="ds_cnn(ap_fixed&lt;16, 8, (ap_q_mode)0, (ap_o_mode)0, 0&gt; const*, int*, ap_fixed&lt;16, 8, (ap_q_mode)0, (ap_o_mode)0, 0&gt;*)::img" PragmaType="array_partition"/>
+    </msg>
+    <msg msg_groups="AUTOMATION_VERBOSE_PASSED" msg_id="214-335" msg_severity="INFO" msg_loc="shape_cnn.cpp:231:0" msg_body="array_partition dim=1 type=cyclic factor=3 variable=ds_cnn(ap_fixed&lt;16, 8, (ap_q_mode)0, (ap_o_mode)0, 0&gt; const*, int*, ap_fixed&lt;16, 8, (ap_q_mode)0, (ap_o_mode)0, 0&gt;*)::pool1 1 ds_cnn shape_cnn.cpp:231:0 shape_cnn.cpp:96:1ds_cnn(ap_fixed&lt;16, 8, (ap_q_mode)0, (ap_o_mode)0, 0&gt; const*, int*, ap_fixed&lt;16, 8, (ap_q_mode)0, (ap_o_mode)0, 0&gt;*)::pool1">
+        <args PragmaFunction="ds_cnn" PragmaIsAuto="1" PragmaOptions="dim=1 type=cyclic factor=3 variable=ds_cnn(ap_fixed&lt;16, 8, (ap_q_mode)0, (ap_o_mode)0, 0&gt; const*, int*, ap_fixed&lt;16, 8, (ap_q_mode)0, (ap_o_mode)0, 0&gt;*)::pool1" PragmaSrcLoc="shape_cnn.cpp:96:1" PragmaSrcLoc-DebugLoc="File shape_cnn.cpp Line 96 Column 1" PragmaType="array_partition" VarLoc="shape_cnn.cpp:231:0" VarName="ds_cnn(ap_fixed&lt;16, 8, (ap_q_mode)0, (ap_o_mode)0, 0&gt; const*, int*, ap_fixed&lt;16, 8, (ap_q_mode)0, (ap_o_mode)0, 0&gt;*)::pool1"/>
+    </msg>
+    <msg msg_groups="AUTOMATION PRAGMA_MISC" msg_id="214-270" msg_severity="INFO" msg_loc="shape_cnn.cpp:96:1" msg_body="Inferring pragma 'array_partition type=cyclic factor=3 dim=1' for array 'ds_cnn(ap_fixed&lt;16, 8, (ap_q_mode)0, (ap_o_mode)0, 0&gt; const*, int*, ap_fixed&lt;16, 8, (ap_q_mode)0, (ap_o_mode)0, 0&gt;*)::pool1' due to pipeline pragma">
+        <args Dim="1" Factor="3" Mode="cyclic" Name="ds_cnn(ap_fixed&lt;16, 8, (ap_q_mode)0, (ap_o_mode)0, 0&gt; const*, int*, ap_fixed&lt;16, 8, (ap_q_mode)0, (ap_o_mode)0, 0&gt;*)::pool1" PragmaType="array_partition"/>
+    </msg>
+    <msg msg_groups="AUTOMATION_VERBOSE_PASSED" msg_id="214-335" msg_severity="INFO" msg_loc="shape_cnn.cpp:231:0" msg_body="array_partition dim=2 type=cyclic factor=3 variable=ds_cnn(ap_fixed&lt;16, 8, (ap_q_mode)0, (ap_o_mode)0, 0&gt; const*, int*, ap_fixed&lt;16, 8, (ap_q_mode)0, (ap_o_mode)0, 0&gt;*)::pool1 1 ds_cnn shape_cnn.cpp:231:0 shape_cnn.cpp:96:1ds_cnn(ap_fixed&lt;16, 8, (ap_q_mode)0, (ap_o_mode)0, 0&gt; const*, int*, ap_fixed&lt;16, 8, (ap_q_mode)0, (ap_o_mode)0, 0&gt;*)::pool1">
+        <args PragmaFunction="ds_cnn" PragmaIsAuto="1" PragmaOptions="dim=2 type=cyclic factor=3 variable=ds_cnn(ap_fixed&lt;16, 8, (ap_q_mode)0, (ap_o_mode)0, 0&gt; const*, int*, ap_fixed&lt;16, 8, (ap_q_mode)0, (ap_o_mode)0, 0&gt;*)::pool1" PragmaSrcLoc="shape_cnn.cpp:96:1" PragmaSrcLoc-DebugLoc="File shape_cnn.cpp Line 96 Column 1" PragmaType="array_partition" VarLoc="shape_cnn.cpp:231:0" VarName="ds_cnn(ap_fixed&lt;16, 8, (ap_q_mode)0, (ap_o_mode)0, 0&gt; const*, int*, ap_fixed&lt;16, 8, (ap_q_mode)0, (ap_o_mode)0, 0&gt;*)::pool1"/>
+    </msg>
+    <msg msg_groups="AUTOMATION PRAGMA_MISC" msg_id="214-270" msg_severity="INFO" msg_loc="shape_cnn.cpp:96:1" msg_body="Inferring pragma 'array_partition type=cyclic factor=3 dim=2' for array 'ds_cnn(ap_fixed&lt;16, 8, (ap_q_mode)0, (ap_o_mode)0, 0&gt; const*, int*, ap_fixed&lt;16, 8, (ap_q_mode)0, (ap_o_mode)0, 0&gt;*)::pool1' due to pipeline pragma">
+        <args Dim="2" Factor="3" Mode="cyclic" Name="ds_cnn(ap_fixed&lt;16, 8, (ap_q_mode)0, (ap_o_mode)0, 0&gt; const*, int*, ap_fixed&lt;16, 8, (ap_q_mode)0, (ap_o_mode)0, 0&gt;*)::pool1" PragmaType="array_partition"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="shape_cnn.cpp:231:0" msg_body="Applying array_partition to '_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E5pool1': Cyclic partitioning with factor 3 on dimension 1. Cyclic partitioning with factor 3 on dimension 2.">
+        <args Dim="islist 1 2" Factor="islist 3 3" Mode="islist Cyclic Cyclic" UOName="_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E5pool1"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="shape_cnn.cpp:230:0" msg_body="Applying array_partition to '_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E3img': Cyclic partitioning with factor 2 on dimension 1. Cyclic partitioning with factor 4 on dimension 2.">
+        <args Dim="islist 1 2" Factor="islist 2 4" Mode="islist Cyclic Cyclic" UOName="_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E3img"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="shape_cnn.cpp:232:0" msg_body="Applying array_partition to '_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E2pw': Cyclic partitioning with factor 3 on dimension 1. Cyclic partitioning with factor 8 on dimension 2.">
+        <args Dim="islist 1 2" Factor="islist 3 8" Mode="islist Cyclic Cyclic" UOName="_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E2pw"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="./ds_cnn_weights_data.h:9:0" msg_body="Applying array_partition to '_ZN7weights7CONV1_WE': Complete partitioning on dimension 1.">
+        <args Dim="1" Mode="Complete" UOName="_ZN7weights7CONV1_WE"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="./ds_cnn_weights_data.h:36:0" msg_body="Applying array_partition to '_ZN7weights5CLS_WE': Complete partitioning on dimension 1.">
+        <args Dim="1" Mode="Complete" UOName="_ZN7weights5CLS_WE"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="./ds_cnn_weights_data.h:27:0" msg_body="Applying array_partition to '_ZN7weights4PW_WE': Complete partitioning on dimension 1.">
+        <args Dim="1" Mode="Complete" UOName="_ZN7weights4PW_WE"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="./ds_cnn_weights_data.h:18:0" msg_body="Applying array_partition to '_ZN7weights4DW_WE': Complete partitioning on dimension 2.">
+        <args Dim="2" Mode="Complete" UOName="_ZN7weights4DW_WE"/>
+    </msg>
+</xilinx:hls_fe_msgs>

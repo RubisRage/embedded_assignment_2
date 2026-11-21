@@ -1,0 +1,426 @@
+<profile>
+<RunData>
+  <RUN_TYPE>synth</RUN_TYPE>
+  <VIVADO_VERSION>v.2026.1</VIVADO_VERSION>
+  <ROOT_MODULE_CELL>bd_0_i/hls_inst</ROOT_MODULE_CELL>
+</RunData>
+<TimingReport>
+  <TargetClockPeriod>10.000</TargetClockPeriod>
+  <AchievedClockPeriod>8.266</AchievedClockPeriod>
+  <CLOCK_NAME>ap_clk</CLOCK_NAME>
+  <CP_FINAL>8.266</CP_FINAL>
+  <CP_ROUTE>NA</CP_ROUTE>
+  <CP_SYNTH>8.266</CP_SYNTH>
+  <CP_TARGET>10.000</CP_TARGET>
+  <SLACK_FINAL>1.734</SLACK_FINAL>
+  <SLACK_ROUTE></SLACK_ROUTE>
+  <SLACK_SYNTH>1.734</SLACK_SYNTH>
+  <TIMING_MET>TRUE</TIMING_MET>
+  <TNS_FINAL>0.000</TNS_FINAL>
+  <TNS_ROUTE>NA</TNS_ROUTE>
+  <TNS_SYNTH>0.000</TNS_SYNTH>
+  <WNS_FINAL>1.734</WNS_FINAL>
+  <WNS_ROUTE>NA</WNS_ROUTE>
+  <WNS_SYNTH>1.734</WNS_SYNTH>
+</TimingReport>
+<AreaReport>
+  <Resources>
+    <BRAM>69</BRAM>
+    <CLB>0</CLB>
+    <DSP>92</DSP>
+    <FF>6739</FF>
+    <LATCH>0</LATCH>
+    <LUT>7559</LUT>
+    <SRL>135</SRL>
+    <URAM>0</URAM>
+  </Resources>
+  <AvailableResources>
+    <BRAM>280</BRAM>
+    <CLB>0</CLB>
+    <DSP>220</DSP>
+    <FF>106400</FF>
+    <LUT>53200</LUT>
+    <URAM>0</URAM>
+  </AvailableResources>
+</AreaReport>
+<RtlModules>
+  <RtlModule CELL="inst" DEPTH="0" FILE_NAME="bd_0_hls_inst_0.v" ORIG_REF_NAME="ds_cnn" TOP_CELL="bd_0_i/hls_inst/inst">
+    <SubModules count="49">bins_r_U control_s_axi_U gmem_m_axi_U grp_avgpool6x8_fu_491 grp_cls_gap_logits_argmax_fu_545 grp_conv1_relu_maxpool_fu_309 grp_depthwise_pointwise_relu_fused_fu_367 grp_ds_cnn_Pipeline_VITIS_LOOP_240_1_fu_286 p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E2pw_0_0_U p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E2pw_0_1_U p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E2pw_0_2_U p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E2pw_0_3_U p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E2pw_0_4_U p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E2pw_0_5_U p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E2pw_0_6_U p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E2pw_0_7_U p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E2pw_1_0_U p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E2pw_1_1_U p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E2pw_1_2_U p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E2pw_1_3_U p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E2pw_1_4_U p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E2pw_1_5_U p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E2pw_1_6_U p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E2pw_1_7_U p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E2pw_2_0_U p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E2pw_2_1_U p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E2pw_2_2_U p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E2pw_2_3_U p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E2pw_2_4_U p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E2pw_2_5_U p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E2pw_2_6_U p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E2pw_2_7_U p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E3img_0_0_U p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E3img_0_1_U p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E3img_0_2_U p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E3img_0_3_U p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E3img_1_0_U p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E3img_1_1_U p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E3img_1_2_U p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E3img_1_3_U p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E5pool1_0_0_U p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E5pool1_0_1_U p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E5pool1_0_2_U p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E5pool1_1_0_U p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E5pool1_1_1_U p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E5pool1_1_2_U p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E5pool1_2_0_U p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E5pool1_2_1_U p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E5pool1_2_2_U</SubModules>
+    <Resources BRAM="69" DSP="92" FF="6739" LUT="7559" LUTRAM="144" LogicLUT="7280" RAMB18="33" RAMB36="18" SRL="135"/>
+    <LocalResources FF="87" LUT="1" SRL="1"/>
+  </RtlModule>
+  <RtlModule CELL="inst/bins_r_U" DEPTH="1" FILE_NAME="ds_cnn.v" ORIG_REF_NAME="ds_cnn_bins_r_RAM_2P_LUTRAM_1R1W">
+    <Resources FF="15" LUT="95" LUTRAM="80" LogicLUT="15"/>
+  </RtlModule>
+  <RtlModule CELL="inst/control_s_axi_U" DEPTH="1" FILE_NAME="ds_cnn.v" ORIG_REF_NAME="ds_cnn_control_s_axi">
+    <Resources FF="154" LUT="173" LUTRAM="64" LogicLUT="109"/>
+    <LocalResources FF="122" LUT="76" LogicLUT="76"/>
+  </RtlModule>
+  <RtlModule CELL="inst/gmem_m_axi_U" DEPTH="1" FILE_NAME="ds_cnn.v" ORIG_REF_NAME="ds_cnn_gmem_m_axi">
+    <Resources BRAM="1" FF="898" LUT="617" LogicLUT="548" RAMB18="1" SRL="69"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_avgpool6x8_fu_491" DEPTH="1" FILE_NAME="ds_cnn.v" ORIG_REF_NAME="ds_cnn_avgpool6x8">
+    <SubModules count="1">flow_control_loop_pipe_sequential_init_U</SubModules>
+    <Resources FF="915" LUT="668" LogicLUT="652" SRL="16"/>
+    <LocalResources FF="913" LUT="657" LogicLUT="641" SRL="16"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_avgpool6x8_fu_491/flow_control_loop_pipe_sequential_init_U" DEPTH="2" FILE_NAME="ds_cnn_avgpool6x8.v" ORIG_REF_NAME="ds_cnn_flow_control_loop_pipe_sequential_init">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_cls_gap_logits_argmax_fu_545" DEPTH="1" FILE_NAME="ds_cnn.v" ORIG_REF_NAME="ds_cnn_cls_gap_logits_argmax">
+    <SubModules count="4">grp_cls_gap_logits_argmax_Pipeline_VITIS_LOOP_177_2_VITIS_LOOP_178_3_VITIS_LOOP_179_s_fu_154 grp_cls_gap_logits_argmax_Pipeline_VITIS_LOOP_187_5_fu_168 grp_cls_gap_logits_argmax_Pipeline_VITIS_LOOP_194_6_fu_180 grp_cls_gap_logits_argmax_Pipeline_VITIS_LOOP_207_8_fu_218</SubModules>
+    <Resources DSP="16" FF="1961" LUT="1991" LogicLUT="1981" SRL="10"/>
+    <LocalResources FF="337" LUT="7" LogicLUT="7"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_cls_gap_logits_argmax_fu_545/grp_cls_gap_logits_argmax_Pipeline_VITIS_LOOP_177_2_VITIS_LOOP_178_3_VITIS_LOOP_179_s_fu_154" DEPTH="2" FILE_NAME="ds_cnn_cls_gap_logits_argmax.v" ORIG_REF_NAME="ds_cnn_cls_gap_logits_argmax_Pipeline_VITIS_LOOP_177_2_VITIS_LOOP_178_3_VITIS_LOOP_179_s">
+    <SubModules count="1">flow_control_loop_pipe_sequential_init_U</SubModules>
+    <Resources FF="155" LUT="509" LogicLUT="508" SRL="1"/>
+    <LocalResources FF="153" LUT="496" LogicLUT="495" SRL="1"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_cls_gap_logits_argmax_fu_545/grp_cls_gap_logits_argmax_Pipeline_VITIS_LOOP_177_2_VITIS_LOOP_178_3_VITIS_LOOP_179_s_fu_154/flow_control_loop_pipe_sequential_init_U" DEPTH="3" FILE_NAME="ds_cnn_cls_gap_logits_argmax_Pipeline_VITIS_LOOP_177_2_VITIS_LOOP_178_3_VITIS_LOOP_179_s.v" ORIG_REF_NAME="ds_cnn_flow_control_loop_pipe_sequential_init">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_cls_gap_logits_argmax_fu_545/grp_cls_gap_logits_argmax_Pipeline_VITIS_LOOP_187_5_fu_168" DEPTH="2" FILE_NAME="ds_cnn_cls_gap_logits_argmax.v" ORIG_REF_NAME="ds_cnn_cls_gap_logits_argmax_Pipeline_VITIS_LOOP_187_5">
+    <SubModules count="1">flow_control_loop_pipe_sequential_init_U</SubModules>
+    <Resources FF="272" LUT="823" LogicLUT="819" SRL="4"/>
+    <LocalResources FF="270" LUT="733" LogicLUT="729" SRL="4"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_cls_gap_logits_argmax_fu_545/grp_cls_gap_logits_argmax_Pipeline_VITIS_LOOP_187_5_fu_168/flow_control_loop_pipe_sequential_init_U" DEPTH="3" FILE_NAME="ds_cnn_cls_gap_logits_argmax_Pipeline_VITIS_LOOP_187_5.v" ORIG_REF_NAME="ds_cnn_flow_control_loop_pipe_sequential_init">
+    <Resources FF="2" LUT="90" LogicLUT="90"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_cls_gap_logits_argmax_fu_545/grp_cls_gap_logits_argmax_Pipeline_VITIS_LOOP_194_6_fu_180" DEPTH="2" FILE_NAME="ds_cnn_cls_gap_logits_argmax.v" ORIG_REF_NAME="ds_cnn_cls_gap_logits_argmax_Pipeline_VITIS_LOOP_194_6">
+    <SubModules count="10">flow_control_loop_pipe_sequential_init_U mul_38s_11s_49_2_1_U331 mul_38s_11s_49_2_1_U332 mul_38s_11s_49_2_1_U333 mul_38s_12s_50_2_1_U334 mul_38s_12s_50_2_1_U335 mul_38s_13s_51_2_1_U336 mul_38s_13s_51_2_1_U337 mul_38s_15s_52_2_1_U338 weights_CLS_B_U</SubModules>
+    <Resources DSP="16" FF="1147" LUT="602" LogicLUT="597" SRL="5"/>
+    <LocalResources FF="1055" LUT="508" LogicLUT="503" SRL="5"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_cls_gap_logits_argmax_fu_545/grp_cls_gap_logits_argmax_Pipeline_VITIS_LOOP_194_6_fu_180/flow_control_loop_pipe_sequential_init_U" DEPTH="3" FILE_NAME="ds_cnn_cls_gap_logits_argmax_Pipeline_VITIS_LOOP_194_6.v" ORIG_REF_NAME="ds_cnn_flow_control_loop_pipe_sequential_init">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_cls_gap_logits_argmax_fu_545/grp_cls_gap_logits_argmax_Pipeline_VITIS_LOOP_194_6_fu_180/mul_38s_11s_49_2_1_U331" DEPTH="3" FILE_NAME="ds_cnn_cls_gap_logits_argmax_Pipeline_VITIS_LOOP_194_6.v" ORIG_REF_NAME="ds_cnn_mul_38s_11s_49_2_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_cls_gap_logits_argmax_fu_545/grp_cls_gap_logits_argmax_Pipeline_VITIS_LOOP_194_6_fu_180/mul_38s_11s_49_2_1_U332" DEPTH="3" FILE_NAME="ds_cnn_cls_gap_logits_argmax_Pipeline_VITIS_LOOP_194_6.v" ORIG_REF_NAME="ds_cnn_mul_38s_11s_49_2_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_cls_gap_logits_argmax_fu_545/grp_cls_gap_logits_argmax_Pipeline_VITIS_LOOP_194_6_fu_180/mul_38s_11s_49_2_1_U333" DEPTH="3" FILE_NAME="ds_cnn_cls_gap_logits_argmax_Pipeline_VITIS_LOOP_194_6.v" ORIG_REF_NAME="ds_cnn_mul_38s_11s_49_2_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_cls_gap_logits_argmax_fu_545/grp_cls_gap_logits_argmax_Pipeline_VITIS_LOOP_194_6_fu_180/mul_38s_12s_50_2_1_U334" DEPTH="3" FILE_NAME="ds_cnn_cls_gap_logits_argmax_Pipeline_VITIS_LOOP_194_6.v" ORIG_REF_NAME="ds_cnn_mul_38s_12s_50_2_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_cls_gap_logits_argmax_fu_545/grp_cls_gap_logits_argmax_Pipeline_VITIS_LOOP_194_6_fu_180/mul_38s_12s_50_2_1_U335" DEPTH="3" FILE_NAME="ds_cnn_cls_gap_logits_argmax_Pipeline_VITIS_LOOP_194_6.v" ORIG_REF_NAME="ds_cnn_mul_38s_12s_50_2_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_cls_gap_logits_argmax_fu_545/grp_cls_gap_logits_argmax_Pipeline_VITIS_LOOP_194_6_fu_180/mul_38s_13s_51_2_1_U336" DEPTH="3" FILE_NAME="ds_cnn_cls_gap_logits_argmax_Pipeline_VITIS_LOOP_194_6.v" ORIG_REF_NAME="ds_cnn_mul_38s_13s_51_2_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_cls_gap_logits_argmax_fu_545/grp_cls_gap_logits_argmax_Pipeline_VITIS_LOOP_194_6_fu_180/mul_38s_13s_51_2_1_U337" DEPTH="3" FILE_NAME="ds_cnn_cls_gap_logits_argmax_Pipeline_VITIS_LOOP_194_6.v" ORIG_REF_NAME="ds_cnn_mul_38s_13s_51_2_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_cls_gap_logits_argmax_fu_545/grp_cls_gap_logits_argmax_Pipeline_VITIS_LOOP_194_6_fu_180/mul_38s_15s_52_2_1_U338" DEPTH="3" FILE_NAME="ds_cnn_cls_gap_logits_argmax_Pipeline_VITIS_LOOP_194_6.v" ORIG_REF_NAME="ds_cnn_mul_38s_15s_52_2_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_cls_gap_logits_argmax_fu_545/grp_cls_gap_logits_argmax_Pipeline_VITIS_LOOP_194_6_fu_180/weights_CLS_B_U" DEPTH="3" FILE_NAME="ds_cnn_cls_gap_logits_argmax_Pipeline_VITIS_LOOP_194_6.v" ORIG_REF_NAME="ds_cnn_cls_gap_logits_argmax_Pipeline_VITIS_LOOP_194_6_weights_CLS_B_ROM_AUTO_1R">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_cls_gap_logits_argmax_fu_545/grp_cls_gap_logits_argmax_Pipeline_VITIS_LOOP_207_8_fu_218" DEPTH="2" FILE_NAME="ds_cnn_cls_gap_logits_argmax.v" ORIG_REF_NAME="ds_cnn_cls_gap_logits_argmax_Pipeline_VITIS_LOOP_207_8">
+    <SubModules count="1">flow_control_loop_pipe_sequential_init_U</SubModules>
+    <Resources FF="50" LUT="50" LogicLUT="50"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_cls_gap_logits_argmax_fu_545/grp_cls_gap_logits_argmax_Pipeline_VITIS_LOOP_207_8_fu_218/flow_control_loop_pipe_sequential_init_U" DEPTH="3" FILE_NAME="ds_cnn_cls_gap_logits_argmax_Pipeline_VITIS_LOOP_207_8.v" ORIG_REF_NAME="ds_cnn_flow_control_loop_pipe_sequential_init">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_conv1_relu_maxpool_fu_309" DEPTH="1" FILE_NAME="ds_cnn.v" ORIG_REF_NAME="ds_cnn_conv1_relu_maxpool">
+    <SubModules count="15">flow_control_loop_pipe_sequential_init_U mul_5ns_7ns_11_1_1_U12 mul_6ns_8ns_13_1_1_U13 p_ZN7weights7CONV1_WE_0_U p_ZN7weights7CONV1_WE_1_U p_ZN7weights7CONV1_WE_2_U p_ZN7weights7CONV1_WE_3_U p_ZN7weights7CONV1_WE_4_U p_ZN7weights7CONV1_WE_5_U p_ZN7weights7CONV1_WE_6_U p_ZN7weights7CONV1_WE_7_U p_ZN7weights7CONV1_WE_8_U urem_5ns_3ns_2_9_1_U11 urem_6ns_3ns_2_10_1_U14 weights_CONV1_B_U</SubModules>
+    <Resources DSP="37" FF="1315" LUT="1838" LogicLUT="1811" SRL="27"/>
+    <LocalResources DSP="36" FF="1158" LUT="1651" LogicLUT="1633" SRL="18"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_conv1_relu_maxpool_fu_309/flow_control_loop_pipe_sequential_init_U" DEPTH="2" FILE_NAME="ds_cnn_conv1_relu_maxpool.v" ORIG_REF_NAME="ds_cnn_flow_control_loop_pipe_sequential_init">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_conv1_relu_maxpool_fu_309/mul_5ns_7ns_11_1_1_U12" DEPTH="2" FILE_NAME="ds_cnn_conv1_relu_maxpool.v" ORIG_REF_NAME="ds_cnn_mul_5ns_7ns_11_1_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_conv1_relu_maxpool_fu_309/mul_6ns_8ns_13_1_1_U13" DEPTH="2" FILE_NAME="ds_cnn_conv1_relu_maxpool.v" ORIG_REF_NAME="ds_cnn_mul_6ns_8ns_13_1_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_conv1_relu_maxpool_fu_309/p_ZN7weights7CONV1_WE_0_U" DEPTH="2" FILE_NAME="ds_cnn_conv1_relu_maxpool.v" ORIG_REF_NAME="ds_cnn_conv1_relu_maxpool_p_ZN7weights7CONV1_WE_0_ROM_AUTO_1R">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_conv1_relu_maxpool_fu_309/p_ZN7weights7CONV1_WE_1_U" DEPTH="2" FILE_NAME="ds_cnn_conv1_relu_maxpool.v" ORIG_REF_NAME="ds_cnn_conv1_relu_maxpool_p_ZN7weights7CONV1_WE_1_ROM_AUTO_1R">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_conv1_relu_maxpool_fu_309/p_ZN7weights7CONV1_WE_2_U" DEPTH="2" FILE_NAME="ds_cnn_conv1_relu_maxpool.v" ORIG_REF_NAME="ds_cnn_conv1_relu_maxpool_p_ZN7weights7CONV1_WE_2_ROM_AUTO_1R">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_conv1_relu_maxpool_fu_309/p_ZN7weights7CONV1_WE_3_U" DEPTH="2" FILE_NAME="ds_cnn_conv1_relu_maxpool.v" ORIG_REF_NAME="ds_cnn_conv1_relu_maxpool_p_ZN7weights7CONV1_WE_3_ROM_AUTO_1R">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_conv1_relu_maxpool_fu_309/p_ZN7weights7CONV1_WE_4_U" DEPTH="2" FILE_NAME="ds_cnn_conv1_relu_maxpool.v" ORIG_REF_NAME="ds_cnn_conv1_relu_maxpool_p_ZN7weights7CONV1_WE_4_ROM_AUTO_1R">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_conv1_relu_maxpool_fu_309/p_ZN7weights7CONV1_WE_5_U" DEPTH="2" FILE_NAME="ds_cnn_conv1_relu_maxpool.v" ORIG_REF_NAME="ds_cnn_conv1_relu_maxpool_p_ZN7weights7CONV1_WE_5_ROM_AUTO_1R">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_conv1_relu_maxpool_fu_309/p_ZN7weights7CONV1_WE_6_U" DEPTH="2" FILE_NAME="ds_cnn_conv1_relu_maxpool.v" ORIG_REF_NAME="ds_cnn_conv1_relu_maxpool_p_ZN7weights7CONV1_WE_6_ROM_AUTO_1R">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_conv1_relu_maxpool_fu_309/p_ZN7weights7CONV1_WE_7_U" DEPTH="2" FILE_NAME="ds_cnn_conv1_relu_maxpool.v" ORIG_REF_NAME="ds_cnn_conv1_relu_maxpool_p_ZN7weights7CONV1_WE_7_ROM_AUTO_1R">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_conv1_relu_maxpool_fu_309/p_ZN7weights7CONV1_WE_8_U" DEPTH="2" FILE_NAME="ds_cnn_conv1_relu_maxpool.v" ORIG_REF_NAME="ds_cnn_conv1_relu_maxpool_p_ZN7weights7CONV1_WE_8_ROM_AUTO_1R">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_conv1_relu_maxpool_fu_309/urem_5ns_3ns_2_9_1_U11" DEPTH="2" FILE_NAME="ds_cnn_conv1_relu_maxpool.v" ORIG_REF_NAME="ds_cnn_urem_5ns_3ns_2_9_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_conv1_relu_maxpool_fu_309/urem_6ns_3ns_2_10_1_U14" DEPTH="2" FILE_NAME="ds_cnn_conv1_relu_maxpool.v" ORIG_REF_NAME="ds_cnn_urem_6ns_3ns_2_10_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_conv1_relu_maxpool_fu_309/weights_CONV1_B_U" DEPTH="2" FILE_NAME="ds_cnn_conv1_relu_maxpool.v" ORIG_REF_NAME="ds_cnn_conv1_relu_maxpool_weights_CONV1_B_ROM_AUTO_1R">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_depthwise_pointwise_relu_fused_fu_367" DEPTH="1" FILE_NAME="ds_cnn.v" ORIG_REF_NAME="ds_cnn_depthwise_pointwise_relu_fused">
+    <SubModules count="5">grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426 grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_94_3_fu_349 mul_5ns_7ns_11_1_1_U250 mul_64ns_66ns_129_5_1_U249 mul_6ns_8ns_13_1_1_U251</SubModules>
+    <Resources DSP="39" FF="1290" LUT="2029" LogicLUT="2017" SRL="12"/>
+    <LocalResources FF="258" LUT="156" LogicLUT="156"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426" DEPTH="2" FILE_NAME="ds_cnn_depthwise_pointwise_relu_fused.v" ORIG_REF_NAME="ds_cnn_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6">
+    <SubModules count="6">flow_control_loop_pipe_sequential_init_U p_ZN7weights4PW_WE_12_U p_ZN7weights4PW_WE_13_U p_ZN7weights4PW_WE_14_U p_ZN7weights4PW_WE_15_U weights_PW_B_U</SubModules>
+    <Resources DSP="16" FF="442" LUT="799" LogicLUT="793" SRL="6"/>
+    <LocalResources DSP="16" FF="379" LUT="726" LogicLUT="720" SRL="6"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/flow_control_loop_pipe_sequential_init_U" DEPTH="3" FILE_NAME="ds_cnn_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6.v" ORIG_REF_NAME="ds_cnn_flow_control_loop_pipe_sequential_init">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/p_ZN7weights4PW_WE_12_U" DEPTH="3" FILE_NAME="ds_cnn_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6.v" ORIG_REF_NAME="ds_cnn_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_p_ZN7weights4PW_WE_1yd2">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/p_ZN7weights4PW_WE_13_U" DEPTH="3" FILE_NAME="ds_cnn_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6.v" ORIG_REF_NAME="ds_cnn_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_p_ZN7weights4PW_WE_1zec">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/p_ZN7weights4PW_WE_14_U" DEPTH="3" FILE_NAME="ds_cnn_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6.v" ORIG_REF_NAME="ds_cnn_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_p_ZN7weights4PW_WE_1Aem">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/p_ZN7weights4PW_WE_15_U" DEPTH="3" FILE_NAME="ds_cnn_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6.v" ORIG_REF_NAME="ds_cnn_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_p_ZN7weights4PW_WE_1Bew">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/weights_PW_B_U" DEPTH="3" FILE_NAME="ds_cnn_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6.v" ORIG_REF_NAME="ds_cnn_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_weights_PW_B_ROM_AUTlbW">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_94_3_fu_349" DEPTH="2" FILE_NAME="ds_cnn_depthwise_pointwise_relu_fused.v" ORIG_REF_NAME="ds_cnn_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_94_3">
+    <SubModules count="5">flow_control_loop_pipe_sequential_init_U p_ZN7weights4DW_WE_6_U p_ZN7weights4DW_WE_7_U p_ZN7weights4DW_WE_8_U weights_DW_B_U</SubModules>
+    <Resources DSP="9" FF="565" LUT="949" LogicLUT="943" SRL="6"/>
+    <LocalResources DSP="9" FF="524" LUT="581" LogicLUT="575" SRL="6"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_94_3_fu_349/flow_control_loop_pipe_sequential_init_U" DEPTH="3" FILE_NAME="ds_cnn_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_94_3.v" ORIG_REF_NAME="ds_cnn_flow_control_loop_pipe_sequential_init">
+    <Resources FF="2" LUT="348" LogicLUT="348"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_94_3_fu_349/p_ZN7weights4DW_WE_6_U" DEPTH="3" FILE_NAME="ds_cnn_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_94_3.v" ORIG_REF_NAME="ds_cnn_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_94_3_p_ZN7weights4DW_WE_6_ibs">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_94_3_fu_349/p_ZN7weights4DW_WE_7_U" DEPTH="3" FILE_NAME="ds_cnn_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_94_3.v" ORIG_REF_NAME="ds_cnn_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_94_3_p_ZN7weights4DW_WE_7_jbC">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_94_3_fu_349/p_ZN7weights4DW_WE_8_U" DEPTH="3" FILE_NAME="ds_cnn_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_94_3.v" ORIG_REF_NAME="ds_cnn_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_94_3_p_ZN7weights4DW_WE_8_kbM">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_94_3_fu_349/weights_DW_B_U" DEPTH="3" FILE_NAME="ds_cnn_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_94_3.v" ORIG_REF_NAME="ds_cnn_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_94_3_weights_DW_B_ROM_AUTObkb">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_depthwise_pointwise_relu_fused_fu_367/mul_5ns_7ns_11_1_1_U250" DEPTH="2" FILE_NAME="ds_cnn_depthwise_pointwise_relu_fused.v" ORIG_REF_NAME="ds_cnn_mul_5ns_7ns_11_1_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_depthwise_pointwise_relu_fused_fu_367/mul_64ns_66ns_129_5_1_U249" DEPTH="2" FILE_NAME="ds_cnn_depthwise_pointwise_relu_fused.v" ORIG_REF_NAME="ds_cnn_mul_64ns_66ns_129_5_1">
+    <Resources DSP="13" FF="25" LUT="93" LogicLUT="93"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_depthwise_pointwise_relu_fused_fu_367/mul_6ns_8ns_13_1_1_U251" DEPTH="2" FILE_NAME="ds_cnn_depthwise_pointwise_relu_fused.v" ORIG_REF_NAME="ds_cnn_mul_6ns_8ns_13_1_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_ds_cnn_Pipeline_VITIS_LOOP_240_1_fu_286" DEPTH="1" FILE_NAME="ds_cnn.v" ORIG_REF_NAME="ds_cnn_ds_cnn_Pipeline_VITIS_LOOP_240_1">
+    <SubModules count="1">flow_control_loop_pipe_sequential_init_U</SubModules>
+    <Resources FF="104" LUT="51" LogicLUT="51"/>
+    <LocalResources FF="102" LUT="46" LogicLUT="46"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_ds_cnn_Pipeline_VITIS_LOOP_240_1_fu_286/flow_control_loop_pipe_sequential_init_U" DEPTH="2" FILE_NAME="ds_cnn_ds_cnn_Pipeline_VITIS_LOOP_240_1.v" ORIG_REF_NAME="ds_cnn_flow_control_loop_pipe_sequential_init">
+  </RtlModule>
+  <RtlModule CELL="inst/p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E2pw_0_0_U" DEPTH="1" FILE_NAME="ds_cnn.v" ORIG_REF_NAME="ds_cnn_p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E2pw_0_01iI">
+  </RtlModule>
+  <RtlModule CELL="inst/p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E2pw_0_1_U" DEPTH="1" FILE_NAME="ds_cnn.v" ORIG_REF_NAME="ds_cnn_p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E2pw_0_01iI">
+  </RtlModule>
+  <RtlModule CELL="inst/p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E2pw_0_2_U" DEPTH="1" FILE_NAME="ds_cnn.v" ORIG_REF_NAME="ds_cnn_p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E2pw_0_01iI">
+  </RtlModule>
+  <RtlModule CELL="inst/p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E2pw_0_3_U" DEPTH="1" FILE_NAME="ds_cnn.v" ORIG_REF_NAME="ds_cnn_p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E2pw_0_01iI">
+  </RtlModule>
+  <RtlModule CELL="inst/p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E2pw_0_4_U" DEPTH="1" FILE_NAME="ds_cnn.v" ORIG_REF_NAME="ds_cnn_p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E2pw_0_01iI">
+  </RtlModule>
+  <RtlModule CELL="inst/p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E2pw_0_5_U" DEPTH="1" FILE_NAME="ds_cnn.v" ORIG_REF_NAME="ds_cnn_p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E2pw_0_01iI">
+  </RtlModule>
+  <RtlModule CELL="inst/p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E2pw_0_6_U" DEPTH="1" FILE_NAME="ds_cnn.v" ORIG_REF_NAME="ds_cnn_p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E2pw_0_01iI">
+  </RtlModule>
+  <RtlModule CELL="inst/p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E2pw_0_7_U" DEPTH="1" FILE_NAME="ds_cnn.v" ORIG_REF_NAME="ds_cnn_p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E2pw_0_01iI">
+  </RtlModule>
+  <RtlModule CELL="inst/p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E2pw_1_0_U" DEPTH="1" FILE_NAME="ds_cnn.v" ORIG_REF_NAME="ds_cnn_p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E2pw_0_01iI">
+  </RtlModule>
+  <RtlModule CELL="inst/p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E2pw_1_1_U" DEPTH="1" FILE_NAME="ds_cnn.v" ORIG_REF_NAME="ds_cnn_p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E2pw_0_01iI">
+  </RtlModule>
+  <RtlModule CELL="inst/p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E2pw_1_2_U" DEPTH="1" FILE_NAME="ds_cnn.v" ORIG_REF_NAME="ds_cnn_p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E2pw_0_01iI">
+  </RtlModule>
+  <RtlModule CELL="inst/p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E2pw_1_3_U" DEPTH="1" FILE_NAME="ds_cnn.v" ORIG_REF_NAME="ds_cnn_p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E2pw_0_01iI">
+  </RtlModule>
+  <RtlModule CELL="inst/p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E2pw_1_4_U" DEPTH="1" FILE_NAME="ds_cnn.v" ORIG_REF_NAME="ds_cnn_p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E2pw_0_01iI">
+  </RtlModule>
+  <RtlModule CELL="inst/p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E2pw_1_5_U" DEPTH="1" FILE_NAME="ds_cnn.v" ORIG_REF_NAME="ds_cnn_p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E2pw_0_01iI">
+  </RtlModule>
+  <RtlModule CELL="inst/p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E2pw_1_6_U" DEPTH="1" FILE_NAME="ds_cnn.v" ORIG_REF_NAME="ds_cnn_p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E2pw_0_01iI">
+  </RtlModule>
+  <RtlModule CELL="inst/p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E2pw_1_7_U" DEPTH="1" FILE_NAME="ds_cnn.v" ORIG_REF_NAME="ds_cnn_p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E2pw_0_01iI">
+  </RtlModule>
+  <RtlModule CELL="inst/p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E2pw_2_0_U" DEPTH="1" FILE_NAME="ds_cnn.v" ORIG_REF_NAME="ds_cnn_p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E2pw_0_01iI">
+  </RtlModule>
+  <RtlModule CELL="inst/p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E2pw_2_1_U" DEPTH="1" FILE_NAME="ds_cnn.v" ORIG_REF_NAME="ds_cnn_p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E2pw_0_01iI">
+  </RtlModule>
+  <RtlModule CELL="inst/p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E2pw_2_2_U" DEPTH="1" FILE_NAME="ds_cnn.v" ORIG_REF_NAME="ds_cnn_p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E2pw_0_01iI">
+  </RtlModule>
+  <RtlModule CELL="inst/p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E2pw_2_3_U" DEPTH="1" FILE_NAME="ds_cnn.v" ORIG_REF_NAME="ds_cnn_p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E2pw_0_01iI">
+  </RtlModule>
+  <RtlModule CELL="inst/p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E2pw_2_4_U" DEPTH="1" FILE_NAME="ds_cnn.v" ORIG_REF_NAME="ds_cnn_p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E2pw_0_01iI">
+  </RtlModule>
+  <RtlModule CELL="inst/p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E2pw_2_5_U" DEPTH="1" FILE_NAME="ds_cnn.v" ORIG_REF_NAME="ds_cnn_p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E2pw_0_01iI">
+  </RtlModule>
+  <RtlModule CELL="inst/p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E2pw_2_6_U" DEPTH="1" FILE_NAME="ds_cnn.v" ORIG_REF_NAME="ds_cnn_p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E2pw_0_01iI">
+  </RtlModule>
+  <RtlModule CELL="inst/p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E2pw_2_7_U" DEPTH="1" FILE_NAME="ds_cnn.v" ORIG_REF_NAME="ds_cnn_p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E2pw_0_01iI">
+  </RtlModule>
+  <RtlModule CELL="inst/p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E3img_0_0_U" DEPTH="1" FILE_NAME="ds_cnn.v" ORIG_REF_NAME="ds_cnn_p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E3img_0_KfY">
+  </RtlModule>
+  <RtlModule CELL="inst/p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E3img_0_1_U" DEPTH="1" FILE_NAME="ds_cnn.v" ORIG_REF_NAME="ds_cnn_p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E3img_0_KfY">
+  </RtlModule>
+  <RtlModule CELL="inst/p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E3img_0_2_U" DEPTH="1" FILE_NAME="ds_cnn.v" ORIG_REF_NAME="ds_cnn_p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E3img_0_KfY">
+  </RtlModule>
+  <RtlModule CELL="inst/p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E3img_0_3_U" DEPTH="1" FILE_NAME="ds_cnn.v" ORIG_REF_NAME="ds_cnn_p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E3img_0_KfY">
+  </RtlModule>
+  <RtlModule CELL="inst/p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E3img_1_0_U" DEPTH="1" FILE_NAME="ds_cnn.v" ORIG_REF_NAME="ds_cnn_p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E3img_0_KfY">
+  </RtlModule>
+  <RtlModule CELL="inst/p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E3img_1_1_U" DEPTH="1" FILE_NAME="ds_cnn.v" ORIG_REF_NAME="ds_cnn_p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E3img_0_KfY">
+  </RtlModule>
+  <RtlModule CELL="inst/p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E3img_1_2_U" DEPTH="1" FILE_NAME="ds_cnn.v" ORIG_REF_NAME="ds_cnn_p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E3img_0_KfY">
+  </RtlModule>
+  <RtlModule CELL="inst/p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E3img_1_3_U" DEPTH="1" FILE_NAME="ds_cnn.v" ORIG_REF_NAME="ds_cnn_p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E3img_0_KfY">
+  </RtlModule>
+  <RtlModule CELL="inst/p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E5pool1_0_0_U" DEPTH="1" FILE_NAME="ds_cnn.v" ORIG_REF_NAME="ds_cnn_p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E5pool1_Shg">
+  </RtlModule>
+  <RtlModule CELL="inst/p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E5pool1_0_1_U" DEPTH="1" FILE_NAME="ds_cnn.v" ORIG_REF_NAME="ds_cnn_p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E5pool1_Shg">
+  </RtlModule>
+  <RtlModule CELL="inst/p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E5pool1_0_2_U" DEPTH="1" FILE_NAME="ds_cnn.v" ORIG_REF_NAME="ds_cnn_p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E5pool1_Shg">
+  </RtlModule>
+  <RtlModule CELL="inst/p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E5pool1_1_0_U" DEPTH="1" FILE_NAME="ds_cnn.v" ORIG_REF_NAME="ds_cnn_p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E5pool1_Shg">
+  </RtlModule>
+  <RtlModule CELL="inst/p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E5pool1_1_1_U" DEPTH="1" FILE_NAME="ds_cnn.v" ORIG_REF_NAME="ds_cnn_p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E5pool1_Shg">
+  </RtlModule>
+  <RtlModule CELL="inst/p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E5pool1_1_2_U" DEPTH="1" FILE_NAME="ds_cnn.v" ORIG_REF_NAME="ds_cnn_p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E5pool1_Shg">
+  </RtlModule>
+  <RtlModule CELL="inst/p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E5pool1_2_0_U" DEPTH="1" FILE_NAME="ds_cnn.v" ORIG_REF_NAME="ds_cnn_p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E5pool1_Shg">
+  </RtlModule>
+  <RtlModule CELL="inst/p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E5pool1_2_1_U" DEPTH="1" FILE_NAME="ds_cnn.v" ORIG_REF_NAME="ds_cnn_p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E5pool1_Shg">
+  </RtlModule>
+  <RtlModule CELL="inst/p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E5pool1_2_2_U" DEPTH="1" FILE_NAME="ds_cnn.v" ORIG_REF_NAME="ds_cnn_p_ZZ6ds_cnnPK8ap_fixedILi16ELi8EL9ap_q_mode0EL9ap_o_mode0ELi0EEPiPS2_E5pool1_Shg">
+  </RtlModule>
+</RtlModules>
+<TimingPaths>
+  <TPATH DATAPATH_DELAY="7.658" DATAPATH_LOGIC_DELAY="3.999" DATAPATH_NET_DELAY="3.659" ENDPOINT_PIN="bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/tmp_42_reg_3152_reg[0]/S" LOGIC_LEVELS="21" MAX_FANOUT="41" SLACK="1.734" STARTPOINT_PIN="bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/tmp_85_reg_3109_reg[0]/C">
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/tmp_85_reg_3109_reg[0]" PRIMITIVE_TYPE="FLOP_LATCH.flop.FDRE" FILE_NAME="ds_cnn_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6.v" LINE_NUMBER="1475"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry_i_3" PRIMITIVE_TYPE="LUT.others.LUT4" FILE_NAME="ds_cnn_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6.v" LINE_NUMBER="2166"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry" PRIMITIVE_TYPE="CARRY.others.CARRY4" FILE_NAME="ds_cnn_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6.v" LINE_NUMBER="2146"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__0" PRIMITIVE_TYPE="CARRY.others.CARRY4" FILE_NAME="ds_cnn_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6.v" LINE_NUMBER="2146"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__1" PRIMITIVE_TYPE="CARRY.others.CARRY4" FILE_NAME="ds_cnn_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6.v" LINE_NUMBER="2146"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__2" PRIMITIVE_TYPE="CARRY.others.CARRY4" FILE_NAME="ds_cnn_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6.v" LINE_NUMBER="2146"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__3" PRIMITIVE_TYPE="CARRY.others.CARRY4" FILE_NAME="ds_cnn_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6.v" LINE_NUMBER="2146"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__4" PRIMITIVE_TYPE="CARRY.others.CARRY4" FILE_NAME="ds_cnn_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6.v" LINE_NUMBER="2146"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__5" PRIMITIVE_TYPE="CARRY.others.CARRY4" FILE_NAME="ds_cnn_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6.v" LINE_NUMBER="2146"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__6" PRIMITIVE_TYPE="CARRY.others.CARRY4" FILE_NAME="ds_cnn_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6.v" LINE_NUMBER="2146"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__7" PRIMITIVE_TYPE="CARRY.others.CARRY4" FILE_NAME="ds_cnn_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6.v" LINE_NUMBER="2146"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry_i_3" PRIMITIVE_TYPE="LUT.others.LUT4" FILE_NAME="ds_cnn_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6.v" LINE_NUMBER="2168"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry" PRIMITIVE_TYPE="CARRY.others.CARRY4" FILE_NAME="ds_cnn_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6.v" LINE_NUMBER="2146"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__0" PRIMITIVE_TYPE="CARRY.others.CARRY4" FILE_NAME="ds_cnn_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6.v" LINE_NUMBER="2146"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__1" PRIMITIVE_TYPE="CARRY.others.CARRY4" FILE_NAME="ds_cnn_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6.v" LINE_NUMBER="2146"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__2" PRIMITIVE_TYPE="CARRY.others.CARRY4" FILE_NAME="ds_cnn_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6.v" LINE_NUMBER="2146"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__3" PRIMITIVE_TYPE="CARRY.others.CARRY4" FILE_NAME="ds_cnn_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6.v" LINE_NUMBER="2146"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__4" PRIMITIVE_TYPE="CARRY.others.CARRY4" FILE_NAME="ds_cnn_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6.v" LINE_NUMBER="2146"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__5" PRIMITIVE_TYPE="CARRY.others.CARRY4" FILE_NAME="ds_cnn_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6.v" LINE_NUMBER="2146"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__6" PRIMITIVE_TYPE="CARRY.others.CARRY4" FILE_NAME="ds_cnn_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6.v" LINE_NUMBER="2146"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__7" PRIMITIVE_TYPE="CARRY.others.CARRY4" FILE_NAME="ds_cnn_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6.v" LINE_NUMBER="2146"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/tmp_91_reg_3142[0]_i_1" PRIMITIVE_TYPE="LUT.others.LUT2" FILE_NAME="ds_cnn.v" LINE_NUMBER="1148"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/tmp_42_reg_3152_reg[0]" PRIMITIVE_TYPE="FLOP_LATCH.flop.FDSE" FILE_NAME="ds_cnn_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6.v" LINE_NUMBER="1220"/>
+  </TPATH>
+  <TPATH DATAPATH_DELAY="7.658" DATAPATH_LOGIC_DELAY="3.999" DATAPATH_NET_DELAY="3.659" ENDPOINT_PIN="bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/tmp_42_reg_3152_reg[1]/S" LOGIC_LEVELS="21" MAX_FANOUT="41" SLACK="1.734" STARTPOINT_PIN="bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/tmp_85_reg_3109_reg[0]/C">
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/tmp_85_reg_3109_reg[0]" PRIMITIVE_TYPE="FLOP_LATCH.flop.FDRE" FILE_NAME="ds_cnn_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6.v" LINE_NUMBER="1475"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry_i_3" PRIMITIVE_TYPE="LUT.others.LUT4" FILE_NAME="ds_cnn_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6.v" LINE_NUMBER="2166"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry" PRIMITIVE_TYPE="CARRY.others.CARRY4" FILE_NAME="ds_cnn_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6.v" LINE_NUMBER="2146"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__0" PRIMITIVE_TYPE="CARRY.others.CARRY4" FILE_NAME="ds_cnn_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6.v" LINE_NUMBER="2146"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__1" PRIMITIVE_TYPE="CARRY.others.CARRY4" FILE_NAME="ds_cnn_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6.v" LINE_NUMBER="2146"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__2" PRIMITIVE_TYPE="CARRY.others.CARRY4" FILE_NAME="ds_cnn_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6.v" LINE_NUMBER="2146"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__3" PRIMITIVE_TYPE="CARRY.others.CARRY4" FILE_NAME="ds_cnn_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6.v" LINE_NUMBER="2146"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__4" PRIMITIVE_TYPE="CARRY.others.CARRY4" FILE_NAME="ds_cnn_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6.v" LINE_NUMBER="2146"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__5" PRIMITIVE_TYPE="CARRY.others.CARRY4" FILE_NAME="ds_cnn_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6.v" LINE_NUMBER="2146"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__6" PRIMITIVE_TYPE="CARRY.others.CARRY4" FILE_NAME="ds_cnn_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6.v" LINE_NUMBER="2146"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__7" PRIMITIVE_TYPE="CARRY.others.CARRY4" FILE_NAME="ds_cnn_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6.v" LINE_NUMBER="2146"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry_i_3" PRIMITIVE_TYPE="LUT.others.LUT4" FILE_NAME="ds_cnn_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6.v" LINE_NUMBER="2168"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry" PRIMITIVE_TYPE="CARRY.others.CARRY4" FILE_NAME="ds_cnn_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6.v" LINE_NUMBER="2146"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__0" PRIMITIVE_TYPE="CARRY.others.CARRY4" FILE_NAME="ds_cnn_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6.v" LINE_NUMBER="2146"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__1" PRIMITIVE_TYPE="CARRY.others.CARRY4" FILE_NAME="ds_cnn_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6.v" LINE_NUMBER="2146"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__2" PRIMITIVE_TYPE="CARRY.others.CARRY4" FILE_NAME="ds_cnn_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6.v" LINE_NUMBER="2146"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__3" PRIMITIVE_TYPE="CARRY.others.CARRY4" FILE_NAME="ds_cnn_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6.v" LINE_NUMBER="2146"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__4" PRIMITIVE_TYPE="CARRY.others.CARRY4" FILE_NAME="ds_cnn_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6.v" LINE_NUMBER="2146"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__5" PRIMITIVE_TYPE="CARRY.others.CARRY4" FILE_NAME="ds_cnn_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6.v" LINE_NUMBER="2146"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__6" PRIMITIVE_TYPE="CARRY.others.CARRY4" FILE_NAME="ds_cnn_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6.v" LINE_NUMBER="2146"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__7" PRIMITIVE_TYPE="CARRY.others.CARRY4" FILE_NAME="ds_cnn_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6.v" LINE_NUMBER="2146"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/tmp_91_reg_3142[0]_i_1" PRIMITIVE_TYPE="LUT.others.LUT2" FILE_NAME="ds_cnn.v" LINE_NUMBER="1148"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/tmp_42_reg_3152_reg[1]" PRIMITIVE_TYPE="FLOP_LATCH.flop.FDSE" FILE_NAME="ds_cnn_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6.v" LINE_NUMBER="1220"/>
+  </TPATH>
+  <TPATH DATAPATH_DELAY="7.658" DATAPATH_LOGIC_DELAY="3.999" DATAPATH_NET_DELAY="3.659" ENDPOINT_PIN="bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/tmp_42_reg_3152_reg[2]/S" LOGIC_LEVELS="21" MAX_FANOUT="41" SLACK="1.734" STARTPOINT_PIN="bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/tmp_85_reg_3109_reg[0]/C">
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/tmp_85_reg_3109_reg[0]" PRIMITIVE_TYPE="FLOP_LATCH.flop.FDRE" FILE_NAME="ds_cnn_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6.v" LINE_NUMBER="1475"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry_i_3" PRIMITIVE_TYPE="LUT.others.LUT4" FILE_NAME="ds_cnn_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6.v" LINE_NUMBER="2166"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry" PRIMITIVE_TYPE="CARRY.others.CARRY4" FILE_NAME="ds_cnn_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6.v" LINE_NUMBER="2146"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__0" PRIMITIVE_TYPE="CARRY.others.CARRY4" FILE_NAME="ds_cnn_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6.v" LINE_NUMBER="2146"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__1" PRIMITIVE_TYPE="CARRY.others.CARRY4" FILE_NAME="ds_cnn_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6.v" LINE_NUMBER="2146"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__2" PRIMITIVE_TYPE="CARRY.others.CARRY4" FILE_NAME="ds_cnn_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6.v" LINE_NUMBER="2146"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__3" PRIMITIVE_TYPE="CARRY.others.CARRY4" FILE_NAME="ds_cnn_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6.v" LINE_NUMBER="2146"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__4" PRIMITIVE_TYPE="CARRY.others.CARRY4" FILE_NAME="ds_cnn_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6.v" LINE_NUMBER="2146"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__5" PRIMITIVE_TYPE="CARRY.others.CARRY4" FILE_NAME="ds_cnn_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6.v" LINE_NUMBER="2146"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__6" PRIMITIVE_TYPE="CARRY.others.CARRY4" FILE_NAME="ds_cnn_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6.v" LINE_NUMBER="2146"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__7" PRIMITIVE_TYPE="CARRY.others.CARRY4" FILE_NAME="ds_cnn_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6.v" LINE_NUMBER="2146"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry_i_3" PRIMITIVE_TYPE="LUT.others.LUT4" FILE_NAME="ds_cnn_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6.v" LINE_NUMBER="2168"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry" PRIMITIVE_TYPE="CARRY.others.CARRY4" FILE_NAME="ds_cnn_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6.v" LINE_NUMBER="2146"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__0" PRIMITIVE_TYPE="CARRY.others.CARRY4" FILE_NAME="ds_cnn_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6.v" LINE_NUMBER="2146"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__1" PRIMITIVE_TYPE="CARRY.others.CARRY4" FILE_NAME="ds_cnn_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6.v" LINE_NUMBER="2146"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__2" PRIMITIVE_TYPE="CARRY.others.CARRY4" FILE_NAME="ds_cnn_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6.v" LINE_NUMBER="2146"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__3" PRIMITIVE_TYPE="CARRY.others.CARRY4" FILE_NAME="ds_cnn_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6.v" LINE_NUMBER="2146"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__4" PRIMITIVE_TYPE="CARRY.others.CARRY4" FILE_NAME="ds_cnn_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6.v" LINE_NUMBER="2146"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__5" PRIMITIVE_TYPE="CARRY.others.CARRY4" FILE_NAME="ds_cnn_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6.v" LINE_NUMBER="2146"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__6" PRIMITIVE_TYPE="CARRY.others.CARRY4" FILE_NAME="ds_cnn_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6.v" LINE_NUMBER="2146"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__7" PRIMITIVE_TYPE="CARRY.others.CARRY4" FILE_NAME="ds_cnn_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6.v" LINE_NUMBER="2146"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/tmp_91_reg_3142[0]_i_1" PRIMITIVE_TYPE="LUT.others.LUT2" FILE_NAME="ds_cnn.v" LINE_NUMBER="1148"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/tmp_42_reg_3152_reg[2]" PRIMITIVE_TYPE="FLOP_LATCH.flop.FDSE" FILE_NAME="ds_cnn_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6.v" LINE_NUMBER="1220"/>
+  </TPATH>
+  <TPATH DATAPATH_DELAY="7.658" DATAPATH_LOGIC_DELAY="3.999" DATAPATH_NET_DELAY="3.659" ENDPOINT_PIN="bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/tmp_42_reg_3152_reg[3]/S" LOGIC_LEVELS="21" MAX_FANOUT="41" SLACK="1.734" STARTPOINT_PIN="bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/tmp_85_reg_3109_reg[0]/C">
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/tmp_85_reg_3109_reg[0]" PRIMITIVE_TYPE="FLOP_LATCH.flop.FDRE" FILE_NAME="ds_cnn_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6.v" LINE_NUMBER="1475"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry_i_3" PRIMITIVE_TYPE="LUT.others.LUT4" FILE_NAME="ds_cnn_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6.v" LINE_NUMBER="2166"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry" PRIMITIVE_TYPE="CARRY.others.CARRY4" FILE_NAME="ds_cnn_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6.v" LINE_NUMBER="2146"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__0" PRIMITIVE_TYPE="CARRY.others.CARRY4" FILE_NAME="ds_cnn_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6.v" LINE_NUMBER="2146"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__1" PRIMITIVE_TYPE="CARRY.others.CARRY4" FILE_NAME="ds_cnn_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6.v" LINE_NUMBER="2146"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__2" PRIMITIVE_TYPE="CARRY.others.CARRY4" FILE_NAME="ds_cnn_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6.v" LINE_NUMBER="2146"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__3" PRIMITIVE_TYPE="CARRY.others.CARRY4" FILE_NAME="ds_cnn_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6.v" LINE_NUMBER="2146"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__4" PRIMITIVE_TYPE="CARRY.others.CARRY4" FILE_NAME="ds_cnn_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6.v" LINE_NUMBER="2146"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__5" PRIMITIVE_TYPE="CARRY.others.CARRY4" FILE_NAME="ds_cnn_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6.v" LINE_NUMBER="2146"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__6" PRIMITIVE_TYPE="CARRY.others.CARRY4" FILE_NAME="ds_cnn_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6.v" LINE_NUMBER="2146"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__7" PRIMITIVE_TYPE="CARRY.others.CARRY4" FILE_NAME="ds_cnn_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6.v" LINE_NUMBER="2146"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry_i_3" PRIMITIVE_TYPE="LUT.others.LUT4" FILE_NAME="ds_cnn_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6.v" LINE_NUMBER="2168"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry" PRIMITIVE_TYPE="CARRY.others.CARRY4" FILE_NAME="ds_cnn_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6.v" LINE_NUMBER="2146"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__0" PRIMITIVE_TYPE="CARRY.others.CARRY4" FILE_NAME="ds_cnn_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6.v" LINE_NUMBER="2146"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__1" PRIMITIVE_TYPE="CARRY.others.CARRY4" FILE_NAME="ds_cnn_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6.v" LINE_NUMBER="2146"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__2" PRIMITIVE_TYPE="CARRY.others.CARRY4" FILE_NAME="ds_cnn_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6.v" LINE_NUMBER="2146"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__3" PRIMITIVE_TYPE="CARRY.others.CARRY4" FILE_NAME="ds_cnn_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6.v" LINE_NUMBER="2146"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__4" PRIMITIVE_TYPE="CARRY.others.CARRY4" FILE_NAME="ds_cnn_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6.v" LINE_NUMBER="2146"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__5" PRIMITIVE_TYPE="CARRY.others.CARRY4" FILE_NAME="ds_cnn_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6.v" LINE_NUMBER="2146"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__6" PRIMITIVE_TYPE="CARRY.others.CARRY4" FILE_NAME="ds_cnn_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6.v" LINE_NUMBER="2146"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__7" PRIMITIVE_TYPE="CARRY.others.CARRY4" FILE_NAME="ds_cnn_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6.v" LINE_NUMBER="2146"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/tmp_91_reg_3142[0]_i_1" PRIMITIVE_TYPE="LUT.others.LUT2" FILE_NAME="ds_cnn.v" LINE_NUMBER="1148"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/tmp_42_reg_3152_reg[3]" PRIMITIVE_TYPE="FLOP_LATCH.flop.FDSE" FILE_NAME="ds_cnn_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6.v" LINE_NUMBER="1220"/>
+  </TPATH>
+  <TPATH DATAPATH_DELAY="7.658" DATAPATH_LOGIC_DELAY="3.999" DATAPATH_NET_DELAY="3.659" ENDPOINT_PIN="bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/tmp_42_reg_3152_reg[4]/S" LOGIC_LEVELS="21" MAX_FANOUT="41" SLACK="1.734" STARTPOINT_PIN="bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/tmp_85_reg_3109_reg[0]/C">
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/tmp_85_reg_3109_reg[0]" PRIMITIVE_TYPE="FLOP_LATCH.flop.FDRE" FILE_NAME="ds_cnn_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6.v" LINE_NUMBER="1475"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry_i_3" PRIMITIVE_TYPE="LUT.others.LUT4" FILE_NAME="ds_cnn_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6.v" LINE_NUMBER="2166"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry" PRIMITIVE_TYPE="CARRY.others.CARRY4" FILE_NAME="ds_cnn_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6.v" LINE_NUMBER="2146"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__0" PRIMITIVE_TYPE="CARRY.others.CARRY4" FILE_NAME="ds_cnn_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6.v" LINE_NUMBER="2146"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__1" PRIMITIVE_TYPE="CARRY.others.CARRY4" FILE_NAME="ds_cnn_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6.v" LINE_NUMBER="2146"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__2" PRIMITIVE_TYPE="CARRY.others.CARRY4" FILE_NAME="ds_cnn_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6.v" LINE_NUMBER="2146"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__3" PRIMITIVE_TYPE="CARRY.others.CARRY4" FILE_NAME="ds_cnn_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6.v" LINE_NUMBER="2146"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__4" PRIMITIVE_TYPE="CARRY.others.CARRY4" FILE_NAME="ds_cnn_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6.v" LINE_NUMBER="2146"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__5" PRIMITIVE_TYPE="CARRY.others.CARRY4" FILE_NAME="ds_cnn_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6.v" LINE_NUMBER="2146"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__6" PRIMITIVE_TYPE="CARRY.others.CARRY4" FILE_NAME="ds_cnn_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6.v" LINE_NUMBER="2146"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_13_fu_2228_p2_carry__7" PRIMITIVE_TYPE="CARRY.others.CARRY4" FILE_NAME="ds_cnn_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6.v" LINE_NUMBER="2146"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry_i_3" PRIMITIVE_TYPE="LUT.others.LUT4" FILE_NAME="ds_cnn_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6.v" LINE_NUMBER="2168"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry" PRIMITIVE_TYPE="CARRY.others.CARRY4" FILE_NAME="ds_cnn_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6.v" LINE_NUMBER="2146"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__0" PRIMITIVE_TYPE="CARRY.others.CARRY4" FILE_NAME="ds_cnn_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6.v" LINE_NUMBER="2146"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__1" PRIMITIVE_TYPE="CARRY.others.CARRY4" FILE_NAME="ds_cnn_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6.v" LINE_NUMBER="2146"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__2" PRIMITIVE_TYPE="CARRY.others.CARRY4" FILE_NAME="ds_cnn_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6.v" LINE_NUMBER="2146"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__3" PRIMITIVE_TYPE="CARRY.others.CARRY4" FILE_NAME="ds_cnn_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6.v" LINE_NUMBER="2146"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__4" PRIMITIVE_TYPE="CARRY.others.CARRY4" FILE_NAME="ds_cnn_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6.v" LINE_NUMBER="2146"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__5" PRIMITIVE_TYPE="CARRY.others.CARRY4" FILE_NAME="ds_cnn_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6.v" LINE_NUMBER="2146"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__6" PRIMITIVE_TYPE="CARRY.others.CARRY4" FILE_NAME="ds_cnn_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6.v" LINE_NUMBER="2146"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/add_ln127_14_fu_2303_p2_carry__7" PRIMITIVE_TYPE="CARRY.others.CARRY4" FILE_NAME="ds_cnn_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6.v" LINE_NUMBER="2146"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/tmp_91_reg_3142[0]_i_1" PRIMITIVE_TYPE="LUT.others.LUT2" FILE_NAME="ds_cnn.v" LINE_NUMBER="1148"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_depthwise_pointwise_relu_fused_fu_367/grp_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6_fu_426/tmp_42_reg_3152_reg[4]" PRIMITIVE_TYPE="FLOP_LATCH.flop.FDSE" FILE_NAME="ds_cnn_depthwise_pointwise_relu_fused_Pipeline_VITIS_LOOP_120_6.v" LINE_NUMBER="1220"/>
+  </TPATH>
+</TimingPaths>
+<VivadoReportFiles>
+  <ReportFile TYPE="design_analysis" PATH="verilog/report/ds_cnn_design_analysis_synth.rpt"/>
+  <ReportFile TYPE="failfast" PATH="verilog/report/ds_cnn_failfast_synth.rpt"/>
+  <ReportFile TYPE="power" PATH="verilog/report/ds_cnn_power_synth.rpt"/>
+  <ReportFile TYPE="timing" PATH="verilog/report/ds_cnn_timing_synth.rpt"/>
+  <ReportFile TYPE="timing_paths" PATH="verilog/report/ds_cnn_timing_paths_synth.rpt"/>
+  <ReportFile TYPE="utilization" PATH="verilog/report/ds_cnn_utilization_synth.rpt"/>
+  <ReportFile TYPE="utilization_hierarchical" PATH="verilog/report/ds_cnn_utilization_hierarchical_synth.rpt"/>
+</VivadoReportFiles>
+</profile>

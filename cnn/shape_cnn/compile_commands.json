@@ -1,0 +1,27 @@
+[
+  {
+    "directory": "/home/rubisrage/Projects/vivado-projects/assignment_2_vitis/shape_cnn",
+    "arguments": [
+      "/home/rubisrage/tools/xilinx-sdu/2026.1/Vitis/lnx64/tools/clang-16/bin/clang++",
+      "--gcc-toolchain=/home/rubisrage/tools/xilinx-sdu/2026.1/Vitis/tps/lnx64/gcc-8.3.0",
+      "-fhls",
+      "-hls-syn-headers-dir=/home/rubisrage/tools/xilinx-sdu/2026.1/Vitis/common/technology/autopilot",
+      "-fhlstoplevel=ds_cnn",
+      "-c",
+      "/home/rubisrage/Projects/vivado-projects/assignment_2_vitis/shape_cnn/shape_cnn.cpp"
+    ],
+    "file": "/home/rubisrage/Projects/vivado-projects/assignment_2_vitis/shape_cnn/shape_cnn.cpp"
+  },
+  {
+    "directory": "/home/rubisrage/Projects/vivado-projects/assignment_2_vitis/shape_cnn",
+    "arguments": [
+      "/home/rubisrage/tools/xilinx-sdu/2026.1/Vitis/lnx64/tools/clang-16/bin/clang++",
+      "--gcc-toolchain=/home/rubisrage/tools/xilinx-sdu/2026.1/Vitis/tps/lnx64/gcc-8.3.0",
+      "-fhls-tb",
+      "-hls-sim-headers-dir=/home/rubisrage/tools/xilinx-sdu/2026.1/Vitis/include",
+      "-c",
+      "/home/rubisrage/Projects/vivado-projects/assignment_2_vitis/shape_cnn/tb_shape_cnn.cpp"
+    ],
+    "file": "/home/rubisrage/Projects/vivado-projects/assignment_2_vitis/shape_cnn/tb_shape_cnn.cpp"
+  }
+]
